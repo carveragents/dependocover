@@ -1,0 +1,393 @@
+Dependocover report: https://github.com/pallets/flask
+Languages: Python
+Files scanned: 231
+Findings: 1374
+Repository ID: pallets/flask
+Version/revision: 49943b5
+Categories: api_call=15, configuration_parameter=19, external_service=204, package=32, python_import=90, runtime_requirement=1
+
+DEDUPLICATED ENVIRONMENT INVENTORY
+
+LIBRARIES
+- amqp [python] — amqp==5.1.1
+  found at: examples/celery/requirements.txt:7
+- asgiref [python] — asgiref>=3.2
+  imported as: asgiref
+  found at: pyproject.toml, src/flask/app.py:1137
+- async-timeout [python] — async-timeout==4.0.2
+  found at: examples/celery/requirements.txt:9
+- billiard [python] — billiard==3.6.4.0
+  found at: examples/celery/requirements.txt:11
+- blinker [python] — blinker==1.6.2; blinker>=1.9.0
+  imported as: blinker
+  found at: examples/celery/requirements.txt:13, pyproject.toml, src/flask/signals.py:3
+- celery[redis] [python] — celery[redis]; celery[redis]==5.2.7
+  imported as: celery
+  found at: examples/celery/pyproject.toml, examples/celery/requirements.txt:15, examples/celery/src/task_app/__init__.py:1, examples/celery/src/task_app/__init__.py:2, examples/celery/src/task_app/tasks.py:3, examples/celery/src/task_app/tasks.py:4, examples/celery/src/task_app/views.py:1
+- click [python] — click==8.1.3; click>=8.1.3
+  imported as: click
+  found at: examples/celery/requirements.txt:17, examples/tutorial/flaskr/db.py:4, pyproject.toml, src/flask/app.py:17, src/flask/cli.py:17, src/flask/cli.py:18, src/flask/sansio/scaffold.py:22, src/flask/testing.py:12
+- click-didyoumean [python] — click-didyoumean==0.3.0
+  found at: examples/celery/requirements.txt:24
+- click-plugins [python] — click-plugins==1.1.1
+  found at: examples/celery/requirements.txt:26
+- click-repl [python] — click-repl==0.2.0
+  found at: examples/celery/requirements.txt:28
+- config_module_app [python] — version not declared
+  imported as: config_module_app
+  found at: tests/test_instance_config.py:25
+- config_package_app [python] — version not declared
+  imported as: config_package_app
+  found at: tests/test_instance_config.py:41
+- cryptography [python] — version not declared
+  imported as: cryptography
+  found at: src/flask/cli.py:810
+- docutils [python] — version not declared
+  imported as: docutils
+  found at: docs/conf.py:91, docs/conf.py:92
+- flask [python] — flask; flask==2.3.2
+  found at: examples/celery/pyproject.toml, examples/celery/requirements.txt:30, examples/javascript/pyproject.toml, examples/tutorial/pyproject.toml
+- installed_package [python] — version not declared
+  imported as: installed_package
+  found at: tests/test_instance_config.py:92
+- itsdangerous [python] — itsdangerous==2.1.2; itsdangerous>=2.2.0
+  imported as: itsdangerous
+  found at: examples/celery/requirements.txt:32, pyproject.toml, src/flask/sessions.py:10, src/flask/sessions.py:11
+- jinja2 [python] — jinja2==3.1.2; jinja2>=3.1.2
+  imported as: jinja2
+  found at: examples/celery/requirements.txt:34, pyproject.toml, src/flask/debughelpers.py:5, src/flask/sansio/scaffold.py:11, src/flask/sansio/scaffold.py:12, src/flask/templating.py:5, src/flask/templating.py:6, src/flask/templating.py:7
+- kombu [python] — kombu==5.2.4
+  found at: examples/celery/requirements.txt:36
+- markupsafe [python] — markupsafe==2.1.2; markupsafe>=2.1.1
+  imported as: markupsafe
+  found at: examples/celery/requirements.txt:38, pyproject.toml, src/flask/json/tag.py:52, tests/test_basic.py:15, tests/test_json_tag.py:6, tests/test_templating.py:6
+- namespace [python] — version not declared
+  imported as: namespace
+  found at: tests/test_instance_config.py:60
+- packaging [python] — version not declared
+  imported as: packaging
+  found at: docs/conf.py:1
+- pallets_sphinx_themes [python] — version not declared
+  imported as: pallets_sphinx_themes
+  found at: docs/conf.py:2, docs/conf.py:3
+- prompt-toolkit [python] — prompt-toolkit==3.0.38
+  found at: examples/celery/requirements.txt:42
+- pytest [python] — pytest
+  imported as: pytest
+  found at: examples/javascript/pyproject.toml, examples/javascript/tests/conftest.py:1, examples/javascript/tests/test_js_example.py:1, examples/tutorial/pyproject.toml, examples/tutorial/tests/conftest.py:4, examples/tutorial/tests/test_auth.py:1, examples/tutorial/tests/test_blog.py:1, examples/tutorial/tests/test_db.py:3
+- python-dotenv [python] — python-dotenv
+  imported as: dotenv
+  found at: pyproject.toml, src/flask/cli.py:497, src/flask/cli.py:733, tests/test_cli.py:523
+- pytz [python] — pytz==2023.3
+  found at: examples/celery/requirements.txt:44
+- redis [python] — redis==4.5.4
+  found at: examples/celery/requirements.txt:46
+- sansio [python] — version not declared
+  imported as: sansio
+  found at: src/flask/app.py:43, src/flask/blueprints.py:10, src/flask/blueprints.py:11, src/flask/blueprints.py:12, src/flask/config.py:14, src/flask/debughelpers.py:10, src/flask/debughelpers.py:13, src/flask/json/provider.py:16
+- site_app [python] — version not declared
+  imported as: site_app
+  found at: tests/test_instance_config.py:73
+- site_package [python] — version not declared
+  imported as: site_package
+  found at: tests/test_instance_config.py:107
+- six [python] — six==1.16.0
+  found at: examples/celery/requirements.txt:48
+- typing_extensions [python] — version not declared
+  imported as: typing_extensions
+  found at: src/flask/config.py:12, src/flask/ctx.py:18, src/flask/sessions.py:17
+- vine [python] — vine==5.0.0
+  found at: examples/celery/requirements.txt:50
+- wcwidth [python] — wcwidth==0.2.6
+  found at: examples/celery/requirements.txt:55
+- werkzeug [python] — werkzeug==2.3.3; werkzeug>=3.1.0
+  imported as: werkzeug
+  found at: examples/celery/requirements.txt:57, examples/tutorial/flaskr/auth.py:11, examples/tutorial/flaskr/auth.py:12, examples/tutorial/flaskr/blog.py:8, pyproject.toml, src/flask/app.py:18, src/flask/app.py:19, src/flask/app.py:20
+
+INTERNAL SERVICES
+- MySQL [relational_database]
+  endpoint: HTTP mysql://localhost/foo
+  endpoint: HTTP mysql://{self.db_server}/foo
+  found at: docs/config.rst:690, docs/config.rst:726
+- Redis [cache_or_key_value_store]
+  endpoint: HTTP redis://localhost
+  found at: docs/patterns/celery.rst:111, docs/patterns/celery.rst:112, docs/patterns/celery.rst:66, docs/patterns/celery.rst:77, docs/patterns/celery.rst:78, examples/celery/requirements.txt:10, examples/celery/requirements.txt:15, examples/celery/requirements.txt:46
+- 0 [external_service]
+  endpoint: HTTP http://0.0.0.0:8000
+  endpoint: HTTP http://0.0.0.0:8080
+  found at: docs/deploying/gunicorn.rst:90, docs/tutorial/deploy.rst:102
+- 127 [external_service]
+  endpoint: HTTP http://127.0.0.1:3000/
+  endpoint: HTTP http://127.0.0.1:5000
+  endpoint: HTTP http://127.0.0.1:5000/
+  endpoint: HTTP http://127.0.0.1:5000/auth/login
+  endpoint: HTTP http://127.0.0.1:5000/auth/register
+  endpoint: HTTP http://127.0.0.1:5000/hello
+  endpoint: HTTP http://127.0.0.1:8000
+  endpoint: HTTP http://127.0.0.1:8000/
+  endpoint: HTTP http://127.0.0.1:8080
+  found at: README.md:35, docs/cli.rst:101, docs/cli.rst:125, docs/cli.rst:201, docs/cli.rst:209, docs/cli.rst:217, docs/cli.rst:225, docs/cli.rst:76
+- localhost [external_service]
+  endpoint: HTTP http://localhost
+  endpoint: HTTP http://localhost/
+  endpoint: HTTP http://localhost/hello/test%20x
+  endpoint: HTTP http://localhost/meh
+  endpoint: HTTP http://localhost/user/
+  endpoint: HTTP http://localhost:5000/
+  endpoint: HTTP https://localhost
+  endpoint: HTTP https://localhost/
+  found at: docs/server.rst:30, examples/celery/README.md:25, tests/test_appctx.py:18, tests/test_basic.py:1369, tests/test_basic.py:1739, tests/test_helpers.py:109, tests/test_helpers.py:117, tests/test_helpers.py:128
+
+DATABASES / BROKERS: HOSTING UNKNOWN
+- Celery/message broker [task_queue]
+  found at: CHANGES.rst:581, docs/errorhandling.rst:70, docs/patterns/celery.rst:1, docs/patterns/celery.rst:102, docs/patterns/celery.rst:103, docs/patterns/celery.rst:11, docs/patterns/celery.rst:110, docs/patterns/celery.rst:111
+
+STANDARD CLOUD SERVICES
+- None detected
+
+THIRD-PARTY SERVICES
+- SMTP email provider [email_delivery]
+  found at: docs/logging.rst:110
+
+UNCLASSIFIED SERVICE CLUES
+- domain.com [external_service]
+  endpoint: POST http://domain.com/action
+    request keys: gin, vodka
+  found at: tests/test_testing.py:259
+
+API ENDPOINTS (observed request calls)
+- POST http://domain.com/action [unclassified_reference / http_endpoint]
+  parameter names: gin, vodka
+  found at: tests/test_testing.py:259
+
+OTHER URL REFERENCES
+- http://0.0.0.0:8000 [internal_candidate / http_endpoint] — docs/deploying/gunicorn.rst:90
+- http://0.0.0.0:8080 [internal_candidate / http_endpoint] — docs/tutorial/deploy.rst:102
+- http://127.0.0.1:3000/ [internal_candidate / http_endpoint] — tests/test_basic.py:1841
+- http://127.0.0.1:5000 [internal_candidate / http_endpoint] — docs/quickstart.rst:114, docs/quickstart.rst:50, examples/javascript/README.rst:38, examples/tutorial/README.rst:53
+- http://127.0.0.1:5000/ [internal_candidate / http_endpoint] — README.md:35, docs/cli.rst:101, docs/cli.rst:76, docs/config.rst:480, docs/config.rst:488
+- http://127.0.0.1:5000/auth/login [internal_candidate / http_endpoint] — docs/tutorial/static.rst:58
+- http://127.0.0.1:5000/auth/register [internal_candidate / http_endpoint] — docs/tutorial/templates.rst:174
+- http://127.0.0.1:5000/hello [internal_candidate / http_endpoint] — docs/tutorial/factory.rst:150
+- http://127.0.0.1:8000 [internal_candidate / http_endpoint] — docs/deploying/apache-httpd.rst:50, docs/deploying/gunicorn.rst:114, docs/deploying/gunicorn.rst:58, docs/deploying/nginx.rst:51
+- http://127.0.0.1:8000/ [internal_candidate / http_endpoint] — docs/cli.rst:125, docs/cli.rst:201, docs/cli.rst:209, docs/cli.rst:217, docs/cli.rst:225
+- http://127.0.0.1:8080 [internal_candidate / http_endpoint] — docs/deploying/waitress.rst:53
+- http://a.other.test [unclassified_reference / http_endpoint] — tests/test_request.py:67
+- http://abc.example.test [unclassified_reference / http_endpoint] — tests/test_basic.py:1553
+- http://api.example.test [unclassified_reference / http_endpoint] — tests/test_blueprints.py:1037
+- http://api.parent.example.test [unclassified_reference / http_endpoint] — tests/test_blueprints.py:1056
+- http://bad.test [unclassified_reference / http_endpoint] — tests/test_request.py:69
+- http://dev.local:5000 [unclassified_reference / http_endpoint] — tests/test_basic.py:1581
+- http://domain.invalid/ [informational_reference / http_endpoint] — docs/patterns/templateinheritance.rst:33
+- http://example.com/static/index.html [unclassified_reference / http_endpoint] — tests/test_basic.py:1495, tests/test_basic.py:1500
+- http://example.com/user/delete [informational_reference / http_endpoint] — docs/web-security.rst:119
+- http://example.com:1234/foo/ [unclassified_reference / http_endpoint] — tests/test_testing.py:24, tests/test_testing.py:27
+- http://example.com:8080/ [unclassified_reference / http_endpoint] — tests/test_basic.py:310
+- http://example.com:8080/foo [unclassified_reference / http_endpoint] — tests/test_basic.py:288
+- http://example.test [unclassified_reference / http_endpoint] — tests/test_basic.py:1550, tests/test_request.py:65
+- http://foo.dev.local [unclassified_reference / http_endpoint] — tests/test_basic.py:1606
+- http://foo.localhost [unclassified_reference / http_endpoint] — tests/test_basic.py:1599
+- http://foo.localhost.localdomain:5000/ [unclassified_reference / http_endpoint] — tests/test_reqctx.py:82
+- http://img.website.com [unclassified_reference / http_endpoint] — src/flask/config.py:331, src/flask/config.py:339
+- http://localhost [internal_candidate / http_endpoint] — tests/test_regression.py:26
+- http://localhost.localdomain/ [unclassified_reference / http_endpoint] — tests/test_basic.py:1796
+- http://localhost.localdomain:5000/ [unclassified_reference / http_endpoint] — tests/test_reqctx.py:76
+- http://localhost/ [internal_candidate / http_endpoint] — tests/test_helpers.py:128, tests/test_helpers.py:133, tests/test_testing.py:36, tests/test_testing.py:39
+- http://localhost/hello/test%20x [internal_candidate / http_endpoint] — tests/test_basic.py:1369
+- http://localhost/meh [internal_candidate / http_endpoint] — tests/test_reqctx.py:118
+- http://localhost/user/ [internal_candidate / http_endpoint] — tests/test_basic.py:1739
+- http://localhost:5000/ [internal_candidate / http_endpoint] — docs/server.rst:30, examples/celery/README.md:25
+- http://mitsuhiko.localhost.localdomain/ [unclassified_reference / http_endpoint] — tests/test_basic.py:1812
+- http://mitsuhiko.localhost.localdomain:3000/ [unclassified_reference / http_endpoint] — tests/test_basic.py:1825
+- http://mongoengine.org [informational_reference / http_endpoint] — docs/patterns/mongoengine.rst:12
+- http://parent.example.test [unclassified_reference / http_endpoint] — tests/test_blueprints.py:1059
+- http://test.localhost.localdomain/ [unclassified_reference / http_endpoint] — tests/test_basic.py:1799
+- http://www.example.com:8080/test/ [unclassified_reference / http_endpoint] — tests/test_basic.py:336, tests/test_basic.py:346
+- http://www.localhost.localdomain:3000/ [unclassified_reference / http_endpoint] — tests/test_basic.py:1849
+- http://xxx.example.com:1234/foo/ [unclassified_reference / http_endpoint] — tests/test_testing.py:131, tests/test_testing.py:137
+- http://xyz.other.test [unclassified_reference / http_endpoint] — tests/test_basic.py:1557
+- https://api.jquery.com/jQuery.ajax/ [informational_reference / http_endpoint] — examples/javascript/README.rst:16
+- https://asgi.readthedocs.io [informational_reference / http_endpoint] — docs/async-await.rst:83
+- https://blinker.readthedocs.io/ [informational_reference / http_endpoint] — docs/api.rst:329, docs/conf.py:39, docs/installation.rst:33
+- https://caniuse.com/ [informational_reference / http_endpoint] — docs/web-security.rst:269
+- https://celery.readthedocs.io [informational_reference / http_endpoint] — docs/patterns/celery.rst:14
+- https://celery.readthedocs.io/en/latest/getting-started/first-steps-with-celery.html [informational_reference / http_endpoint] — docs/patterns/celery.rst:15
+- https://celery.readthedocs.io/en/stable/userguide/configuration.html [informational_reference / http_endpoint] — docs/patterns/celery.rst:64
+- https://click.palletsprojects.com [informational_reference / http_endpoint] — docs/index.rst:28
+- https://click.palletsprojects.com/ [informational_reference / http_endpoint] — docs/cli.rst:11, docs/conf.py:34
+- https://cloud.google.com/appengine/docs/standard/python3/building-app [informational_reference / http_endpoint] — docs/deploying/index.rst:68
+- https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service [informational_reference / http_endpoint] — docs/deploying/index.rst:69
+- https://code.jquery.com/jquery-3.3.1.min.js [informational_reference / http_endpoint] — examples/javascript/js_example/templates/jquery.html:10
+- https://coverage.readthedocs.io/ [informational_reference / http_endpoint] — docs/tutorial/tests.rst:34
+- https://csp.withgoogle.com/docs/index.html [informational_reference / http_endpoint] — docs/web-security.rst:184
+- https://dev.local [unclassified_reference / http_endpoint] — tests/test_basic.py:1588, tests/test_basic.py:1595
+- https://dev.local:5000 [unclassified_reference / http_endpoint] — tests/test_basic.py:1584
+- https://developer.mozilla.org/ [informational_reference / http_endpoint] — docs/quickstart.rst:364
+- https://developer.mozilla.org/Web/API/Fetch_API [informational_reference / http_endpoint] — docs/patterns/javascript.rst:18
+- https://developer.mozilla.org/Web/API/XMLHttpRequest [informational_reference / http_endpoint] — docs/patterns/javascript.rst:20
+- https://developer.mozilla.org/Web/JavaScript [informational_reference / http_endpoint] — docs/patterns/javascript.rst:16
+- https://developer.mozilla.org/Web/JavaScript/Reference/Global_Objects/Promise [informational_reference / http_endpoint] — docs/patterns/javascript.rst:155
+- https://developer.mozilla.org/docs/Web/CSS [informational_reference / http_endpoint] — docs/tutorial/static.rst:70
+- https://developer.mozilla.org/docs/Web/HTML [informational_reference / http_endpoint] — docs/tutorial/templates.rst:35, docs/tutorial/views.rst:74
+- https://developer.mozilla.org/en-US/docs/Web/API/FormData [informational_reference / http_endpoint] — docs/patterns/javascript.rst:157
+- https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch [informational_reference / http_endpoint] — examples/javascript/README.rst:10, examples/javascript/js_example/templates/fetch.html:4
+- https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest [informational_reference / http_endpoint] — examples/javascript/README.rst:13, examples/javascript/js_example/templates/xhr.html:4
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies [informational_reference / http_endpoint] — docs/web-security.rst:266
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy [informational_reference / http_endpoint] — docs/web-security.rst:185
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie [informational_reference / http_endpoint] — docs/web-security.rst:267
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security [informational_reference / http_endpoint] — docs/web-security.rst:171
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options [informational_reference / http_endpoint] — docs/web-security.rst:196
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options [informational_reference / http_endpoint] — docs/web-security.rst:208
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status [informational_reference / http_endpoint] — docs/errorhandling.rst:79
+- https://devguide.python.org/versions/ [informational_reference / http_endpoint] — docs/extensiondev.rst:305
+- https://discord.gg/pallets [informational_reference / http_endpoint] — .github/ISSUE_TEMPLATE/config.yml:10, docs/conf.py:52, docs/extensiondev.rst:301
+- https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html [informational_reference / http_endpoint] — docs/deploying/index.rst:70
+- https://docs.gunicorn.org/ [informational_reference / http_endpoint] — docs/deploying/gunicorn.rst:18
+- https://docs.microsoft.com/en-us/azure/app-service/quickstart-python [informational_reference / http_endpoint] — docs/deploying/index.rst:71
+- https://docs.mongoengine.org/projects/flask-mongoengine/en/latest/ [informational_reference / http_endpoint] — docs/patterns/mongoengine.rst:13
+- https://docs.pylonsproject.org/projects/waitress/ [informational_reference / http_endpoint] — docs/deploying/waitress.rst:18
+- https://docs.pylonsproject.org/projects/waitress/en/stable/ [informational_reference / http_endpoint] — docs/tutorial/deploy.rst:109
+- https://docs.pytest.org/ [informational_reference / http_endpoint] — docs/testing.rst:14
+- https://docs.python.org/2.7/library/datetime.html [unclassified_reference / http_endpoint] — tests/test_json.py:149
+- https://docs.python.org/2/library/sys.html [unclassified_reference / http_endpoint] — src/flask/cli.py:116
+- https://docs.python.org/3/ [informational_reference / http_endpoint] — docs/conf.py:32
+- https://docs.python.org/3/tutorial/ [informational_reference / http_endpoint] — docs/tutorial/index.rst:33
+- https://docs.sentry.io/platforms/python/ [informational_reference / http_endpoint] — docs/errorhandling.rst:71
+- https://docs.sentry.io/platforms/python/guides/flask/ [informational_reference / http_endpoint] — docs/errorhandling.rst:72
+- https://docs.sqlalchemy.org/ [informational_reference / http_endpoint] — docs/conf.py:37
+- https://docs.sqlalchemy.org/en/latest/orm/extensions/declarative/ [informational_reference / http_endpoint] — docs/patterns/sqlalchemy.rst:109
+- https://en.wikipedia.org/wiki/Cross-site_scripting [informational_reference / http_endpoint] — docs/web-security.rst:52
+- https://en.wikipedia.org/wiki/Favicon [informational_reference / http_endpoint] — docs/patterns/favicon.rst:55
+- https://en.wikipedia.org/wiki/SQL_injection [informational_reference / http_endpoint] — docs/patterns/sqlite3.rst:127
+- https://eventlet.readthedocs.io [informational_reference / http_endpoint] — docs/deploying/eventlet.rst:8
+- https://example.com/ [unclassified_reference / http_endpoint] — tests/test_testing.py:102
+- https://example.com/hello [unclassified_reference / http_endpoint] — src/flask/app.py:1168
+- https://example.com/myapp/ [informational_reference / http_endpoint] — docs/patterns/javascript.rst:83
+- https://flask-caching.readthedocs.io/en/latest/ [informational_reference / http_endpoint] — docs/patterns/caching.rst:16
+- https://flask-sqlalchemy.palletsprojects.com/ [informational_reference / http_endpoint] — docs/patterns/appfactories.rst:61, docs/patterns/sqlalchemy.rst:23
+- https://flask-wtf.readthedocs.io/ [informational_reference / http_endpoint] — docs/patterns/wtforms.rst:22
+- https://flask.palletsprojects.com/blueprints/ [unclassified_reference / http_endpoint] — src/flask/debughelpers.py:177, tests/test_templating.py:508
+- https://flask.palletsprojects.com/patterns/celery/ [informational_reference / http_endpoint] — examples/celery/README.md:6
+- https://flask.palletsprojects.com/patterns/javascript/ [informational_reference / http_endpoint] — examples/javascript/README.rst:18
+- https://flask.palletsprojects.com/tutorial/ [informational_reference / http_endpoint] — examples/tutorial/README.rst:6
+- https://git-scm.com/ [informational_reference / http_endpoint] — docs/tutorial/layout.rst:52
+- https://github.com/astral-sh/ruff-pre-commit [unclassified_reference / http_endpoint] — .pre-commit-config.yaml:2
+- https://github.com/astral-sh/uv-pre-commit [unclassified_reference / http_endpoint] — .pre-commit-config.yaml:7
+- https://github.com/codespell-project/codespell [unclassified_reference / http_endpoint] — .pre-commit-config.yaml:11
+- https://github.com/django/asgiref [informational_reference / http_endpoint] — docs/deploying/asgi.rst:6
+- https://github.com/getsentry/sentry [informational_reference / http_endpoint] — docs/errorhandling.rst:38
+- https://github.com/pallets-eco [informational_reference / http_endpoint] — docs/extensiondev.rst:304
+- https://github.com/pallets/flask [informational_reference / http_endpoint] — examples/tutorial/README.rst:17
+- https://github.com/pallets/flask/ [informational_reference / http_endpoint] — docs/conf.py:50
+- https://github.com/pallets/flask/discussions [informational_reference / http_endpoint] — docs/extensiondev.rst:302
+- https://github.com/pallets/flask/discussions/ [unclassified_reference / http_endpoint] — .github/ISSUE_TEMPLATE/config.yml:7
+- https://github.com/pallets/flask/issues/ [informational_reference / http_endpoint] — docs/conf.py:51
+- https://github.com/pallets/flask/issues/%s [informational_reference / http_endpoint] — docs/conf.py:27
+- https://github.com/pallets/flask/issues/248 [informational_reference / http_endpoint] — docs/web-security.rst:149
+- https://github.com/pallets/flask/issues/4095 [unclassified_reference / http_endpoint] — src/flask/typing.py:76
+- https://github.com/pallets/flask/issues/4295 [unclassified_reference / http_endpoint] — src/flask/typing.py:77
+- https://github.com/pallets/flask/issues/4297 [unclassified_reference / http_endpoint] — src/flask/typing.py:78
+- https://github.com/pallets/flask/pull/%s [informational_reference / http_endpoint] — docs/conf.py:28
+- https://github.com/pallets/flask/security/advisories/GHSA-%s [informational_reference / http_endpoint] — docs/conf.py:29
+- https://github.com/pallets/flask/security/advisories/new [unclassified_reference / http_endpoint] — .github/ISSUE_TEMPLATE/config.yml:4
+- https://github.com/pallets/flask/tree/ [informational_reference / http_endpoint] — docs/conf.py:75
+- https://github.com/pallets/flask/tree/main/examples/celery [informational_reference / http_endpoint] — docs/patterns/celery.rst:17, docs/patterns/celery.rst:216
+- https://github.com/pgjones/hypercorn [informational_reference / http_endpoint] — docs/deploying/asgi.rst:23
+- https://github.com/pre-commit/pre-commit-hooks [unclassified_reference / http_endpoint] — .pre-commit-config.yaml:17
+- https://github.com/theskumar/python-dotenv [informational_reference / http_endpoint] — docs/cli.rst:182, docs/installation.rst:47, src/flask/cli.py:708
+- https://github.com/wntrblm/flask-talisman [informational_reference / http_endpoint] — docs/web-security.rst:161
+- https://greenlet.readthedocs.io [informational_reference / http_endpoint] — docs/gevent.rst:9
+- https://greenlet.readthedocs.io/en/latest/ [informational_reference / http_endpoint] — docs/deploying/gevent.rst:18
+- https://gunicorn.org/ [informational_reference / http_endpoint] — docs/deploying/gunicorn.rst:17
+- https://help.pythonanywhere.com/pages/Flask/ [informational_reference / http_endpoint] — docs/deploying/index.rst:67
+- https://httpd.apache.org/ [informational_reference / http_endpoint] — docs/deploying/apache-httpd.rst:16, docs/deploying/mod_wsgi.rst:20
+- https://itsdangerous.palletsprojects.com/ [informational_reference / http_endpoint] — docs/conf.py:36
+- https://jinja.palletsprojects.com [informational_reference / http_endpoint] — docs/index.rst:27
+- https://jinja.palletsprojects.com/ [informational_reference / http_endpoint] — README.md:18, docs/conf.py:35
+- https://jinja.palletsprojects.com/templates/ [informational_reference / http_endpoint] — docs/quickstart.rst:397, docs/templating.rst:12, docs/tutorial/blog.rst:128, docs/tutorial/templates.rst:34
+- https://jquery.com/ [informational_reference / http_endpoint] — docs/patterns/fileuploads.rst:182, docs/patterns/javascript.rst:21, examples/javascript/js_example/templates/jquery.html:4
+- https://libuv.org/ [informational_reference / http_endpoint] — docs/gevent.rst:112
+- https://localhost [internal_candidate / http_endpoint] — tests/test_helpers.py:165, tests/test_helpers.py:166
+- https://localhost/ [internal_candidate / http_endpoint] — tests/test_appctx.py:18, tests/test_helpers.py:109, tests/test_helpers.py:117, tests/test_helpers.py:131, tests/test_testing.py:95
+- https://modwsgi.readthedocs.io/ [informational_reference / http_endpoint] — docs/deploying/mod_wsgi.rst:19
+- https://nginx.org/ [informational_reference / http_endpoint] — docs/deploying/nginx.rst:16
+- https://packaging.python.org/tutorials/packaging-projects/ [informational_reference / http_endpoint] — docs/cli.rst:456, docs/cli.rst:518, docs/tutorial/install.rst:50
+- https://palletsprojects.com/contributing/ [informational_reference / http_endpoint] — README.md:53, docs/contributing.rst:8
+- https://palletsprojects.com/donate [informational_reference / http_endpoint] — README.md:45, docs/conf.py:48
+- https://palletsprojects.com/p/click/ [informational_reference / http_endpoint] — docs/installation.rst:32, docs/tutorial/next.rst:36
+- https://palletsprojects.com/p/itsdangerous/ [informational_reference / http_endpoint] — docs/installation.rst:31, docs/tutorial/next.rst:38
+- https://palletsprojects.com/p/jinja/ [informational_reference / http_endpoint] — docs/installation.rst:29, docs/quickstart.rst:356, docs/tutorial/next.rst:35
+- https://palletsprojects.com/p/markupsafe/ [informational_reference / http_endpoint] — docs/installation.rst:30
+- https://palletsprojects.com/p/werkzeug/ [informational_reference / http_endpoint] — docs/installation.rst:28, docs/tutorial/next.rst:37
+- https://pypi.org/project/Flask-SQLAlchemy/ [informational_reference / http_endpoint] — docs/patterns/sqlalchemy.rst:21
+- https://pypi.org/project/Flask-WTF/ [informational_reference / http_endpoint] — docs/patterns/wtforms.rst:20
+- https://pypi.org/project/Flask/ [informational_reference / http_endpoint] — docs/conf.py:49
+- https://pypi.org/project/Flask/${{ [unclassified_reference / http_endpoint] — .github/workflows/publish.yaml:51
+- https://pypi.org/project/Pallets-Sphinx-Themes/ [informational_reference / http_endpoint] — docs/extensiondev.rst:303
+- https://pypi.org/project/blinker/ [informational_reference / http_endpoint] — docs/signals.rst:166
+- https://pypi.org/project/mod-wsgi/ [informational_reference / http_endpoint] — docs/deploying/mod_wsgi.rst:18
+- https://pypi.org/search/ [informational_reference / http_endpoint] — docs/extensiondev.rst:300, docs/extensions.rst:48
+- https://pytest.readthedocs.io/ [informational_reference / http_endpoint] — docs/tutorial/tests.rst:33
+- https://pythonhosted.org/watchdog/ [informational_reference / http_endpoint] — docs/installation.rst:48
+- https://quart.palletsprojects.com [informational_reference / http_endpoint] — docs/async-await.rst:82, docs/gevent.rst:19
+- https://raw.githubusercontent.com/pallets/flask/refs/heads/stable/docs/_static/flask-name.svg [unclassified_reference / http_endpoint] — README.md:1
+- https://security.stackexchange.com/q/39118 [informational_reference / http_endpoint] — docs/web-security.rst:298
+- https://sentry.io/ [informational_reference / http_endpoint] — docs/errorhandling.rst:36
+- https://sentry.io/signup/ [informational_reference / http_endpoint] — docs/errorhandling.rst:39
+- https://sqlite.org/about.html [informational_reference / http_endpoint] — docs/tutorial/database.rst:20
+- https://sqlite.org/lang.html [informational_reference / http_endpoint] — docs/tutorial/database.rst:21
+- https://unpkg.com/normalize.css@8.0.1/normalize.css [informational_reference / http_endpoint] — examples/javascript/js_example/templates/base.html:3
+- https://unpkg.com/sakura.css@1.3.1/css/sakura.css [informational_reference / http_endpoint] — examples/javascript/js_example/templates/base.html:4
+- https://uvloop.readthedocs.io/ [informational_reference / http_endpoint] — docs/gevent.rst:114
+- https://uwsgi-docs.readthedocs.io/en/latest/ [informational_reference / http_endpoint] — docs/deploying/uwsgi.rst:16
+- https://uwsgi-docs.readthedocs.io/en/latest/Apache.html [informational_reference / http_endpoint] — docs/deploying/uwsgi.rst:105
+- https://uwsgi-docs.readthedocs.io/en/latest/Nginx.html [informational_reference / http_endpoint] — docs/deploying/uwsgi.rst:104
+- https://werkzeug.palletsprojects.com [informational_reference / http_endpoint] — docs/index.rst:26
+- https://werkzeug.palletsprojects.com/ [informational_reference / http_endpoint] — README.md:17, docs/conf.py:33
+- https://werkzeug.palletsprojects.com/debug/ [informational_reference / http_endpoint] — docs/debugging.rst:57
+- https://wsgi.readthedocs.io/ [unclassified_reference / http_endpoint] — README.md:16
+- https://wtforms.readthedocs.io/ [informational_reference / http_endpoint] — docs/conf.py:38, docs/patterns/wtforms.rst:125, docs/patterns/wtforms.rst:126
+- https://www.dynaconf.com/ [informational_reference / http_endpoint] — docs/config.rst:631
+- https://www.fabfile.org/ [informational_reference / http_endpoint] — docs/config.rst:755
+- https://www.gevent.org [informational_reference / http_endpoint] — docs/gevent.rst:8
+- https://www.gevent.org/ [informational_reference / http_endpoint] — docs/deploying/gevent.rst:17, docs/deploying/gunicorn.rst:105, docs/deploying/uwsgi.rst:128
+- https://www.gevent.org/api/gevent.html [informational_reference / http_endpoint] — docs/gevent.rst:42
+- https://www.gevent.org/loop_impls.html [informational_reference / http_endpoint] — docs/gevent.rst:113
+- https://www.ietf.org/rfc/rfc2068.txt [informational_reference / http_endpoint] — docs/quickstart.rst:333
+- https://www.python.org/dev/peps/pep-0519/ [unclassified_reference / http_endpoint] — tests/test_helpers.py:15
+- https://www.sqlalchemy.org/ [informational_reference / http_endpoint] — docs/patterns/sqlalchemy.rst:108, docs/patterns/sqlalchemy.rst:213
+- mysql://localhost/foo [internal_candidate / relational_database] — docs/config.rst:690
+- mysql://{self.db_server}/foo [internal_or_managed_candidate / relational_database] — docs/config.rst:726
+- redis://localhost [internal_candidate / cache_or_key_value_store] — docs/patterns/celery.rst:111, docs/patterns/celery.rst:112, docs/patterns/celery.rst:77, docs/patterns/celery.rst:78, examples/celery/src/task_app/__init__.py:11
+
+CONFIGURATION PARAMETERS
+- BAR — tests/test_cli.py:547
+- CONTENT_LENGTH — docs/patterns/methodoverrides.rst:34
+- EGGS — tests/test_cli.py:551
+- FLASK_DEBUG — src/flask/cli.py:481, src/flask/helpers.py:32
+- FLASK_RUN_FROM_CLI — src/flask/app.py:706, src/flask/cli.py:667
+- FLASK_SKIP_DOTENV — src/flask/helpers.py:43
+- FOO — tests/test_cli.py:545
+- HAM — tests/test_cli.py:553
+- HTTP_HOST — docs/patterns/appdispatch.rst:106
+- HTTP_X_HTTP_METHOD_OVERRIDE — docs/patterns/methodoverrides.rst:30
+- PATH_INFO — docs/patterns/appdispatch.rst:171
+- PYTHONSTARTUP — src/flask/cli.py:1019
+- REQUEST_METHOD — docs/patterns/methodoverrides.rst:32
+- SCRIPT_NAME — tests/test_basic.py:299
+- SPAM — tests/test_cli.py:549
+- YOURAPPLICATION_SETTINGS — src/flask/config.py:107
+- werkzeug.debug.preserve_context — src/flask/app.py:1668
+- werkzeug.request — tests/test_appctx.py:186
+- wsgi.errors — docs/logging.rst:65, src/flask/logging.py:26
+
+CONTAINER / ENVIRONMENT DETAILS
+- Python [runtime_requirement]
+  versions/tags: >=3.11, Python
+  found at: pyproject.toml
+
+Review notes:
+- URL matches can include documentation and examples; inspect the cited lines.
+
+Taxonomy version: 1.0
+Use --format json for the full inventory, evidence, parameters and locations.

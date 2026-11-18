@@ -1,0 +1,1562 @@
+Dependocover report: https://github.com/git/git
+Languages: Python, JavaScript, C
+Files scanned: 4847
+Findings: 7812
+Repository ID: git/git
+Version/revision: e1ec09b
+Categories: configuration_parameter=114, external_service=314, package=7, python_import=23, source_import=511
+
+DEDUPLICATED ENVIRONMENT INVENTORY
+
+LIBRARIES
+- abspath.h [c/c++] — version not declared
+  found at: abspath.c:2, apply.c:14, archive.c:5, builtin/am.c:10, builtin/bugreport.c:3, builtin/bundle.c:3, builtin/clean.c:13, builtin/clone.c:16
+- accctrl.h [c/c++] — version not declared
+  found at: compat/simple-ipc/ipc-win32.c:10
+- aclapi.h [c/c++] — version not declared
+  found at: compat/mingw.c:20, compat/simple-ipc/ipc-win32.c:11
+- add-interactive.h [c/c++] — version not declared
+  found at: add-interactive.c:4, builtin/add.c:26, builtin/checkout.c:47, builtin/commit.c:22, builtin/reset.c:40, builtin/stash.c:33, commit.h:5
+- add-patch.h [c/c++] — version not declared
+  found at: add-interactive.h:4, add-patch.c:5
+- advice.h [c/c++] — version not declared
+  found at: add-patch.c:6, advice.c:2, branch.c:4, builtin/add.c:8, builtin/am.c:11, builtin/branch.c:30, builtin/checkout.c:5, builtin/clone.c:17
+- afunix.h [c/c++] — version not declared
+  found at: compat/posix.h:95
+- alias.h [c/c++] — version not declared
+  found at: alias.c:4, builtin/cat-file.c:31, builtin/help.c:18, builtin/merge.c:49, connect.c:23, git.c:13, gpg-interface.c:16, help.c:23
+- alloc.h [c/c++] — version not declared
+  found at: alloc.c:18, blame.c:22, blob.c:3, commit-graph.c:21, commit.c:17, compat/mingw.c:6, merge-ort.c:23, object.c:15
+- alloca.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:459, contrib/buildsystems/CMakeLists.txt:340, git-compat-util.h:745
+- apply.h [c/c++] — version not declared
+  found at: apply.c:37, builtin/add.c:28, builtin/am.c:39, builtin/apply.c:5, range-diff.c:21
+- archive.h [c/c++] — version not declared
+  found at: archive-tar.c:13, archive-zip.c:9, archive.c:22, builtin/archive.c:6, builtin/upload-archive.c:6, diagnose.c:4
+- arpa/inet.h [c/c++] — version not declared
+  found at: compat/posix.h:160
+- attr.h [c/c++] — version not declared
+  found at: archive.c:21, attr.c:16, builtin/check-attr.c:4, builtin/pack-objects.c:9, builtin/var.c:11, common-init.c:7, convert.c:12, environment.c:16
+- AvailabilityMacros.h [c/c++] — version not declared
+  found at: git-compat-util.h:188
+- banned.h [c/c++] — version not declared
+  found at: git-compat-util.h:1085
+- base85.h [c/c++] — version not declared
+  found at: apply.c:15, base85.c:2, diff.c:10, t/helper/test-base85.c:2
+- basics.h [c/c++] — version not declared
+  found at: reftable/basics.c:10, reftable/block.h:12, reftable/blocksource.c:11, reftable/fsck.c:1, reftable/pq.c:14, reftable/record.c:16, reftable/record.h:12, reftable/system.c:4
+- Begin.h [c/c++] — version not declared
+  found at: t/t4051/includes.c:1
+- bisect.h [c/c++] — version not declared
+  found at: bisect.c:17, builtin/bisect.c:11, builtin/rev-list.c:22, builtin/rev-parse.c:13, revision.c:33
+- bits/libc-lock.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:49
+- blame.h [c/c++] — version not declared
+  found at: blame.c:21, builtin/blame.c:33
+- blob.h [c/c++] — version not declared
+  found at: alloc.c:13, blob.c:2, builtin/fast-export.c:32, builtin/fast-import.c:12, builtin/fsck.c:7, builtin/hash-object.c:16, builtin/index-pack.c:12, builtin/merge-tree.c:16
+- block-sha1/sha1.h [c/c++] — version not declared
+  found at: hash.h:19, hash.h:49
+- block.h [c/c++] — version not declared
+  found at: reftable/block.c:9, reftable/iter.c:13, reftable/iter.h:13, reftable/table.c:12, reftable/table.h:12, reftable/writer.c:13, reftable/writer.h:13
+- blocksource.h [c/c++] — version not declared
+  found at: reftable/block.c:11, reftable/blocksource.c:12, reftable/iter.c:14, reftable/table.c:13
+- bloom.h [c/c++] — version not declared
+  found at: blame.c:24, bloom.c:4, builtin/last-modified.c:2, commit-graph.c:25, line-log.c:19, revision.c:47, t/helper/test-bloom.c:4, t/helper/test-read-graph.c:11
+- branch.h [c/c++] — version not declared
+  found at: branch.c:6, builtin/am.c:29, builtin/branch.c:21, builtin/checkout.c:6, builtin/clone.c:38, builtin/fetch.c:38, builtin/log.c:39, builtin/merge.c:50
+- bsd/stdlib.h [c/c++] — version not declared
+  found at: compat/posix.h:170
+- builtin.h [c/c++] — version not declared
+  found at: builtin/add.c:7, builtin/am.c:9, builtin/annotate.c:8, builtin/apply.c:2, builtin/archive.c:5, builtin/backfill.c:4, builtin/bisect.c:4, builtin/blame.c:10
+- bundle-uri.h [c/c++] — version not declared
+  found at: builtin/clone.c:49, builtin/fetch.c:44, bundle-uri.c:4, connect.c:24, serve.c:11, t/helper/test-bundle-uri.c:3, transport.c:32
+- bundle.h [c/c++] — version not declared
+  found at: builtin/bundle.c:9, builtin/clone.c:48, bundle-uri.c:5, bundle.c:5, transport.c:16
+- cache-tree.h [c/c++] — version not declared
+  found at: blame.c:7, builtin/am.c:24, builtin/checkout-index.c:16, builtin/checkout.c:7, builtin/commit.c:15, builtin/fsck.c:10, builtin/history.c:5, builtin/merge.c:36
+- cache.h [c/c++] — version not declared
+  found at: t/t4256/1/mailinfo.c:1
+- cbtree.h [c/c++] — version not declared
+  found at: cbtree.c:8, oidtree.h:4
+- chdir-notify.h [c/c++] — version not declared
+  found at: chdir-notify.c:3, environment.c:36, odb/source-files.c:4, odb/source-loose.c:3, odb/source-packed.c:3, setup.c:20, tmp-objdir.c:4
+- checkout.h [c/c++] — version not declared
+  found at: builtin/checkout.c:8, builtin/worktree.c:7, checkout.c:8
+- chunk-format.h [c/c++] — version not declared
+  found at: chunk-format.c:5, commit-graph.c:31, midx-write.c:13, midx.c:12, pack-write.c:8
+- clar-decls.h [c/c++] — version not declared
+  found at: t/unit-tests/lib-reftable.h:3, t/unit-tests/unit-test.h:6
+- clar.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:105, t/unit-tests/clar/example/example.c:1, t/unit-tests/clar/example/main.c:8, t/unit-tests/clar/test/selftest.h:1, t/unit-tests/clar/test/suites/combined.c:3, t/unit-tests/clar/test/suites/main.c:8, t/unit-tests/clar/test/suites/pointer.c:1
+- clar.suite [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:228
+- clar/clar.h [c/c++] — version not declared
+  found at: t/unit-tests/lib-reftable.h:2, t/unit-tests/unit-test.h:2
+- clar/fixtures.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:1052
+- clar/fs.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:1053
+- clar/print.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:1054
+- clar/sandbox.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:1051
+- clar/summary.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:1055
+- color.h [c/c++] — version not declared
+  found at: add-interactive.c:5, add-patch.c:23, add-patch.h:4, advice.c:4, builtin/blame.c:12, builtin/branch.c:12, builtin/clean.c:25, builtin/commit.c:16
+- column.h [c/c++] — version not declared
+  found at: builtin/branch.c:25, builtin/clean.c:24, builtin/column.c:8, builtin/commit.c:37, builtin/tag.c:30, column.c:5, help.c:16, wt-status.c:26
+- command-list.h [c/c++] — version not declared
+  found at: help.c:14
+- commit-graph.h [c/c++] — version not declared
+  found at: blame.c:25, bloom.c:8, builtin/commit-graph.c:8, builtin/commit.c:43, builtin/fetch.c:40, builtin/gc.c:30, builtin/last-modified.c:4, builtin/merge.c:53
+- commit-reach.h [c/c++] — version not declared
+  found at: bisect.c:21, builtin/branch.c:31, builtin/commit.c:42, builtin/fast-import.c:29, builtin/fetch.c:37, builtin/history.c:7, builtin/log.c:47, builtin/merge-base.c:10
+- commit-slab-decl.h [c/c++] — version not declared
+  found at: commit-slab.h:4, revision.h:11
+- commit-slab-impl.h [c/c++] — version not declared
+  found at: commit-slab.h:5
+- commit-slab.h [c/c++] — version not declared
+  found at: bisect.c:20, blame.c:23, bloom.c:10, builtin/describe.c:24, builtin/last-modified.c:5, builtin/log.c:43, builtin/name-rev.c:16, builtin/show-branch.c:18
+- commit.h [c/c++] — version not declared
+  found at: add-patch.c:7, alloc.c:15, archive.c:18, bisect.c:6, blame.c:9, bloom.c:9, branch.c:17, builtin/am.c:26
+- common-init.h [c/c++] — version not declared
+  found at: common-init.c:4, common-main.c:2
+- CommonCrypto/CommonDigest.h [c/c++] — version not declared
+  found at: hash.h:24, hash.h:6
+- CommonCrypto/CommonHMAC.h [c/c++] — version not declared
+  found at: compat/apple-common-crypto.h:5
+- compat/apple-common-crypto.h [c/c++] — version not declared
+  found at: git-compat-util.h:434
+- compat/bswap.h [c/c++] — version not declared
+  found at: git-compat-util.h:412
+- compat/compiler.h [c/c++] — version not declared
+  found at: builtin/bugreport.c:10
+- compat/disk.h [c/c++] — version not declared
+  found at: diagnose.c:3
+- compat/fsmonitor/fsm-health.h [c/c++] — version not declared
+  found at: builtin/fsmonitor--daemon.c:14
+- compat/fsmonitor/fsm-listen.h [c/c++] — version not declared
+  found at: builtin/fsmonitor--daemon.c:15
+- compat/mingw.h [c/c++] — version not declared
+  found at: git-compat-util.h:160
+- compat/msvc.h [c/c++] — version not declared
+  found at: git-compat-util.h:163
+- compat/nonblock.h [c/c++] — version not declared
+  found at: run-command.c:19
+- compat/obstack.h [c/c++] — version not declared
+  found at: kwset.c:40
+- compat/posix.h [c/c++] — version not declared
+  found at: git-compat-util.h:26, reftable/reftable-system.h:12
+- compat/precompose_utf8.h [c/c++] — version not declared
+  found at: git-compat-util.h:168
+- compat/sha1-chunked.h [c/c++] — version not declared
+  found at: hash.h:140
+- compat/terminal.h [c/c++] — version not declared
+  found at: add-patch.c:24, compat/terminal.c:2, prompt.c:10
+- compat/win32/path-utils.h [c/c++] — version not declared
+  found at: git-compat-util.h:155, git-compat-util.h:159, git-compat-util.h:162
+- compat/zlib-compat.h [c/c++] — version not declared
+  found at: git-zlib.h:4, reftable/reftable-system.h:13
+- config-list.h [c/c++] — version not declared
+  found at: builtin/help.c:16
+- config.h [c/c++] — version not declared
+  found at: add-patch.c:8, advice.c:3, alias.c:5, apply.c:16, archive-tar.c:8, archive-zip.c:8, archive.c:6, attr.c:13
+- conio.h [c/c++] — version not declared
+  found at: compat/mingw.c:21, compat/msvc.c:3, compat/poll/poll.c:50
+- connect.h [c/c++] — version not declared
+  found at: builtin/fetch-pack.c:11, builtin/receive-pack.c:9, builtin/send-pack.c:8, connect.c:13, fetch-object-info.c:6, fetch-pack.c:21, remote-curl.c:11, remote.c:27
+- connected.h [c/c++] — version not declared
+  found at: builtin/clone.c:42, builtin/fetch.c:30, builtin/receive-pack.c:10, bundle.c:20, connected.c:9, fetch-pack.c:30
+- constants.h [c/c++] — version not declared
+  found at: reftable/block.c:12, reftable/iter.c:15, reftable/merged.c:11, reftable/record.c:14, reftable/stack.c:12, reftable/table.c:14, reftable/writer.c:14
+- contrib/libgit-sys/public_symbol_export.h [c/c++] — version not declared
+  found at: contrib/libgit-sys/public_symbol_export.c:9
+- convert.h [c/c++] — version not declared
+  found at: archive.c:7, blame.c:10, builtin/cat-file.c:12, builtin/ls-files.c:13, combine-diff.c:7, config.c:17, convert.c:7, diff.c:12
+- copy.h [c/c++] — version not declared
+  found at: builtin/bisect.c:5, builtin/clone.c:19, builtin/difftool.c:19, builtin/worktree.c:9, bundle-uri.c:6, convert.c:8, copy.c:2, pkt-line.c:2
+- copyfile.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar/fs.h:315
+- CoreFoundation/CoreFoundation.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-listen-darwin.c:5
+- CoreServices/CoreServices.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-listen-darwin.c:6
+- credential.h [c/c++] — version not declared
+  found at: builtin/credential-cache--daemon.c:12, builtin/credential-cache.c:2, builtin/credential-store.c:6, builtin/credential.c:4, credential.c:6, http.c:14, imap-send.c:30, oss-fuzz/fuzz-credential-from-url-gently.c:7
+- crtdbg.h [c/c++] — version not declared
+  found at: compat/mingw.c:3736, git-compat-util.h:23
+- csum-file.h [c/c++] — version not declared
+  found at: builtin/fast-import.c:20, builtin/index-pack.c:11, builtin/pack-objects.c:16, chunk-format.c:6, commit-graph.c:6, csum-file.c:12, pack-revindex.c:11, pack-write.c:6
+- CURL [cmake] — find_package(CURL)
+  found at: contrib/buildsystems/CMakeLists.txt:142
+- curl/curl.h [c/c++] — version not declared
+  found at: git-curl-compat.h:3, http.h:9
+- curl/easy.h [c/c++] — version not declared
+  found at: http.h:10
+- date.h [c/c++] — version not declared
+  found at: apply.c:17, archive-zip.c:20, builtin/config.c:7, builtin/fast-import.c:31, builtin/gc.c:18, builtin/remote.c:6, builtin/show-branch.c:19, builtin/tag.c:32
+- decorate.h [c/c++] — version not declared
+  found at: builtin/fast-export.c:26, builtin/unpack-objects.c:21, commit-reach.c:6, decorate.c:8, line-log.c:11, revision.c:26, revision.h:12, t/unit-tests/u-example-decorate.c:5
+- default.h [c/c++] — version not declared
+  found at: negotiator/default.c:4
+- delta-islands.h [c/c++] — version not declared
+  found at: builtin/pack-objects.c:27, delta-islands.c:18
+- delta.h [c/c++] — version not declared
+  found at: apply.c:19, builtin/fast-import.c:15, builtin/index-pack.c:6, builtin/pack-objects.c:13, builtin/unpack-objects.c:15, diff-delta.c:17, diff.c:20, packfile.c:12
+- diagnose.h [c/c++] — version not declared
+  found at: builtin/bugreport.c:13, builtin/diagnose.c:8, diagnose.c:2
+- diff-merges.h [c/c++] — version not declared
+  found at: builtin/diff-files.c:13, builtin/diff-index.c:7, builtin/diff.c:19, builtin/log.c:25, builtin/merge.c:28, diff-merges.c:2, fmt-merge-msg.c:11, revision.c:18
+- diff.h [c/c++] — version not declared
+  found at: add-patch.c:9, apply.c:20, bisect.c:7, blame.c:11, bloom.c:5, builtin/add.c:22, builtin/am.c:27, builtin/blame.c:17
+- diffcore.h [c/c++] — version not declared
+  found at: add-interactive.c:6, blame.c:12, bloom.c:6, builtin/diff-pairs.c:4, builtin/diff.c:20, builtin/fast-export.c:23, builtin/last-modified.c:9, builtin/log.c:24
+- dir-iterator.h [c/c++] — version not declared
+  found at: builtin/clone.c:35, dir-iterator.c:4, t/helper/test-dir-iterator.c:5
+- dir.h [c/c++] — version not declared
+  found at: add-interactive.c:17, apply.c:21, attr.c:17, bisect.c:25, builtin/add.c:13, builtin/am.c:18, builtin/backfill.c:10, builtin/check-ignore.c:4
+- direct.h [c/c++] — version not declared
+  found at: compat/msvc-posix.h:4, t/unit-tests/clar/clar.c:49
+- dirent.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-path-utils-darwin.c:6, compat/posix.h:120, compat/precompose_utf8.h:6, t/t4051/includes.c:12, t/unit-tests/clar/clar/fs.h:304, t/unit-tests/u-reftable-stack.c:20
+- dispatch/dispatch.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-listen-darwin.c:2
+- editor.h [c/c++] — version not declared
+  found at: add-patch.c:10, builtin/add.c:12, builtin/am.c:13, builtin/branch.c:13, builtin/bugreport.c:4, builtin/commit.c:18, builtin/config.c:8, builtin/history.c:9
+- End.h [c/c++] — version not declared
+  found at: t/t4051/includes.c:20
+- entry.h [c/c++] — version not declared
+  found at: apply.c:38, builtin/checkout--worker.c:6, builtin/checkout-index.c:18, builtin/checkout.c:45, builtin/difftool.c:35, builtin/mv.c:30, builtin/stash.c:21, entry.c:16
+- environment.h [c/c++] — version not declared
+  found at: add-patch.c:11, advice.c:5, apply.c:22, archive.c:8, attr.c:14, bisect.c:8, branch.c:7, builtin/add.c:10
+- ewah/ewok.h [c/c++] — version not declared
+  found at: builtin/diff.c:12, builtin/last-modified.c:11, commit-reach.c:13, dir.c:28, fsmonitor.c:8, pack-bitmap.h:4, pseudo-merge.h:7, sparse-index.c:6
+- ewok.h [c/c++] — version not declared
+  found at: ewah/bitmap.c:20, ewah/ewah_bitmap.c:21, ewah/ewah_io.c:23, ewah/ewah_rlw.c:23, ewah/ewok_rlw.h:22
+- ewok_rlw.h [c/c++] — version not declared
+  found at: ewah/ewah_bitmap.c:22, ewah/ewah_rlw.c:24
+- exec-cmd.h [c/c++] — version not declared
+  found at: attr.c:15, builtin/gc.c:40, builtin/help.c:10, builtin/notes.c:24, builtin/receive-pack.c:12, builtin/upload-pack.c:4, common-init.c:5, config.c:23
+- EXPAT [cmake] — find_package(EXPAT)
+  found at: contrib/buildsystems/CMakeLists.txt:143
+- expat.h [c/c++] — version not declared
+  found at: http-push.c:29
+- fcntl.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-path-utils-darwin.c:8, compat/posix.h:104, contrib/credential/wincred/git-credential-wincred.c:8, t/t4051/includes.c:5, t/unit-tests/clar/clar/fs.h:305, t/unit-tests/clar/test/selftest.c:149
+- fetch-negotiator.h [c/c++] — version not declared
+  found at: fetch-negotiator.c:2, fetch-pack.c:31
+- fetch-object-info.h [c/c++] — version not declared
+  found at: builtin/cat-file.c:34, fetch-object-info.c:9, transport.c:12
+- fetch-pack.h [c/c++] — version not declared
+  found at: builtin/fetch-pack.c:9, bundle-uri.c:13, fetch-pack.c:18, transport.c:11
+- floss.h(floss_execl,floss_execlp,floss_execv,floss_execvp) [c/c++] — version not declared
+  found at: git-compat-util.h:358
+- floss.h(floss_getpwuid) [c/c++] — version not declared
+  found at: git-compat-util.h:359
+- fmt-merge-msg.h [c/c++] — version not declared
+  found at: builtin/fmt-merge-msg.c:3, builtin/merge.c:45, environment.c:30, fmt-merge-msg.c:17
+- for-each-ref.h [c/c++] — version not declared
+  found at: builtin/for-each-ref.c:5, builtin/refs.c:9
+- fsck.h [c/c++] — version not declared
+  found at: builtin/fsck.c:11, builtin/index-pack.c:17, builtin/mktag.c:10, builtin/receive-pack.c:13, builtin/refs.c:3, builtin/unpack-objects.c:22, fetch-pack.c:32, fsck.c:16
+- fsm-darwin-gcc.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-listen-darwin.c:3
+- fsm-health.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-health-darwin.c:4, compat/fsmonitor/fsm-health-linux.c:4, compat/fsmonitor/fsm-health-win32.c:4
+- fsm-listen.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-listen-darwin.c:28, compat/fsmonitor/fsm-listen-linux.c:4, compat/fsmonitor/fsm-listen-win32.c:4
+- fsmonitor--daemon.h [c/c++] — version not declared
+  found at: builtin/fsmonitor--daemon.c:16, compat/fsmonitor/fsm-health-darwin.c:5, compat/fsmonitor/fsm-health-linux.c:5, compat/fsmonitor/fsm-health-win32.c:5, compat/fsmonitor/fsm-listen-darwin.c:29, compat/fsmonitor/fsm-listen-linux.c:5, compat/fsmonitor/fsm-listen-win32.c:5
+- fsmonitor-ipc.h [c/c++] — version not declared
+  found at: builtin/fsmonitor--daemon.c:12, compat/fsmonitor/fsm-ipc-unix.c:11, compat/fsmonitor/fsm-ipc-win32.c:3, compat/fsmonitor/fsm-settings-unix.c:4, fsmonitor-ipc.c:6, fsmonitor-settings.c:5, fsmonitor.c:10, help.c:21
+- fsmonitor-ll.h [c/c++] — version not declared
+  found at: builtin/fsmonitor--daemon.c:11, compat/fsmonitor/fsm-health-darwin.c:3, compat/fsmonitor/fsm-health-linux.c:3, compat/fsmonitor/fsm-health-win32.c:3, compat/fsmonitor/fsm-ipc-unix.c:10, compat/fsmonitor/fsm-listen-darwin.c:27, compat/fsmonitor/fsm-listen-linux.c:3, compat/fsmonitor/fsm-listen-win32.c:3
+- fsmonitor-path-utils.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-ipc-unix.c:12, compat/fsmonitor/fsm-listen-darwin.c:30, compat/fsmonitor/fsm-listen-linux.c:6, compat/fsmonitor/fsm-path-utils-darwin.c:3, compat/fsmonitor/fsm-path-utils-linux.c:3, compat/fsmonitor/fsm-path-utils-win32.c:3, compat/fsmonitor/fsm-settings-unix.c:6, compat/fsmonitor/fsm-settings-win32.c:6
+- fsmonitor-settings.h [c/c++] — version not declared
+  found at: builtin/fsmonitor--daemon.c:13, compat/fsmonitor/fsm-settings-unix.c:5, compat/fsmonitor/fsm-settings-win32.c:5, fsmonitor-settings.c:6, fsmonitor.h:6, scalar.c:15, wt-status.c:37
+- fsmonitor.h [c/c++] — version not declared
+  found at: builtin/update-index.c:33, diff-lib.c:26, entry.c:15, fsmonitor.c:9, preload-index.c:11, read-cache.c:44, unpack-trees.c:27
+- gcrypt.h [c/c++] — version not declared
+  found at: sha256/gcrypt.h:4
+- gettext.h [c/c++] — version not declared
+  found at: add-interactive.c:7, add-patch.c:12, advice.c:6, alias.c:6, apply.c:23, archive-tar.c:9, archive-zip.c:10, archive.c:9
+- git-compat-util.h [c/c++] — version not declared
+  found at: abspath.c:1, add-interactive.c:3, add-patch.c:4, advice.c:1, alias.c:3, alloc.c:11, apply.c:13, archive-tar.c:7
+- git-curl-compat.h [c/c++] — version not declared
+  found at: help.c:27, http.c:5, imap-send.c:38, remote-curl.c:5
+- git-zlib.h [c/c++] — version not declared
+  found at: archive-tar.c:10, archive-zip.c:11, archive.c:10, builtin/unpack-objects.c:8, config.c:20, csum-file.c:13, environment.c:22, git-zlib.c:6
+- glib.h [c/c++] — version not declared
+  found at: contrib/credential/libsecret/git-credential-libsecret.c:29
+- gnu-versions.h [c/c++] — version not declared
+  found at: compat/obstack.c:40
+- gnu/libc-version.h [c/c++] — version not declared
+  found at: compat/compiler.h:7
+- gpg-interface.h [c/c++] — version not declared
+  found at: builtin/fast-export.c:33, builtin/fast-import.c:32, builtin/receive-pack.c:15, builtin/tag.c:28, builtin/verify-commit.c:15, builtin/verify-tag.c:15, commit.c:18, fmt-merge-msg.c:19
+- graph.h [c/c++] — version not declared
+  found at: builtin/rev-list.c:21, diff.c:35, graph.c:8, log-tree.c:18, revision.c:22
+- grep.h [c/c++] — version not declared
+  found at: builtin/grep.c:21, grep.c:6, revision.c:23, revision.h:5, t/helper/test-pcre2-config.c:2
+- grp.h [c/c++] — version not declared
+  found at: compat/posix.h:187
+- hash-lookup.h [c/c++] — version not declared
+  found at: builtin/name-rev.c:15, commit-graph.c:15, commit.c:22, hash-lookup.c:5, midx-write.c:8, midx.c:8, oid-array.c:5, pack-bitmap-write.c:14
+- hash.h [c/c++] — version not declared
+  found at: add-interactive.c:8, apply.h:4, builtin/apply.c:4, builtin/diff-pairs.c:6, builtin/merge-recursive.c:5, builtin/patch-id.c:8, builtin/repo.c:6, builtin/reset.c:18
+- hashmap.h [c/c++] — version not declared
+  found at: bloom.c:7, builtin/describe.c:18, builtin/last-modified.c:12, bundle-uri.c:10, bundle-uri.h:4, commit-graph.c:22, compat/terminal.c:8, config.c:26
+- help.h [c/c++] — version not declared
+  found at: advice.c:7, builtin/branch.c:29, builtin/bugreport.c:9, builtin/clean.c:27, builtin/commit.c:41, builtin/help.c:17, builtin/merge-tree.c:7, builtin/merge.c:40
+- hex-ll.h [c/c++] — version not declared
+  found at: color.c:8, hex-ll.c:2, hex.h:5, mailinfo.c:7, strbuf.c:5, url.c:2, urlmatch.c:5
+- hex.h [c/c++] — version not declared
+  found at: add-interactive.c:9, add-patch.c:13, apply.c:24, archive-tar.c:11, archive-zip.c:12, archive.c:11, bisect.c:10, blame.c:14
+- hook-list.h [c/c++] — version not declared
+  found at: builtin/bugreport.c:12, hook.c:8
+- hook.h [c/c++] — version not declared
+  found at: builtin/am.c:20, builtin/bugreport.c:11, builtin/checkout.c:16, builtin/clone.c:47, builtin/gc.c:42, builtin/hook.c:6, builtin/merge.c:26, builtin/rebase.c:38
+- http.h [c/c++] — version not declared
+  found at: http-fetch.c:8, http-push.c:10, http-walker.c:8, http.c:8, imap-send.c:39, remote-curl.c:14
+- Iconv [cmake] — find_package(Iconv)
+  found at: contrib/buildsystems/CMakeLists.txt:144
+- iconv.h [c/c++] — version not declared
+  found at: compat/posix.h:242, compat/precompose_utf8.h:7, contrib/buildsystems/CMakeLists.txt:560, contrib/buildsystems/CMakeLists.txt:578
+- ident.h [c/c++] — version not declared
+  found at: builtin/cat-file.c:17, builtin/check-mailmap.c:6, builtin/config.c:11, builtin/remote.c:8, builtin/var.c:15, environment.c:23, gpg-interface.c:11, ident.c:9
+- Intl [cmake] — find_package(Intl)
+  found at: contrib/buildsystems/CMakeLists.txt:148
+- inttypes.h [c/c++] — version not declared
+  found at: compat/mingw-posix.h:428, compat/obstack.c:52, compat/posix.h:165, t/unit-tests/clar/clar.c:21, t/unit-tests/clar/clar.h:10
+- io.h [c/c++] — version not declared
+  found at: compat/msvc-posix.h:7, compat/poll/poll.c:48, contrib/credential/wincred/git-credential-wincred.c:7, t/unit-tests/clar/clar.c:48
+- iter.h [c/c++] — version not declared
+  found at: reftable/block.c:13, reftable/iter.c:9, reftable/merged.c:12, reftable/table.c:15
+- iterator.h [c/c++] — version not declared
+  found at: builtin/clone.c:36, dir-iterator.c:3, refs.c:14, refs/iterator.c:11, refs/refs-internal.h:5, t/helper/test-dir-iterator.c:4
+- json-writer.h [c/c++] — version not declared
+  found at: commit-graph.c:28, json-writer.c:4, revision.c:48, t/helper/test-json-writer.c:2, trace2/tr2_tgt_event.c:5, trace2/tr2_tgt_perf.c:9, tree-walk.c:13, upload-pack.c:34
+- khash.h [c/c++] — version not declared
+  found at: builtin/fast-import.c:30, delta-islands.c:15, loose.h:4, oidset.h:4, pack-bitmap.h:5, pseudo-merge.h:6, tree-verify.c:5
+- kwset.h [c/c++] — version not declared
+  found at: diffcore-pickaxe.c:12, kwset.c:39
+- langinfo.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:29, gettext.c:37
+- lazyload.h [c/c++] — version not declared
+  found at: compat/win32/flush.c:3, compat/win32/trace2_win32_process_info.c:8, t/helper/test-drop-caches.c:7
+- levenshtein.h [c/c++] — version not declared
+  found at: help.c:10, levenshtein.c:2
+- lib-oid.h [c/c++] — version not declared
+  found at: t/unit-tests/lib-oid.c:2, t/unit-tests/u-oid-array.c:4, t/unit-tests/u-oidmap.c:2, t/unit-tests/u-oidtree.c:2
+- lib-reftable.h [c/c++] — version not declared
+  found at: t/unit-tests/lib-reftable.c:2, t/unit-tests/u-reftable-basics.c:10, t/unit-tests/u-reftable-block.c:10, t/unit-tests/u-reftable-merged.c:10, t/unit-tests/u-reftable-pq.c:10, t/unit-tests/u-reftable-readwrite.c:12, t/unit-tests/u-reftable-record.c:10, t/unit-tests/u-reftable-stack.c:13
+- libcharset.h [c/c++] — version not declared
+  found at: gettext.c:35
+- libgen.h [c/c++] — version not declared
+  found at: compat/posix.h:233
+- libintl.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:88, gettext.c:15, gettext.h:17
+- libio/iolibio.h [c/c++] — version not declared
+  found at: compat/obstack.c:391
+- libsecret/secret.h [c/c++] — version not declared
+  found at: contrib/credential/libsecret/git-credential-libsecret.c:30
+- line-log.h [c/c++] — version not declared
+  found at: builtin/blame.c:27, builtin/log.c:38, line-log.c:16, log-tree.c:29, revision.c:28, t/helper/test-revision-walking.c:16
+- line-range.h [c/c++] — version not declared
+  found at: builtin/blame.c:26, line-log.c:5, line-range.c:2
+- linear-assignment.h [c/c++] — version not declared
+  found at: linear-assignment.c:7, range-diff.c:14
+- linux/magic.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-path-utils-linux.c:10
+- list-objects-filter-options.h [c/c++] — version not declared
+  found at: builtin/cat-file.c:18, builtin/clone.c:46, builtin/fetch.c:36, builtin/pack-objects.c:21, builtin/repack.c:18, builtin/rev-list.c:13, builtin/submodule--helper.c:36, bundle.c:19
+- list-objects-filter.h [c/c++] — version not declared
+  found at: list-objects-filter.c:10, list-objects.c:14, repack-filtered.c:9
+- list-objects.h [c/c++] — version not declared
+  found at: bisect.c:13, builtin/describe.c:23, builtin/pack-objects.c:20, builtin/rev-list.c:12, bundle.c:15, http-push.c:14, list-objects.c:13, midx-write.c:17
+- list.h [c/c++] — version not declared
+  found at: builtin/pack-objects.c:32, chdir-notify.c:4, http-walker.c:9, packfile.c:7, packfile.h:4, tempfile.h:4, trailer.c:12, trailer.h:4
+- locale.h [c/c++] — version not declared
+  found at: compat/posix.h:115, compat/regex/regex_internal.h:32
+- locale/coll-lookup.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:82
+- locale/elem-hash.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:81
+- locale/localeinfo.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:80
+- locale/weight.h [c/c++] — version not declared
+  found at: compat/regex/regcomp.c:3461, compat/regex/regex_internal.h:788, compat/regex/regexec.c:3864
+- lockfile.h [c/c++] — version not declared
+  found at: add-interactive.c:16, apply.c:27, apply.h:5, builtin/add.c:11, builtin/am.c:23, builtin/checkout-index.c:14, builtin/checkout.c:19, builtin/clone.c:23
+- log-tree.h [c/c++] — version not declared
+  found at: bisect.c:16, builtin/am.c:35, builtin/diff-tree.c:9, builtin/diff.c:24, builtin/fast-export.c:24, builtin/log.c:27, builtin/rev-list.c:20, builtin/stash.c:29
+- loose.h [c/c++] — version not declared
+  found at: loose.c:11, object-file-convert.c:10, object-file.c:20, odb.c:11, odb/source-loose.c:6, repository.c:15, tmp-objdir.c:7
+- ls-refs.h [c/c++] — version not declared
+  found at: ls-refs.c:11, serve.c:7
+- mach-o/dyld.h [c/c++] — version not declared
+  found at: exec-cmd.c:15
+- mailinfo.h [c/c++] — version not declared
+  found at: builtin/am.c:38, builtin/mailinfo.c:11, mailinfo.c:10, t/t4256/1/mailinfo.c:5
+- mailmap.h [c/c++] — version not declared
+  found at: builtin/blame.c:21, builtin/cat-file.c:29, builtin/check-mailmap.c:7, builtin/commit.c:40, builtin/log.c:41, builtin/shortlog.c:12, environment.c:25, ident.c:13
+- malloc.h [c/c++] — version not declared
+  found at: compat/msvc-posix.h:6, compat/poll/poll.c:32, compat/regex/regex_internal.h:456, compat/win32/alloca.h:1
+- match-trees.h [c/c++] — version not declared
+  found at: match-trees.c:5, merge-ort.c:39, t/helper/test-match-trees.c:5
+- mbsupport.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:110
+- mem-pool.h [c/c++] — version not declared
+  found at: builtin/checkout.c:20, builtin/fast-import.c:28, builtin/name-rev.c:19, diff.c:30, diffcore-rename.c:11, mem-pool.c:8, merge-ort.c:40, oidtree.h:6
+- memory.h [c/c++] — version not declared
+  found at: sha1dc/sha1.c:10
+- merge-blobs.h [c/c++] — version not declared
+  found at: builtin/merge-tree.c:17, merge-blobs.c:6
+- merge-ll.h [c/c++] — version not declared
+  found at: apply.c:26, builtin/add.c:27, builtin/checkout.c:17, convert.c:21, diff.c:31, merge-blobs.c:4, merge-ll.c:16, merge-ort.c:37
+- merge-ort-wrappers.h [c/c++] — version not declared
+  found at: builtin/am.c:34, builtin/merge-recursive.c:6, builtin/merge.c:42, builtin/stash.c:17, merge-ort-wrappers.c:7, sequencer.c:32
+- merge-ort.h [c/c++] — version not declared
+  found at: builtin/history.c:14, builtin/merge-tree.c:12, log-tree.c:20, merge-ort-wrappers.c:6, merge-ort-wrappers.h:4, merge-ort.c:21, replay.c:6, sequencer.c:31
+- merge.h [c/c++] — version not declared
+  found at: builtin/checkout.c:18, builtin/merge.c:41, builtin/pull.c:17, merge-ort.c:38, merge.c:8, sequencer.c:30
+- merged.h [c/c++] — version not declared
+  found at: reftable/merged.c:9, reftable/stack.c:13
+- mergesort.h [c/c++] — version not declared
+  found at: blame.c:8, commit.c:19, fetch-pack.c:37, odb/source-packed.c:10, t/helper/test-mergesort.c:5
+- midx.h [c/c++] — version not declared
+  found at: builtin/multi-pack-index.c:8, builtin/pack-objects.c:40, builtin/repack.c:12, midx-write.c:9, midx.c:9, object-name.c:25, odb.c:12, odb/source-packed.c:11
+- mingw-posix.h [c/c++] — version not declared
+  found at: compat/mingw.h:1, compat/msvc-posix.h:30, compat/posix.h:141
+- mingw.c [c/c++] — version not declared
+  found at: compat/msvc.c:6
+- mingw.h [c/c++] — version not declared
+  found at: compat/msvc.h:5
+- msvc-posix.h [c/c++] — version not declared
+  found at: compat/msvc.h:4, compat/posix.h:143
+- name-hash.h [c/c++] — version not declared
+  found at: apply.c:28, builtin/mv.c:16, dir.c:19, entry.c:10, fsmonitor.c:11, name-hash.c:15, read-cache.c:30, sparse-index.c:8
+- negotiator/default.h [c/c++] — version not declared
+  found at: fetch-negotiator.c:3
+- negotiator/noop.h [c/c++] — version not declared
+  found at: fetch-negotiator.c:5
+- negotiator/skipping.h [c/c++] — version not declared
+  found at: fetch-negotiator.c:4
+- netdb.h [c/c++] — version not declared
+  found at: compat/hstrerror.c:3, compat/posix.h:161
+- netinet/in.h [c/c++] — version not declared
+  found at: compat/posix.h:158
+- netinet/tcp.h [c/c++] — version not declared
+  found at: compat/posix.h:159
+- nettle/sha2.h [c/c++] — version not declared
+  found at: sha256/nettle.h:4
+- nonblock.h [c/c++] — version not declared
+  found at: compat/nonblock.c:2
+- noop.h [c/c++] — version not declared
+  found at: negotiator/noop.c:2
+- notes-cache.h [c/c++] — version not declared
+  found at: notes-cache.c:4, userdiff.h:4
+- notes-merge.h [c/c++] — version not declared
+  found at: builtin/notes.c:28, notes-merge.c:21
+- notes-utils.h [c/c++] — version not declared
+  found at: builtin/am.c:36, builtin/notes.c:29, notes-merge.c:24, notes-merge.h:4, notes-utils.c:9, sequencer.c:41
+- notes.h [c/c++] — version not declared
+  found at: builtin/name-rev.c:22, builtin/notes.c:16, commit.c:16, notes-cache.h:4, notes-merge.c:20, notes-utils.h:4, notes.c:8, pretty.c:18
+- ntsecapi.h [c/c++] — version not declared
+  found at: wrapper.c:17
+- ntstatus.h [c/c++] — version not declared
+  found at: compat/winansi.c:521
+- object-file-convert.h [c/c++] — version not declared
+  found at: builtin/pack-objects.c:35, builtin/rev-parse.c:36, builtin/tag.c:34, commit.c:33, object-file-convert.c:13, object-file.c:21, object-name.c:28, odb.c:13
+- object-file.h [c/c++] — version not declared
+  found at: apply.c:30, builtin/add.c:16, builtin/cat-file.c:23, builtin/checkout.c:21, builtin/clone.c:27, builtin/count-objects.c:16, builtin/difftool.c:32, builtin/fast-export.c:17
+- object-name.h [c/c++] — version not declared
+  found at: add-patch.c:14, apply.c:29, archive.c:12, attr.c:29, bisect.c:22, branch.c:10, builtin/am.c:30, builtin/bisect.c:9
+- object.h [c/c++] — version not declared
+  found at: alloc.c:12, blob.h:4, builtin/backfill.c:15, builtin/diff-pairs.c:8, builtin/fast-export.c:20, builtin/fast-import.c:11, builtin/for-each-ref.c:7, builtin/last-modified.c:15
+- obstack.h [c/c++] — version not declared
+  found at: compat/obstack.c:22
+- odb.h [c/c++] — version not declared
+  found at: apply.c:18, archive-tar.c:14, archive-zip.c:14, archive.c:17, attr.c:25, bisect.c:23, blame.c:6, builtin/add.c:17
+- odb/source-files.h [c/c++] — version not declared
+  found at: builtin/commit-graph.c:11, builtin/multi-pack-index.c:13, builtin/submodule--helper.c:33, commit-graph.c:18, loose.c:6, odb.c:17, odb/source-files.c:12, odb/source-loose.c:10
+- odb/source-inmemory.h [c/c++] — version not declared
+  found at: odb.c:18, odb/source-inmemory.c:5, t/unit-tests/u-odb-inmemory.c:4
+- odb/source-loose.h [c/c++] — version not declared
+  found at: object-file.h:7, odb/source-files.c:13, odb/source-loose.c:11, tmp-objdir.c:17
+- odb/source-packed.h [c/c++] — version not declared
+  found at: odb/source-packed.c:12, packfile.h:8, t/helper/test-read-midx.c:8
+- odb/source.h [c/c++] — version not declared
+  found at: builtin/commit-graph.c:10, builtin/fetch.c:18, builtin/grep.c:30, builtin/multi-pack-index.c:12, builtin/submodule--helper.c:32, odb/source-files.c:11, odb/source-files.h:4, odb/source-inmemory.h:4
+- odb/streaming.h [c/c++] — version not declared
+  found at: archive-tar.c:15, archive-zip.c:15, builtin/cat-file.c:26, builtin/fsck.c:17, builtin/index-pack.c:24, builtin/log.c:19, builtin/pack-objects.c:37, builtin/unpack-objects.c:12
+- odb/transaction.h [c/c++] — version not declared
+  found at: builtin/add.c:18, builtin/unpack-objects.c:13, builtin/update-index.c:22, cache-tree.c:12, object-file.c:25, object-file.h:8, odb/source.h:7, odb/transaction.c:4
+- oid-array.h [c/c++] — version not declared
+  found at: bisect.c:18, builtin/backfill.c:17, builtin/bisect.c:15, builtin/cat-file.c:21, builtin/diff.c:26, builtin/fetch-pack.c:12, builtin/fetch.c:20, builtin/grep.c:31
+- oidmap.h [c/c++] — version not declared
+  found at: builtin/history.c:15, builtin/rev-list.c:26, list-objects-filter.c:12, odb.h:8, oidmap.c:3, replace-object.c:4, replace-object.h:4, sequencer.c:44
+- oidset.h [c/c++] — version not declared
+  found at: blame.h:4, builtin/backfill.c:18, builtin/describe.c:27, builtin/fetch.c:19, builtin/grep.c:32, builtin/index-pack.c:26, builtin/log.c:29, builtin/receive-pack.c:23
+- oidtree.h [c/c++] — version not declared
+  found at: loose.c:13, odb/source-inmemory.c:7, odb/source-loose.c:13, oidtree.c:6, t/unit-tests/u-oidtree.c:3
+- openssl/err.h [c/c++] — version not declared
+  found at: git-compat-util.h:194
+- openssl/evp.h [c/c++] — version not declared
+  found at: git-compat-util.h:436, sha1/openssl.h:4, sha256/openssl.h:4
+- openssl/hmac.h [c/c++] — version not declared
+  found at: git-compat-util.h:437
+- openssl/rand.h [c/c++] — version not declared
+  found at: git-compat-util.h:443
+- openssl/sha.h [c/c++] — version not declared
+  found at: hash.h:31, hash.h:65, hash.h:9
+- openssl/ssl.h [c/c++] — version not declared
+  found at: compat/mingw.h:9, git-compat-util.h:193
+- openssl/x509v3.h [c/c++] — version not declared
+  found at: git-compat-util.h:439
+- pack-bitmap.h [c/c++] — version not declared
+  found at: builtin/pack-objects.c:26, builtin/rev-list.c:18, delta-islands.c:16, midx-write.c:14, midx.c:13, odb/source-packed.c:17, pack-bitmap-write.c:13, pack-bitmap.c:14
+- pack-mtimes.h [c/c++] — version not declared
+  found at: builtin/pack-objects.c:44, pack-mtimes.c:3, pack-write.c:10, packfile.c:27, reachable.c:19, t/helper/test-pack-mtimes.c:8
+- pack-objects.h [c/c++] — version not declared
+  found at: builtin/pack-objects.c:22, delta-islands.c:17, odb/source-files.c:14, pack-bitmap-write.c:15, pack-bitmap.c:16, pack-bitmap.h:7, pack-objects.c:4, pack-write.c:11
+- pack-refs.h [c/c++] — version not declared
+  found at: builtin/pack-refs.c:3, builtin/refs.c:4, pack-refs.c:4
+- pack-revindex.h [c/c++] — version not declared
+  found at: builtin/index-pack.c:21, builtin/pack-objects.c:15, midx-write.c:19, midx.c:14, odb/source-packed.c:15, pack-bitmap-write.c:29, pack-bitmap.c:15, pack-revindex.c:3
+- pack.h [c/c++] — version not declared
+  found at: builtin/fast-import.c:16, builtin/index-pack.c:10, builtin/pack-objects.c:14, builtin/receive-pack.c:24, builtin/show-index.c:8, builtin/unpack-objects.c:16, delta-islands.c:10, fetch-pack.c:16
+- packed-backend.h [c/c++] — version not declared
+  found at: refs/files-backend.c:16, refs/packed-backend.c:12
+- packfile-list.h [c/c++] — version not declared
+  found at: odb/source-packed.h:5, packfile-list.c:3, packfile.h:10
+- packfile.h [c/c++] — version not declared
+  found at: builtin/backfill.c:25, builtin/cat-file.c:22, builtin/clone.c:43, builtin/count-objects.c:15, builtin/fast-import.c:24, builtin/fsck.c:14, builtin/gc.c:31, builtin/index-pack.c:20
+- pager.h [c/c++] — version not declared
+  found at: add-patch.c:15, builtin/am.c:41, builtin/blame.c:31, builtin/fetch.c:33, builtin/grep.c:33, builtin/help.c:12, builtin/log.c:20, builtin/name-rev.c:13
+- parallel-checkout.h [c/c++] — version not declared
+  found at: builtin/checkout--worker.c:9, builtin/checkout-index.c:19, builtin/checkout.c:46, entry.c:17, parallel-checkout.c:10, unpack-trees.c:31
+- parse-options.h [c/c++] — version not declared
+  found at: apply.c:31, archive.c:23, builtin/add.c:19, builtin/am.c:17, builtin/archive.c:9, builtin/backfill.c:7, builtin/bisect.c:10, builtin/blame.c:22
+- parse.h [c/c++] — version not declared
+  found at: builtin/range-diff.c:9, builtin/rev-list.c:32, commit.c:31, common-init.c:9, config.c:16, config.h:7, connected.c:6, hook.c:9
+- patch-ids.h [c/c++] — version not declared
+  found at: builtin/log.c:32, patch-ids.c:6, revision.c:25
+- path-walk.h [c/c++] — version not declared
+  found at: builtin/backfill.c:26, builtin/pack-objects.c:49, builtin/repo.c:11, path-walk.c:5, t/helper/test-path-walk.c:15
+- path.h [c/c++] — version not declared
+  found at: apply.c:32, archive.c:13, attr.c:19, bisect.c:24, blame.c:15, branch.c:11, builtin/add.c:20, builtin/am.c:42
+- paths.h [c/c++] — version not declared
+  found at: git-compat-util.h:206
+- pathspec.h [c/c++] — version not declared
+  found at: add-patch.c:22, archive.h:4, builtin/add.c:15, builtin/check-ignore.c:8, builtin/clean.c:26, builtin/grep.c:24, builtin/ls-files.c:24, builtin/ls-tree.c:19
+- pcre2.h [c/c++] — version not declared
+  found at: grep.h:6
+- PkgConfig [cmake] — find_package(PkgConfig)
+  found at: contrib/buildsystems/CMakeLists.txt:151
+- pkt-line.h [c/c++] — version not declared
+  found at: builtin/archive.c:10, builtin/bundle.c:8, builtin/checkout--worker.c:11, builtin/clone.c:45, builtin/fetch-pack.c:8, builtin/fetch.c:35, builtin/ls-remote.c:6, builtin/pack-objects.c:46
+- poll.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:61, compat/posix.h:129, compat/posix.h:134
+- pq.h [c/c++] — version not declared
+  found at: reftable/merged.c:13, reftable/pq.c:9
+- precompose_utf8.h [c/c++] — version not declared
+  found at: compat/precompose_utf8.c:16
+- preload-index.h [c/c++] — version not declared
+  found at: add-interactive.c:10, builtin/add.c:21, builtin/am.c:31, builtin/checkout.c:26, builtin/commit.c:31, builtin/diff-files.c:15, builtin/diff-index.c:9, builtin/diff.c:21
+- pretty.h [c/c++] — version not declared
+  found at: archive.c:14, builtin/am.c:43, builtin/commit.c:44, builtin/name-rev.c:20, builtin/notes.c:22, builtin/reset.c:22, builtin/show-branch.c:10, diffcore-pickaxe.c:14
+- prio-queue.h [c/c++] — version not declared
+  found at: blame.h:6, builtin/blame.c:23, builtin/describe.c:26, builtin/last-modified.c:17, builtin/show-branch.c:21, commit-reach.c:8, commit.c:21, fetch-pack.c:38
+- process.h [c/c++] — version not declared
+  found at: compat/msvc-posix.h:5
+- progress.h [c/c++] — version not declared
+  found at: builtin/backfill.c:24, builtin/blame.c:28, builtin/commit-graph.c:12, builtin/fsck.c:13, builtin/index-pack.c:16, builtin/log.c:42, builtin/pack-objects.c:23, builtin/prune.c:14
+- promisor-remote.h [c/c++] — version not declared
+  found at: builtin/backfill.c:19, builtin/cat-file.c:28, builtin/fetch.c:39, builtin/grep.c:35, builtin/index-pack.c:30, builtin/log.c:48, builtin/pack-objects.c:43, builtin/repack.c:15
+- prompt.h [c/c++] — version not declared
+  found at: add-interactive.c:19, add-patch.c:25, builtin/bisect.c:17, builtin/clean.c:28, credential.c:11, help.c:20, prompt.c:9
+- protocol-caps.h [c/c++] — version not declared
+  found at: protocol-caps.c:2, serve.c:8
+- protocol.h [c/c++] — version not declared
+  found at: builtin/fetch-pack.c:13, builtin/receive-pack.c:27, builtin/send-pack.c:14, builtin/upload-pack.c:8, connect.c:22, connect.h:4, daemon.c:10, fetch-object-info.h:6
+- prune-packed.h [c/c++] — version not declared
+  found at: builtin/prune-packed.c:4, builtin/prune.c:15, builtin/repack.c:14, prune-packed.c:6
+- psapi.h [c/c++] — version not declared
+  found at: compat/win32/trace2_win32_process_info.c:9
+- pseudo-merge.h [c/c++] — version not declared
+  found at: pack-bitmap-write.c:22, pack-bitmap.c:24, pseudo-merge.c:5, t/helper/test-bitmap.c:8
+- pthread.h [c/c++] — version not declared
+  found at: compat/win32/pthread.c:11, thread-utils.h:5
+- pwd.h [c/c++] — version not declared
+  found at: compat/posix.h:162
+- Python [cmake] — find_package(Python COMPONENTS Interpreter REQUIRED)
+  found at: t/unit-tests/clar/example/CMakeLists.txt:1, t/unit-tests/clar/test/CMakeLists.txt:1
+- quote.h [c/c++] — version not declared
+  found at: apply.c:33, archive.c:25, attr.c:21, bisect.c:14, builtin/am.c:21, builtin/bisect.c:18, builtin/blame.c:19, builtin/check-attr.c:8
+- range-diff.h [c/c++] — version not declared
+  found at: builtin/log.c:49, builtin/range-diff.c:7, log-tree.c:31, range-diff.c:7
+- reachable.h [c/c++] — version not declared
+  found at: builtin/pack-objects.c:28, builtin/prune.c:11, builtin/reflog.c:9, reachable.c:11
+- read-cache-ll.h [c/c++] — version not declared
+  found at: add-interactive.c:11, add-patch.c:16, attr.c:22, builtin/checkout--worker.c:12, builtin/checkout-index.c:20, builtin/clean.c:20, builtin/describe.c:15, builtin/diff-tree.c:10
+- read-cache.h [c/c++] — version not declared
+  found at: apply.c:34, blame.c:16, builtin/add.c:23, builtin/checkout.c:27, builtin/commit.c:32, builtin/history.c:18, builtin/ls-files.c:25, builtin/rm.c:20
+- rebase-interactive.h [c/c++] — version not declared
+  found at: builtin/rebase.c:35, rebase-interactive.c:9, sequencer.c:49
+- rebase.h [c/c++] — version not declared
+  found at: builtin/pull.c:26, builtin/remote.c:16, rebase.c:2
+- record.h [c/c++] — version not declared
+  found at: reftable/block.c:14, reftable/block.h:13, reftable/iter.h:14, reftable/merged.c:14, reftable/pq.h:12, reftable/record.c:11, reftable/table.c:16, reftable/table.h:13
+- ref-cache.h [c/c++] — version not declared
+  found at: refs/files-backend.c:15, refs/ref-cache.c:6
+- ref-filter.h [c/c++] — version not declared
+  found at: builtin/branch.c:27, builtin/for-each-ref.c:9, builtin/history.c:20, builtin/ls-remote.c:7, builtin/repo.c:14, builtin/tag.c:31, builtin/verify-tag.c:16, commit-reach.c:9
+- reflog-walk.h [c/c++] — version not declared
+  found at: builtin/log.c:31, builtin/rev-list.c:24, builtin/stash.c:32, log-tree.c:21, pretty.c:20, reflog-walk.c:10, revision.c:24
+- reflog.h [c/c++] — version not declared
+  found at: builtin/gc.c:35, builtin/reflog.c:12, builtin/stash.c:31, reflog.c:10
+- refs-internal.h [c/c++] — version not declared
+  found at: refs/debug.c:3, refs/files-backend.c:14, refs/packed-backend.c:11, refs/ref-cache.c:5, refs/reftable-backend.c:29
+- refs.h [c/c++] — version not declared
+  found at: add-interactive.c:14, archive.c:16, attr.c:23, bisect.c:12, blame.c:5, branch.c:12, builtin/am.c:25, builtin/bisect.c:12
+- refs/refs-internal.h [c/c++] — version not declared
+  found at: builtin/refs.c:10, builtin/show-ref.c:7, refs.c:16, refs/iterator.c:10
+- refspec.h [c/c++] — version not declared
+  found at: branch.c:13, builtin/clone.c:26, builtin/fast-export.c:16, builtin/fetch.c:15, builtin/merge.c:30, builtin/pull.c:28, builtin/push.c:15, builtin/remote.c:18
+- reftable-basics.h [c/c++] — version not declared
+  found at: reftable/basics.c:11, reftable/basics.h:17, reftable/merged.h:13, reftable/reftable-block.h:13, reftable/reftable-record.h:13
+- reftable-block.h [c/c++] — version not declared
+  found at: reftable/block.h:14, reftable/reftable-table.h:14
+- reftable-blocksource.h [c/c++] — version not declared
+  found at: reftable/block.h:15, reftable/blocksource.c:13, reftable/reftable-block.h:14, reftable/reftable-table.h:15
+- reftable-constants.h [c/c++] — version not declared
+  found at: reftable/constants.h:12
+- reftable-error.h [c/c++] — version not declared
+  found at: reftable/basics.c:12, reftable/block.c:15, reftable/blocksource.c:14, reftable/error.c:10, reftable/iter.c:16, reftable/merged.c:16, reftable/pq.c:11, reftable/record.c:15
+- reftable-fsck.h [c/c++] — version not declared
+  found at: reftable/fsck.c:2
+- reftable-iterator.h [c/c++] — version not declared
+  found at: reftable/iter.h:16, reftable/reftable-block.h:15, reftable/reftable-merged.h:13, reftable/reftable-table.h:13, reftable/table.h:14
+- reftable-merged.h [c/c++] — version not declared
+  found at: reftable/merged.c:15, reftable/stack.c:16
+- reftable-record.h [c/c++] — version not declared
+  found at: reftable/pq.c:12, reftable/record.h:17, reftable/reftable-iterator.h:13, reftable/reftable-writer.h:13, reftable/stack.c:15
+- reftable-stack.h [c/c++] — version not declared
+  found at: reftable/reftable-fsck.h:5, reftable/stack.h:13
+- reftable-system.h [c/c++] — version not declared
+  found at: reftable/reftable-basics.h:12, reftable/reftable-block.h:12, reftable/reftable-blocksource.h:12, reftable/reftable-error.h:12, reftable/reftable-fsck.h:4, reftable/reftable-iterator.h:12, reftable/reftable-merged.h:12, reftable/reftable-record.h:12
+- reftable-table.h [c/c++] — version not declared
+  found at: reftable/fsck.c:3, reftable/table.h:15
+- reftable-writer.h [c/c++] — version not declared
+  found at: reftable/reftable-stack.h:13, reftable/writer.h:15
+- reftable/basics.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:2, t/unit-tests/u-reftable-basics.c:11, t/unit-tests/u-reftable-readwrite.c:13, t/unit-tests/u-reftable-record.c:11, t/unit-tests/u-reftable-table.c:3
+- reftable/block.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-block.c:11, t/unit-tests/u-reftable-table.c:4
+- reftable/blocksource.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:3, t/unit-tests/u-reftable-block.c:12, t/unit-tests/u-reftable-merged.c:11, t/unit-tests/u-reftable-readwrite.c:14, t/unit-tests/u-reftable-table.c:5
+- reftable/constants.h [c/c++] — version not declared
+  found at: t/unit-tests/lib-reftable.c:5, t/unit-tests/u-reftable-block.c:13, t/unit-tests/u-reftable-merged.c:12, t/unit-tests/u-reftable-pq.c:11, t/unit-tests/u-reftable-record.c:12, t/unit-tests/u-reftable-table.c:6
+- reftable/iter.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-table.c:7
+- reftable/merged.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-merged.c:13, t/unit-tests/u-reftable-stack.c:14
+- reftable/pq.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-pq.c:12
+- reftable/record.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-record.c:13
+- reftable/reftable-blocksource.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:4
+- reftable/reftable-constants.h [c/c++] — version not declared
+  found at: t/helper/test-reftable.c:5
+- reftable/reftable-error.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:5, t/helper/test-reftable.c:6, t/unit-tests/u-reftable-basics.c:12, t/unit-tests/u-reftable-block.c:14, t/unit-tests/u-reftable-merged.c:15, t/unit-tests/u-reftable-readwrite.c:15, t/unit-tests/u-reftable-record.c:14, t/unit-tests/u-reftable-stack.c:15
+- reftable/reftable-iterator.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:6
+- reftable/reftable-merged.h [c/c++] — version not declared
+  found at: t/helper/test-reftable.c:7, t/unit-tests/u-reftable-merged.c:16
+- reftable/reftable-record.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:7
+- reftable/reftable-stack.h [c/c++] — version not declared
+  found at: t/helper/test-reftable.c:8
+- reftable/reftable-table.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:8, t/helper/test-reftable.c:9
+- reftable/reftable-writer.h [c/c++] — version not declared
+  found at: oss-fuzz/fuzz-reftable.c:9, t/unit-tests/lib-reftable.h:5, t/unit-tests/u-reftable-merged.c:17, t/unit-tests/u-reftable-readwrite.c:16
+- reftable/stack.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-stack.c:16
+- reftable/system.h [c/c++] — version not declared
+  found at: t/helper/test-reftable.c:4
+- reftable/table.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-merged.c:14, t/unit-tests/u-reftable-readwrite.c:17, t/unit-tests/u-reftable-stack.c:17, t/unit-tests/u-reftable-table.c:9
+- reftable/tree.h [c/c++] — version not declared
+  found at: t/unit-tests/u-reftable-tree.c:10
+- reftable/writer.h [c/c++] — version not declared
+  found at: t/unit-tests/lib-reftable.c:6
+- regcomp.c [c/c++] — version not declared
+  found at: compat/regex/regex.c:80
+- regex.h [c/c++] — version not declared
+  found at: compat/posix.h:125, compat/regex/regex.c:71, contrib/buildsystems/CMakeLists.txt:519, t/t4051/includes.c:17
+- regex_internal.c [c/c++] — version not declared
+  found at: compat/regex/regex.c:74
+- regex_internal.h [c/c++] — version not declared
+  found at: compat/regex/regex.c:72
+- regexec.c [c/c++] — version not declared
+  found at: compat/regex/regex.c:81
+- remote.h [c/c++] — version not declared
+  found at: branch.c:14, builtin/branch.c:19, builtin/cat-file.c:32, builtin/checkout.c:29, builtin/clone.c:39, builtin/fast-export.c:31, builtin/fetch-pack.c:10, builtin/fetch.c:23
+- repack.h [c/c++] — version not declared
+  found at: builtin/repack.c:16, odb/source-files.c:19, repack-cruft.c:2, repack-filtered.c:2, repack-geometry.c:4, repack-midx.c:2, repack-promisor.c:2, repack.c:6
+- replace-object.h [c/c++] — version not declared
+  found at: builtin/cat-file.c:27, builtin/commit-graph.c:13, builtin/fsck.c:20, builtin/index-pack.c:28, builtin/mktag.c:7, builtin/multi-pack-index.c:14, builtin/pack-objects.c:38, builtin/prune.c:16
+- replay.h [c/c++] — version not declared
+  found at: builtin/history.c:21, builtin/replay.c:13, replay.c:9
+- repo-settings.h [c/c++] — version not declared
+  found at: builtin/checkout.c:30, builtin/rev-parse.c:28, environment.h:4, object-name.c:22, ref-filter.c:17, refs.c:25, refs.h:7, repo-settings.c:3
+- repository.h [c/c++] — version not declared
+  found at: add-interactive.c:12, add-patch.c:17, alloc.c:16, apply.c:35, bloom.c:14, branch.c:15, builtin.h:5, builtin/backfill.c:8
+- rerere.h [c/c++] — version not declared
+  found at: apply.c:36, builtin/am.c:37, builtin/commit.c:35, builtin/gc.c:36, builtin/merge.c:39, builtin/rebase.c:32, builtin/rerere.c:7, builtin/revert.c:10
+- reset.h [c/c++] — version not declared
+  found at: builtin/history.c:22, builtin/rebase.c:36, reset.c:8, sequencer.c:50
+- resolve-undo.h [c/c++] — version not declared
+  found at: builtin/checkout.c:31, builtin/fsck.c:21, builtin/ls-files.c:21, builtin/merge.c:43, builtin/read-tree.c:20, builtin/update-index.c:24, merge.c:13, read-cache.c:36
+- revision.h [c/c++] — version not declared
+  found at: add-interactive.c:13, attr.c:24, bisect.c:11, blame.c:17, builtin/add.c:24, builtin/am.c:33, builtin/backfill.c:22, builtin/bisect.c:19
+- run-command.h [c/c++] — version not declared
+  found at: add-interactive.c:18, add-patch.c:20, archive-tar.c:17, bisect.c:15, branch.c:20, builtin/am.c:19, builtin/bisect.c:14, builtin/clone.c:40
+- sddl.h [c/c++] — version not declared
+  found at: compat/mingw.c:22
+- Security/Security.h [c/c++] — version not declared
+  found at: compat/apple-common-crypto.h:20, contrib/credential/osxkeychain/git-credential-osxkeychain.c:4
+- selftest.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/test/main.c:4, t/unit-tests/clar/test/selftest.c:6
+- send-pack.h [c/c++] — version not declared
+  found at: builtin/push.c:23, builtin/send-pack.c:9, remote-curl.c:21, send-pack.c:13, transport.c:15
+- sequencer.h [c/c++] — version not declared
+  found at: branch.c:16, builtin/am.c:32, builtin/checkout.c:33, builtin/commit.c:38, builtin/history.c:24, builtin/merge.c:46, builtin/pull.c:33, builtin/rebase.c:34
+- serve.h [c/c++] — version not declared
+  found at: builtin/upload-pack.c:11, serve.c:9, t/helper/test-serve-v2.c:7
+- server-info.h [c/c++] — version not declared
+  found at: builtin/receive-pack.c:31, builtin/repack.c:10, builtin/update-server-info.c:6, server-info.c:15
+- setjmp.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar.c:13
+- setup.h [c/c++] — version not declared
+  found at: apply.c:39, archive.c:15, attr.c:26, blame.c:18, builtin/blame.c:35, builtin/bugreport.c:14, builtin/bundle.c:5, builtin/check-attr.c:9
+- sha1.h [c/c++] — version not declared
+  found at: block-sha1/sha1.c:12, sha1dc/sha1.c:26
+- sha1/openssl.h [c/c++] — version not declared
+  found at: hash.h:12, hash.h:34
+- sha1collisiondetection/lib/sha1.h [c/c++] — version not declared
+  found at: sha1dc_git.h:6
+- sha1dc/sha1.h [c/c++] — version not declared
+  found at: sha1dc_git.h:4, sha1dc_git.h:8
+- sha1dc_git.h [c/c++] — version not declared
+  found at: hash.h:16, sha1dc_git.c:2
+- sha256/block/sha256.h [c/c++] — version not declared
+  found at: hash.h:72
+- sha256/gcrypt.h [c/c++] — version not declared
+  found at: hash.h:62
+- sha256/nettle.h [c/c++] — version not declared
+  found at: hash.h:58
+- sha256/openssl.h [c/c++] — version not declared
+  found at: hash.h:68
+- shallow.h [c/c++] — version not declared
+  found at: builtin/fetch.c:41, builtin/pack-objects.c:42, builtin/prune.c:20, builtin/receive-pack.c:33, builtin/repack.c:17, builtin/repo.c:20, builtin/rev-parse.c:35, commit-graph.c:27
+- shlib-compat.h [c/c++] — version not declared
+  found at: compat/regex/regex.c:85, compat/regex/regexec.c:256
+- shortlog.h [c/c++] — version not declared
+  found at: builtin/log.c:34, builtin/shortlog.c:14
+- sideband.h [c/c++] — version not declared
+  found at: builtin/receive-pack.c:34, builtin/upload-archive.c:9, fetch-pack.c:17, pkt-line.c:7, send-pack.c:9, sideband.c:9, t/helper/test-pkt-line.c:4, transport.c:33
+- sigchain.h [c/c++] — version not declared
+  found at: add-patch.c:19, builtin/clone.c:37, builtin/fetch.c:27, builtin/gc.c:27, builtin/receive-pack.c:35, builtin/worktree.c:25, compat/terminal.c:4, connected.c:8
+- signal.h [c/c++] — version not declared
+  found at: compat/posix.h:123, t/t4051/includes.c:15
+- simple-ipc.h [c/c++] — version not declared
+  found at: builtin/fsmonitor--daemon.c:18, compat/fsmonitor/fsm-health-win32.c:7, compat/fsmonitor/fsm-listen-darwin.c:32, compat/fsmonitor/fsm-listen-linux.c:8, compat/fsmonitor/fsm-listen-win32.c:7, compat/simple-ipc/ipc-shared.c:2, compat/simple-ipc/ipc-unix-socket.c:3, compat/simple-ipc/ipc-win32.c:4
+- skipping.h [c/c++] — version not declared
+  found at: negotiator/skipping.c:4
+- sparse-index.h [c/c++] — version not declared
+  found at: builtin/checkout-index.c:22, builtin/checkout.c:35, builtin/commit.c:39, builtin/difftool.c:28, builtin/fsck.c:23, builtin/ls-files.c:27, builtin/merge-index.c:8, builtin/read-tree.c:22
+- split-index.h [c/c++] — version not declared
+  found at: builtin/rev-parse.c:32, builtin/update-index.c:31, read-cache.c:41, split-index.c:9, t/helper/test-dump-split-index.c:8, unpack-trees.c:21
+- sspi.h [c/c++] — version not declared
+  found at: compat/mingw.c:24
+- stack.h [c/c++] — version not declared
+  found at: reftable/fsck.c:4, reftable/stack.c:9
+- stash.h [c/c++] — version not declared
+  found at: builtin/stash.c:13, sequencer.c:22, sequencer.h:6
+- statinfo.h [c/c++] — version not declared
+  found at: dir.h:7, object.c:11, odb/source-files.h:5, read-cache-ll.h:6, shallow.c:21, statinfo.c:5
+- stdarg.h [c/c++] — version not declared
+  found at: compat/posix.h:107, contrib/buildsystems/CMakeLists.txt:470, t/t4051/includes.c:8, t/unit-tests/clar/clar.c:18, t/unit-tests/clar/test/selftest.c:1
+- strbuf.h [c/c++] — version not declared
+  found at: abspath.c:3, add-patch.c:18, alias.c:7, archive-tar.c:16, archive-zip.c:16, builtin/bugreport.c:8, builtin/check-mailmap.c:9, builtin/check-ref-format.c:10
+- string-list.h [c/c++] — version not declared
+  found at: add-interactive.c:15, advice.c:8, alias.c:8, apply.h:6, archive.h:5, builtin/am.c:40, builtin/backfill.c:21, builtin/blame.c:20
+- strings.h [c/c++] — version not declared
+  found at: compat/posix.h:111
+- strmap.h [c/c++] — version not declared
+  found at: apply.h:7, branch.c:21, builtin/backfill.c:20, builtin/branch.c:24, builtin/fsmonitor--daemon.c:19, builtin/pack-objects.c:31, builtin/shortlog.c:17, diff.c:47
+- strvec.h [c/c++] — version not declared
+  found at: add-patch.c:21, bisect.c:19, builtin/bisect.c:13, builtin/bundle.c:6, builtin/checkout.c:36, builtin/describe.c:20, builtin/difftool.c:29, builtin/fetch.c:31
+- sub-process.h [c/c++] — version not declared
+  found at: convert.c:18, sub-process.c:5
+- submodule-config.h [c/c++] — version not declared
+  found at: branch.c:19, builtin/fetch.c:28, builtin/grep.c:27, builtin/pull.c:30, builtin/push.c:22, builtin/submodule--helper.c:20, dir.c:34, fsck.c:22
+- submodule.h [c/c++] — version not declared
+  found at: builtin/add.c:25, builtin/check-ignore.c:10, builtin/checkout.c:37, builtin/fetch.c:29, builtin/grep.c:26, builtin/ls-files.c:28, builtin/mv.c:29, builtin/pull.c:29
+- symlinks.h [c/c++] — version not declared
+  found at: apply.c:40, builtin/checkout.c:38, builtin/mv.c:25, builtin/update-index.c:32, compat/mingw.c:14, diff-lib.c:23, dir.c:35, entry.c:13
+- sys/filio.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:67
+- sys/inotify.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-listen-linux.c:12
+- sys/ioctl.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:64, compat/posix.h:149
+- sys/mman.h [c/c++] — version not declared
+  found at: compat/posix.h:293
+- sys/mount.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-path-utils-darwin.c:10
+- sys/param.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-path-utils-darwin.c:9, compat/posix.h:117, exec-cmd.c:19
+- sys/poll.h [c/c++] — version not declared
+  found at: compat/posix.h:131
+- sys/pstat.h [c/c++] — version not declared
+  found at: thread-utils.c:5
+- sys/random.h [c/c++] — version not declared
+  found at: compat/posix.h:173
+- sys/resource.h [c/c++] — version not declared
+  found at: compat/posix.h:147
+- sys/select.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:55, compat/posix.h:156
+- sys/sendfile.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar/fs.h:311
+- sys/socket.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:53, compat/posix.h:148
+- sys/stat.h [c/c++] — version not declared
+  found at: compat/posix.h:103, compat/precompose_utf8.h:4, compat/stat.c:2, t/t4051/includes.c:4, t/unit-tests/clar/clar.c:25, t/unit-tests/clar/clar/fs.h:308, t/unit-tests/clar/test/selftest.c:4, t/unit-tests/clar/test/suites/combined.c:1
+- sys/statfs.h [c/c++] — version not declared
+  found at: compat/fsmonitor/fsm-path-utils-linux.c:7
+- sys/statvfs.h [c/c++] — version not declared
+  found at: compat/posix.h:150
+- sys/sysctl.h [c/c++] — version not declared
+  found at: compat/darwin/procinfo.c:5, compat/posix.h:137, contrib/buildsystems/CMakeLists.txt:539, exec-cmd.c:21
+- sys/sysinfo.h [c/c++] — version not declared
+  found at: git-compat-util.h:198
+- sys/syslimits.h [c/c++] — version not declared
+  found at: t/unit-tests/clar/clar/sandbox.h:2
+- sys/time.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:52, compat/posix.h:121, t/t4051/includes.c:13, t/unit-tests/clar/clar.c:296
+- sys/types.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:35, compat/posix.h:119, compat/precompose_utf8.h:5, compat/regex/regex.h:32, compat/stat.c:3, contrib/buildsystems/CMakeLists.txt:538, exec-cmd.c:20, sha1dc/sha1.c:14
+- sys/uio.h [c/c++] — version not declared
+  found at: compat/posix.h:152
+- sys/un.h [c/c++] — version not declared
+  found at: compat/posix.h:163
+- sys/utime.h [c/c++] — version not declared
+  found at: compat/vcbuild/include/utime.h:1
+- sys/utsname.h [c/c++] — version not declared
+  found at: compat/posix.h:145
+- sys/wait.h [c/c++] — version not declared
+  found at: compat/posix.h:146, t/unit-tests/clar/clar.c:95, t/unit-tests/clar/test/selftest.c:152
+- syslog.h [c/c++] — version not declared
+  found at: compat/posix.h:127, t/t4051/includes.c:19
+- system.h [c/c++] — version not declared
+  found at: reftable/basics.h:16, reftable/block.c:16, reftable/blocksource.c:9, reftable/blocksource.h:12, reftable/error.c:9, reftable/iter.c:11, reftable/iter.h:12, reftable/merged.c:17
+- t/unit-tests/test-lib.h [c/c++] — version not declared
+  found at: t/helper/test-example-tap.c:2
+- table.h [c/c++] — version not declared
+  found at: reftable/iter.c:17, reftable/merged.c:18, reftable/stack.c:17, reftable/table.c:9
+- tag.h [c/c++] — version not declared
+  found at: alloc.c:17, blame.c:19, builtin/blame.c:36, builtin/commit-graph.c:15, builtin/describe.c:11, builtin/diff.c:17, builtin/fast-export.c:21, builtin/fsck.c:8
+- tar.h [c/c++] — version not declared
+  found at: archive-tar.c:12, builtin/get-tar-commit-id.c:6
+- tempfile.h [c/c++] — version not declared
+  found at: builtin/am.c:22, builtin/credential-cache--daemon.c:11, builtin/gc.c:23, builtin/interpret-trailers.c:13, diff.c:15, gpg-interface.c:15, http.c:24, lockfile.h:118
+- termios.h [c/c++] — version not declared
+  found at: compat/posix.h:154
+- test-lib.h [c/c++] — version not declared
+  found at: t/unit-tests/test-lib.c:3
+- test-tool-utils.h [c/c++] — version not declared
+  found at: t/helper/test-submodule.c:4, t/helper/test-tool.c:3
+- test-tool.h [c/c++] — version not declared
+  found at: t/helper/test-advise.c:3, t/helper/test-base85.c:1, t/helper/test-bitmap.c:3, t/helper/test-bloom.c:3, t/helper/test-bundle-uri.c:1, t/helper/test-cache-entry.c:2, t/helper/test-cache-tree.c:4, t/helper/test-chmtime.c:39
+- thread-utils.h [c/c++] — version not declared
+  found at: attr.c:27, builtin/hook.c:8, builtin/index-pack.c:19, builtin/pack-objects.c:25, compat/simple-ipc/ipc-unix-socket.c:5, compat/simple-ipc/ipc-win32.c:7, fsmonitor--daemon.h:7, grep.h:26
+- tlhelp32.h [c/c++] — version not declared
+  found at: compat/win32/exit-process.h:14, compat/win32/trace2_win32_process_info.c:10
+- tmp-objdir.h [c/c++] — version not declared
+  found at: builtin/diff-tree.c:12, builtin/log.c:50, diff.c:34, log-tree.c:15, object-file.c:34, odb.c:27, tmp-objdir.c:2
+- tr2_sysenv.h [c/c++] — version not declared
+  found at: trace2/tr2_sysenv.c:6
+- tr2_tbuf.h [c/c++] — version not declared
+  found at: trace2/tr2_tbuf.c:2
+- trace.h [c/c++] — version not declared
+  found at: builtin/fetch.c:42, builtin/fsmonitor--daemon.c:21, builtin/receive-pack.c:38, builtin/reset.c:37, cache-tree.c:17, chdir-notify.c:7, compat/fsmonitor/fsm-listen-darwin.c:34, compat/fsmonitor/fsm-listen-linux.c:10
+- trace2.h [c/c++] — version not declared
+  found at: blame.c:20, builtin/backfill.c:23, builtin/checkout.c:39, builtin/commit-graph.c:16, builtin/fetch.c:43, builtin/fsmonitor--daemon.c:22, builtin/gc.c:44, builtin/multi-pack-index.c:10
+- trace2/tr2_cfg.h [c/c++] — version not declared
+  found at: trace2.c:11, trace2/tr2_cfg.c:7
+- trace2/tr2_cmd_name.h [c/c++] — version not declared
+  found at: trace2.c:12, trace2/tr2_cmd_name.c:3
+- trace2/tr2_ctr.h [c/c++] — version not declared
+  found at: trace2.c:13, trace2/tr2_ctr.c:4, trace2/tr2_tls.h:4
+- trace2/tr2_dst.h [c/c++] — version not declared
+  found at: trace2.c:14, trace2/tr2_dst.c:5, trace2/tr2_tgt_event.c:9, trace2/tr2_tgt_normal.c:8, trace2/tr2_tgt_perf.c:10
+- trace2/tr2_sid.h [c/c++] — version not declared
+  found at: trace2.c:15, trace2/tr2_dst.c:6, trace2/tr2_sid.c:5, trace2/tr2_tgt_event.c:11, trace2/tr2_tgt_perf.c:11
+- trace2/tr2_sysenv.h [c/c++] — version not declared
+  found at: trace2.c:16, trace2/tr2_cfg.c:8, trace2/tr2_dst.c:7, trace2/tr2_dst.h:5, trace2/tr2_tgt_event.c:12, trace2/tr2_tgt_normal.c:9, trace2/tr2_tgt_perf.c:12
+- trace2/tr2_tbuf.h [c/c++] — version not declared
+  found at: trace2/tr2_sid.c:4, trace2/tr2_tgt_event.c:10, trace2/tr2_tgt_normal.c:10, trace2/tr2_tgt_perf.c:13
+- trace2/tr2_tgt.h [c/c++] — version not declared
+  found at: trace2.c:17, trace2/tr2_ctr.c:2, trace2/tr2_ctr.h:5, trace2/tr2_tgt_event.c:13, trace2/tr2_tgt_normal.c:11, trace2/tr2_tgt_perf.c:14, trace2/tr2_tmr.c:2, trace2/tr2_tmr.h:5
+- trace2/tr2_tls.h [c/c++] — version not declared
+  found at: trace2.c:18, trace2/tr2_ctr.c:3, trace2/tr2_tgt_event.c:14, trace2/tr2_tgt_normal.c:12, trace2/tr2_tgt_perf.c:15, trace2/tr2_tls.c:5, trace2/tr2_tmr.c:3
+- trace2/tr2_tmr.h [c/c++] — version not declared
+  found at: trace2.c:19, trace2/tr2_tgt_event.c:15, trace2/tr2_tgt_normal.c:13, trace2/tr2_tgt_perf.c:16, trace2/tr2_tls.h:5, trace2/tr2_tmr.c:4
+- trailer.h [c/c++] — version not declared
+  found at: builtin/commit.c:45, builtin/interpret-trailers.c:14, builtin/rebase.c:39, builtin/shortlog.c:16, builtin/tag.c:35, pretty.c:22, ref-filter.c:30, sequencer.c:37
+- transport-internal.h [c/c++] — version not declared
+  found at: transport-helper.c:20, transport.c:28
+- transport.h [c/c++] — version not declared
+  found at: builtin/archive.c:8, builtin/cat-file.c:33, builtin/clone.c:32, builtin/fetch.c:24, builtin/ls-remote.c:5, builtin/push.c:18, builtin/remote-ext.c:2, builtin/remote-fd.c:2
+- tree-verify.h [c/c++] — version not declared
+  found at: builtin/rev-list.c:31, tree-verify.c:12
+- tree-walk.h [c/c++] — version not declared
+  found at: archive.c:20, attr.c:28, bloom.c:12, builtin/backfill.c:14, builtin/checkout.c:41, builtin/clone.c:30, builtin/grep.c:17, builtin/history.c:28
+- tree.h [c/c++] — version not declared
+  found at: add-interactive.c:20, alloc.c:14, archive.c:19, bloom.c:11, builtin/backfill.c:13, builtin/checkout.c:40, builtin/clone.c:29, builtin/diff-tree.c:13
+- ubc_check.h [c/c++] — version not declared
+  found at: sha1dc/sha1.c:27, sha1dc/ubc_check.c:33
+- unicode-width.h [c/c++] — version not declared
+  found at: utf8.c:91
+- unit-test.h [c/c++] — version not declared
+  found at: t/unit-tests/lib-oid.c:1, t/unit-tests/lib-reftable.c:1, t/unit-tests/u-ctype.c:1, t/unit-tests/u-dir.c:1, t/unit-tests/u-example-decorate.c:3, t/unit-tests/u-hash.c:1, t/unit-tests/u-hashmap.c:1, t/unit-tests/u-list-objects-filter-options.c:1
+- unix-socket.h [c/c++] — version not declared
+  found at: builtin/credential-cache--daemon.c:13, builtin/credential-cache.c:11, compat/simple-ipc/ipc-unix-socket.c:7, unix-socket.c:5, unix-stream-server.c:3, unix-stream-server.h:4
+- unix-stream-server.h [c/c++] — version not declared
+  found at: compat/simple-ipc/ipc-unix-socket.c:8, unix-stream-server.c:4
+- unpack-trees.h [c/c++] — version not declared
+  found at: archive.c:24, builtin/am.c:28, builtin/checkout.c:42, builtin/clone.c:31, builtin/commit.c:36, builtin/history.c:29, builtin/merge.c:35, builtin/read-tree.c:18
+- upload-pack.h [c/c++] — version not declared
+  found at: builtin/upload-pack.c:10, serve.c:10, upload-pack.c:28
+- url.h [c/c++] — version not declared
+  found at: builtin/credential-store.c:10, builtin/submodule--helper.c:39, builtin/url-parse.c:4, connect.c:14, credential.c:10, fsck.c:18, http-backend.c:18, http-fetch.c:12
+- urlmatch.h [c/c++] — version not declared
+  found at: builtin/config.c:13, builtin/url-parse.c:5, credential.c:14, http-fetch.c:13, http.c:13, promisor-remote.c:15, remote.c:12, sideband.c:13
+- userdiff.h [c/c++] — version not declared
+  found at: archive-zip.c:17, builtin/blame.c:25, builtin/cat-file.c:20, builtin/log.c:52, combine-diff.c:19, diff.c:27, grep.c:10, grep.h:27
+- utf8.h [c/c++] — version not declared
+  found at: archive-zip.c:13, attr.c:20, builtin/blame.c:24, builtin/branch.c:26, builtin/fast-export.c:28, builtin/fetch.c:32, builtin/log.c:45, builtin/repo.c:23
+- utime.h [c/c++] — version not declared
+  found at: compat/posix.h:126, t/helper/test-chmtime.c:41, t/t4051/includes.c:18
+- varint.h [c/c++] — version not declared
+  found at: dir.c:27, read-cache.c:40, varint.c:2
+- version-def.h [c/c++] — version not declared
+  found at: version.c:7
+- version.h [c/c++] — version not declared
+  found at: builtin/bugreport.c:15, builtin/log.c:40, builtin/receive-pack.c:40, connect.c:21, contrib/libgit-sys/public_symbol_export.c:10, fetch-pack.c:23, help.c:17, http.c:15
+- versioncmp.h [c/c++] — version not declared
+  found at: ref-filter.c:29, versioncmp.c:7
+- walker.h [c/c++] — version not declared
+  found at: http-fetch.c:9, http-walker.c:7, remote-curl.c:13, walker.c:6
+- wchar.h [c/c++] — version not declared
+  found at: compat/mingw-posix.h:6, compat/mingw.c:25, compat/regex/regex_internal.h:35, compat/win32/headless.c:12, t/unit-tests/clar/clar.c:19
+- wctype.h [c/c++] — version not declared
+  found at: compat/regex/regex_internal.h:38
+- wildmatch.h [c/c++] — version not declared
+  found at: apply.c:41, builtin/describe.c:25, builtin/ls-remote.c:10, builtin/name-rev.c:18, builtin/reflog.c:10, builtin/replace.c:26, builtin/show-branch.c:20, builtin/submodule--helper.c:37
+- win32.h [c/c++] — version not declared
+  found at: compat/mingw.c:16, compat/msvc.c:2, compat/nonblock.c:17, compat/winansi.c:12
+- win32/exit-process.h [c/c++] — version not declared
+  found at: compat/mingw.c:17
+- win32/lazyload.h [c/c++] — version not declared
+  found at: compat/mingw.c:18, compat/winansi.c:13
+- wincred.h [c/c++] — version not declared
+  found at: contrib/credential/wincred/git-credential-wincred.c:9
+- windows.h [c/c++] — version not declared
+  found at: compat/poll/poll.c:47, compat/posix.h:97, compat/win32.h:6, compat/win32/headless.c:9, compat/win32/pthread.h:14, contrib/credential/wincred/git-credential-wincred.c:5, t/unit-tests/clar/clar.c:47, t/unit-tests/clar/test/selftest.c:10
+- wingdi.h [c/c++] — version not declared
+  found at: compat/winansi.c:10
+- winioctl.h [c/c++] — version not declared
+  found at: compat/mingw.c:26
+- winnt.h [c/c++] — version not declared
+  found at: t/helper/test-drop-caches.c:8
+- winreg.h [c/c++] — version not declared
+  found at: compat/winansi.c:11
+- winsock2.h [c/c++] — version not declared
+  found at: compat/mingw-posix.h:9, compat/poll/poll.c:46, compat/posix.h:93
+- winternl.h [c/c++] — version not declared
+  found at: compat/mingw.c:27, compat/win32/flush.c:2, compat/winansi.c:508
+- worktree.h [c/c++] — version not declared
+  found at: branch.c:18, builtin/branch.c:28, builtin/config.c:18, builtin/fsck.c:24, builtin/gc.c:45, builtin/notes.c:30, builtin/receive-pack.c:41, builtin/reflog.c:11
+- wrapper.h [c/c++] — version not declared
+  found at: compat/mingw.c:19, contrib/credential/osxkeychain/git-credential-osxkeychain.c:7, git-compat-util.h:414, lockfile.c:14, loose.c:9
+- write-or-die.h [c/c++] — version not declared
+  found at: archive-tar.c:18, archive-zip.c:18, builtin/blame.c:37, builtin/cat-file.c:30, builtin/check-attr.c:11, builtin/check-ignore.c:11, builtin/check-mailmap.c:11, builtin/credential-cache.c:7
+- writer.h [c/c++] — version not declared
+  found at: reftable/stack.c:18, reftable/writer.c:9
+- ws.h [c/c++] — version not declared
+  found at: apply.c:42, diff.c:48, environment.c:38, ws.c:12
+- ws2tcpip.h [c/c++] — version not declared
+  found at: compat/mingw-posix.h:10
+- wt-status.h [c/c++] — version not declared
+  found at: builtin/checkout.c:43, builtin/commit.c:25, builtin/history.c:30, builtin/merge.c:52, builtin/pull.c:31, builtin/rebase.c:29, builtin/repack.c:21, commit.c:23
+- xdiff-interface.h [c/c++] — version not declared
+  found at: apply.c:25, archive-zip.c:19, blame.h:5, builtin/checkout.c:44, builtin/merge-file.c:15, builtin/merge-tree.c:6, builtin/rerere.c:11, combine-diff.c:14
+- xdiff.h [c/c++] — version not declared
+  found at: xdiff/xinclude.h:28
+- xdiff/xdiff.h [c/c++] — version not declared
+  found at: builtin/merge-file.c:14, builtin/rerere.c:10, merge-ll.h:8, xdiff-interface.h:5
+- xdiff/xdiffi.h [c/c++] — version not declared
+  found at: xdiff-interface.c:12
+- xdiff/xmacros.h [c/c++] — version not declared
+  found at: combine-diff.c:15
+- xdiff/xtypes.h [c/c++] — version not declared
+  found at: xdiff-interface.c:11
+- xdiff/xutils.h [c/c++] — version not declared
+  found at: xdiff-interface.c:13
+- xdiffi.h [c/c++] — version not declared
+  found at: xdiff/xinclude.h:32
+- xemit.h [c/c++] — version not declared
+  found at: xdiff/xinclude.h:33
+- xinclude.h [c/c++] — version not declared
+  found at: xdiff/xdiffi.c:23, xdiff/xemit.c:23, xdiff/xhistogram.c:44, xdiff/xmerge.c:23, xdiff/xpatience.c:23, xdiff/xprepare.c:23, xdiff/xutils.c:23
+- xmacros.h [c/c++] — version not declared
+  found at: xdiff/xinclude.h:27
+- xmlparse.h [c/c++] — version not declared
+  found at: http-push.c:27
+- xprepare.h [c/c++] — version not declared
+  found at: xdiff/xinclude.h:31
+- xtypes.h [c/c++] — version not declared
+  found at: xdiff/xinclude.h:29
+- xutils.h [c/c++] — version not declared
+  found at: xdiff/xinclude.h:30
+- ZLIB [cmake] — find_package(ZLIB REQUIRED)
+  found at: contrib/buildsystems/CMakeLists.txt:141
+- zlib-ng.h [c/c++] — version not declared
+  found at: compat/zlib-compat.h:5
+- zlib.h [c/c++] — version not declared
+  found at: compat/zlib-compat.h:29
+
+INTERNAL SERVICES
+- $httpd_dest [external_service]
+  endpoint: HTTP http://$httpd_dest
+  found at: t/t5564-http-proxy.sh:28, t/t5564-http-proxy.sh:35
+- %s [external_service]
+  endpoint: HTTP http://%s
+  found at: http.c:1303
+- 127 [external_service]
+  endpoint: HTTP http://127.0.0.1:$LIB_HTTPD_PORT/
+  endpoint: HTTP http://127.0.0.1:$LIB_HTTPD_PORT/one_time_script/repo
+  endpoint: HTTP http://127.0.0.1:$LIB_HTTPD_PORT/smart/repo
+  endpoint: HTTP http://127.0.0.1:$LIB_HTTPD_PORT/smart/test_repo.git
+  endpoint: HTTP http://127.0.0.1:$port
+  endpoint: HTTP http://127.0.0.1:$port/pack
+  found at: git-instaweb.sh:780, t/lib-httpd.sh:214, t/t0611-reftable-httpd.sh:17, t/t5541-http-push-smart.sh:116, t/t5541-http-push-smart.sh:118, t/t5550-http-fetch-dumb.sh:454, t/t5703-upload-pack-ref-in-want.sh:468, t/t5703-upload-pack-ref-in-want.sh:480
+- 2001 [external_service]
+  endpoint: HTTP http://2001/repo
+  endpoint: HTTP http://2001/repository/path
+  endpoint: HTTP https://2001/repository/path
+  found at: t/t9904-url-parse.sh:223, t/t9904-url-parse.sh:231, t/unit-tests/u-urlmatch-normalization.c:281
+- c [external_service]
+  endpoint: HTTP http://c
+  found at: remote.h:470
+- foo [external_service]
+  endpoint: HTTP http://foo
+  endpoint: HTTP https://foo/bar/baz
+  found at: t/t1300-config.sh:2929, t/unit-tests/u-urlmatch-normalization.c:235, t/unit-tests/u-urlmatch-normalization.c:236
+- localhost [external_service]
+  endpoint: HTTP http://localhost:1234
+  found at: t/t5550-http-fetch-dumb.sh:774
+- mayonaise [external_service]
+  endpoint: HTTP http://mayonaise/svnrepo/bar
+  endpoint: HTTP http://mayonaise/svnrepo/dir
+  endpoint: HTTP http://mayonaise/svnrepo/dir/a/b/c/d/e
+  found at: t/t9110-git-svn-use-svm-props.sh:22, t/t9110-git-svn-use-svm-props.sh:38, t/t9110-git-svn-use-svm-props.sh:44, t/t9111-git-svn-use-svnsync-props.sh:21, t/t9111-git-svn-use-svnsync-props.sh:37, t/t9111-git-svn-use-svnsync-props.sh:43
+- x [external_service]
+  endpoint: HTTP http://x
+  endpoint: HTTP http://x/
+  endpoint: HTTP http://x:1
+  endpoint: HTTP http://x:1/
+  endpoint: HTTP http://x:65535
+  endpoint: HTTP http://x:65535/
+  endpoint: HTTP http://x:80
+  endpoint: HTTP http://x:800
+  endpoint: HTTP http://x:800/
+  endpoint: HTTP https://x/
+  endpoint: HTTP https://x:443
+  found at: t/unit-tests/u-urlmatch-normalization.c:136, t/unit-tests/u-urlmatch-normalization.c:137, t/unit-tests/u-urlmatch-normalization.c:138, t/unit-tests/u-urlmatch-normalization.c:139, t/unit-tests/u-urlmatch-normalization.c:140, t/unit-tests/u-urlmatch-normalization.c:141, t/unit-tests/u-urlmatch-normalization.c:142, t/unit-tests/u-urlmatch-normalization.c:143
+- * [external_service]
+  endpoint: HTTP https://*/bar/baz
+  endpoint: HTTP https://*/baz
+  found at: t/t1300-config.sh:2942, t/t1300-config.sh:2944
+- a [external_service]
+  endpoint: HTTP https://a
+  found at: t/t0300-credentials.sh:708
+- a%20b%20c [external_service]
+  endpoint: HTTP https://a%20b%20c/.helper
+  found at: t/t0300-credentials.sh:706
+- bar [external_service]
+  endpoint: HTTP https://bar
+  found at: t/t0300-credentials.sh:619, t/t0300-credentials.sh:620
+- domain [external_service]
+  endpoint: HTTP https://domain:port/
+  found at: t/t5551-http-fetch-smart.sh:728
+- host [external_service]
+  endpoint: HTTP https://host/-style
+  endpoint: HTTP https://host/repo
+    request keys: q
+  found at: t/unit-tests/u-urlmatch-normalization.c:290, t/unit-tests/u-urlmatch-normalization.c:291, trace2.c:254
+
+DATABASES / BROKERS: HOSTING UNKNOWN
+- None detected
+
+STANDARD CLOUD SERVICES
+- None detected
+
+THIRD-PARTY SERVICES
+- SMTP email provider [email_delivery]
+  found at: ci/install-dependencies.sh:62, contrib/credential/osxkeychain/git-credential-osxkeychain.c:422, t/t5550-http-fetch-dumb.sh:708, t/t9001-send-email.sh:1145, t/t9001-send-email.sh:115, t/t9001-send-email.sh:1187, t/t9001-send-email.sh:1199, t/t9001-send-email.sh:1211
+
+UNCLASSIFIED SERVICE CLUES
+- None detected
+
+API ENDPOINTS (observed request calls)
+- None statically identified
+
+OTHER URL REFERENCES
+- http://$httpd_dest [internal_candidate / http_endpoint] — t/t5564-http-proxy.sh:28, t/t5564-http-proxy.sh:35
+- http://%s [internal_candidate / http_endpoint] — http.c:1303
+- http://.* [unclassified_reference / http_endpoint] — t/t5411-proc-receive-hook.sh:66, t/t5548-push-porcelain.sh:125, t/t5548-push-porcelain.sh:343
+- http://127.0.0.1:$LIB_HTTPD_PORT/ [internal_candidate / http_endpoint] — t/lib-httpd.sh:214
+- http://127.0.0.1:$LIB_HTTPD_PORT/one_time_script/repo [internal_candidate / http_endpoint] — t/t5703-upload-pack-ref-in-want.sh:480
+- http://127.0.0.1:$LIB_HTTPD_PORT/smart/repo [internal_candidate / http_endpoint] — t/t0611-reftable-httpd.sh:17, t/t5703-upload-pack-ref-in-want.sh:468
+- http://127.0.0.1:$LIB_HTTPD_PORT/smart/test_repo.git [internal_candidate / http_endpoint] — t/t5541-http-push-smart.sh:116, t/t5541-http-push-smart.sh:118
+- http://127.0.0.1:$port [internal_candidate / http_endpoint] — git-instaweb.sh:780
+- http://127.0.0.1:$port/pack [internal_candidate / http_endpoint] — t/t5550-http-fetch-dumb.sh:454
+- http://2001/repo [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:281
+- http://2001/repository/path [internal_candidate / http_endpoint] — t/t9904-url-parse.sh:223
+- http://a.com/b [unclassified_reference / http_endpoint] — remote.h:467, remote.h:470, remote.h:471, remote.h:472, remote.h:473
+- http://a.com/b/ [unclassified_reference / http_endpoint] — remote.h:468
+- http://a.com/c [unclassified_reference / http_endpoint] — remote.h:467, remote.h:468
+- http://c [internal_candidate / http_endpoint] — remote.h:470
+- http://d.org/e [unclassified_reference / http_endpoint] — remote.h:474
+- http://example.com [unclassified_reference / http_endpoint] — t/lib-credential.sh:117, t/lib-credential.sh:118, t/t0300-credentials.sh:528, t/t0300-credentials.sh:529, t/t0300-credentials.sh:544
+- http://example.com/bundle.bdl [unclassified_reference / http_endpoint] — t/t5750-bundle-uri-parse.sh:10, t/t5750-bundle-uri-parse.sh:110, t/t5750-bundle-uri-parse.sh:130, t/t5750-bundle-uri-parse.sh:144, t/t5750-bundle-uri-parse.sh:160
+- http://example.com/foo [unclassified_reference / http_endpoint] — t/t9901-git-web--browse.sh:19, t/t9901-git-web--browse.sh:21, t/t9901-git-web--browse.sh:26, t/t9901-git-web--browse.sh:28, t/t9901-git-web--browse.sh:33
+- http://example.com/foo.git [unclassified_reference / http_endpoint] — http.c:2371
+- http://example.com/foo.git/info/refs [unclassified_reference / http_endpoint] — http.c:2372
+- http://example.com/git/trash.git [unclassified_reference / http_endpoint] — t/t9500-gitweb-standalone-no-errors.sh:581, t/t9500-gitweb-standalone-no-errors.sh:586
+- http://example.com/path [unclassified_reference / http_endpoint] — urlmatch.c:620
+- http://example.com/repository/path [unclassified_reference / http_endpoint] — t/t9904-url-parse.sh:106, t/t9904-url-parse.sh:127, t/t9904-url-parse.sh:151, t/t9904-url-parse.sh:175, t/t9904-url-parse.sh:26
+- http://example.com/user/bar.baz [unclassified_reference / http_endpoint] — dir.h:499
+- http://example.com:1234/repository/path [unclassified_reference / http_endpoint] — t/t9904-url-parse.sh:126, t/t9904-url-parse.sh:150, t/t9904-url-parse.sh:174, t/t9904-url-parse.sh:25, t/t9904-url-parse.sh:71
+- http://example.com:80/deeper/foo.git [unclassified_reference / http_endpoint] — t/t7450-bad-git-dotfiles.sh:51, t/t7450-bad-git-dotfiles.sh:57
+- http://example.com:test/foo.git [unclassified_reference / http_endpoint] — t/t7450-bad-git-dotfiles.sh:65
+- http://foo [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:235, t/unit-tests/u-urlmatch-normalization.c:236
+- http://gcc.gnu.org/bugzilla/show_bug.cgi [unclassified_reference / http_endpoint] — ewah/ewok.h:30
+- http://git.host/pub/scm/linus.git/ [unclassified_reference / http_endpoint] — http-walker.c:289
+- http://git.host/pub/scm/linux.git/ [unclassified_reference / http_endpoint] — http-walker.c:264, http-walker.c:287
+- http://git.kernel.org/cgit/git/git.git [unclassified_reference / http_endpoint] — t/t4014-format-patch.sh:1184
+- http://invalid.invalid/ [unclassified_reference / http_endpoint] — t/t9123-git-svn-rebuild-with-rewriteroot.sh:21
+- http://localhost:1234 [internal_candidate / http_endpoint] — t/t5550-http-fetch-dumb.sh:774
+- http://mayonaise/svnrepo/bar [internal_candidate / http_endpoint] — t/t9110-git-svn-use-svm-props.sh:22, t/t9111-git-svn-use-svnsync-props.sh:21
+- http://mayonaise/svnrepo/dir [internal_candidate / http_endpoint] — t/t9110-git-svn-use-svm-props.sh:44, t/t9111-git-svn-use-svnsync-props.sh:43
+- http://mayonaise/svnrepo/dir/a/b/c/d/e [internal_candidate / http_endpoint] — t/t9110-git-svn-use-svm-props.sh:38, t/t9111-git-svn-use-svnsync-props.sh:37
+- http://path.tld/bar.git [unclassified_reference / http_endpoint] — t/lib-credential.sh:172, t/lib-credential.sh:173
+- http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/dirent.h.html [unclassified_reference / http_endpoint] — compat/precompose_utf8.h:16
+- http://schemas.microsoft.com/windows/2004/02/mit/task [unclassified_reference / http_endpoint] — builtin/gc.c:2286
+- http://some.host:80 [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:117
+- http://some.host:80/ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:119
+- http://svn.collab.net/repos/svn [unclassified_reference / http_endpoint] — t/t9104-git-svn-follow-parent.sh:115
+- http://svn.example.org [unclassified_reference / http_endpoint] — t/t9150-svk-mergetickets.sh:14, t/t9151-svn-mergeinfo.sh:14
+- http://the.host [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:207, t/unit-tests/u-urlmatch-normalization.c:242
+- http://the.host:80/ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:242
+- http://unicode.org/faq/utf_bom.html [unclassified_reference / http_endpoint] — convert.c:449
+- http://www.apple.com/DTDs/PropertyList-1.0.dtd [unclassified_reference / http_endpoint] — builtin/gc.c:2107
+- http://www.drdobbs.com/a-safer-alternative-to-terminateprocess/184416547 [unclassified_reference / http_endpoint] — compat/win32/exit-process.h:114
+- http://www.dustindiaz.com/getelementsbyclass/ [unclassified_reference / http_endpoint] — gitweb/static/js/lib/common-lib.js:137
+- http://www.eclipse.org/org/documents/edl-v10.php [unclassified_reference / http_endpoint] — xdiff/xhistogram.c:8
+- http://www.gnu.org/licenses/ [unclassified_reference / http_endpoint] — compat/obstack.c:18, compat/obstack.h:18, compat/poll/poll.c:19, compat/poll/poll.h:19, compat/regex/regcomp.c:18
+- http://www.gnu.org/software/gettext/manual/html_node/Tcl.html [unclassified_reference / http_endpoint] — git-gui/git-gui.sh:308
+- http://www.idallen.com/topposting.html [informational_reference / http_endpoint] — git-gui/README.md:171
+- http://www.isthe.com/chongo/tech/comp/fnv [unclassified_reference / http_endpoint] — hashmap.h:108
+- http://www.nczonline.net/blog/2009/06/30/event-delegation-in-javascript/ [unclassified_reference / http_endpoint] — gitweb/static/js/adjust-timezone.js:106
+- http://www.opensource.org/licenses/mit-license.php [unclassified_reference / http_endpoint] — git-p4.py:8
+- http://www.unicode.org/Public/UCD/latest/ucd/EastAsianWidth.txt [unclassified_reference / http_endpoint] — tools/update-unicode/update_unicode.sh:12
+- http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt [unclassified_reference / http_endpoint] — tools/update-unicode/update_unicode.sh:11
+- http://www.unicode.org/reports/tr44/ [unclassified_reference / http_endpoint] — tools/update-unicode/update_unicode.sh:2
+- http://www.xmailserver.org/xdiff-lib.html [unclassified_reference / http_endpoint] — diff-delta.c:5
+- http://x [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:241
+- http://x.y [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:151
+- http://x.y/%61/ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:208
+- http://x.y/^ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:209
+- http://x/ [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:141, t/unit-tests/u-urlmatch-normalization.c:142, t/unit-tests/u-urlmatch-normalization.c:143, t/unit-tests/u-urlmatch-normalization.c:241
+- http://x:1 [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:140
+- http://x:1/ [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:140
+- http://x:65535 [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:139
+- http://x:65535/ [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:139
+- http://x:80 [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:141, t/unit-tests/u-urlmatch-normalization.c:142, t/unit-tests/u-urlmatch-normalization.c:143
+- http://x:800 [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:136, t/unit-tests/u-urlmatch-normalization.c:137, t/unit-tests/u-urlmatch-normalization.c:138
+- http://x:800/ [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:136, t/unit-tests/u-urlmatch-normalization.c:137, t/unit-tests/u-urlmatch-normalization.c:138
+- https://*.example.* [unclassified_reference / http_endpoint] — t/t1300-config.sh:1943
+- https://*.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:1939, t/t1300-config.sh:2024
+- https://*.example.com/ [unclassified_reference / http_endpoint] — t/t1300-config.sh:1947
+- https://*.example.com/wildcardwithsubdomain [unclassified_reference / http_endpoint] — t/t1300-config.sh:1941
+- https://*.org.usehttppath [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:842
+- https://*/bar/baz [internal_candidate / http_endpoint] — t/t1300-config.sh:2942
+- https://*/baz [internal_candidate / http_endpoint] — t/t1300-config.sh:2944
+- https://2001/repository/path [internal_candidate / http_endpoint] — t/t9904-url-parse.sh:231
+- https://a [internal_candidate / http_endpoint] — t/t0300-credentials.sh:708
+- https://a%20b%20c/.helper [internal_candidate / http_endpoint] — t/t0300-credentials.sh:706
+- https://badguy.example.com [unclassified_reference / http_endpoint] — t/lib-credential.sh:405, t/lib-credential.sh:406
+- https://bar [internal_candidate / http_endpoint] — t/t0300-credentials.sh:619, t/t0300-credentials.sh:620
+- https://bugs.exim.org/show_bug.cgi [unclassified_reference / http_endpoint] — grep.c:338, t/t7812-grep-icase-non-ascii.sh:77
+- https://cdist2.perforce.com/perforce/r23.2 [unclassified_reference / http_endpoint] — ci/install-dependencies.sh:10
+- https://code.google.com/p/getelementsbyclassname/ [unclassified_reference / http_endpoint] — gitweb/static/js/lib/common-lib.js:136
+- https://code.google.com/p/mongoose/wiki/MongooseManual [unclassified_reference / http_endpoint] — git-instaweb.sh:435
+- https://code.visualstudio.com/ [informational_reference / http_endpoint] — contrib/vscode/README.md:4
+- https://code.visualstudio.com/docs/editor/debugging [informational_reference / http_endpoint] — contrib/vscode/README.md:10
+- https://code.visualstudio.com/docs/getstarted/settings [informational_reference / http_endpoint] — contrib/vscode/README.md:13
+- https://code.visualstudio.com/docs/setup/linux [informational_reference / http_endpoint] — contrib/vscode/README.md:8
+- https://code.visualstudio.com/docs/setup/mac [informational_reference / http_endpoint] — contrib/vscode/README.md:7
+- https://code.visualstudio.com/docs/setup/windows [informational_reference / http_endpoint] — contrib/vscode/README.md:6
+- https://cr.yp.to/critbit.html [unclassified_reference / http_endpoint] — cbtree.c:3, cbtree.h:3
+- https://cve.mitre.org/ [informational_reference / http_endpoint] — SECURITY.md:53
+- https://cygwin.com/cygwin-ug-net/using-specialnames.html [unclassified_reference / http_endpoint] — t/t9115-git-svn-dcommit-funky-renames.sh:90
+- https://datatracker.ietf.org/doc/html/rfc4616 [unclassified_reference / http_endpoint] — imap-send.c:896
+- https://datatracker.ietf.org/doc/html/rfc5801 [unclassified_reference / http_endpoint] — imap-send.c:969
+- https://datatracker.ietf.org/doc/html/rfc7231 [unclassified_reference / http_endpoint] — http.c:2111
+- https://datatracker.ietf.org/doc/html/rfc7628 [unclassified_reference / http_endpoint] — imap-send.c:970
+- https://deep.nested.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:2041
+- https://dev.azure.com.usehttppath [unclassified_reference / http_endpoint] — scalar.c:146
+- https://developer.apple.com/documentation/coreservices/1443980-fseventstreamcreate [unclassified_reference / http_endpoint] — compat/fsmonitor/fsm-listen-darwin.c:411
+- https://developer.mozilla.org/en/DOM/document.getElementsByClassName [unclassified_reference / http_endpoint] — gitweb/static/js/lib/common-lib.js:125
+- https://developercertificate.org/ [informational_reference / http_endpoint] — git-gui/README.md:153
+- https://developers.google.com/open-source/licenses/bsd [unclassified_reference / http_endpoint] — reftable/basics.c:6, reftable/basics.h:6, reftable/block.c:6, reftable/block.h:6, reftable/blocksource.c:6
+- https://developers.google.com/workspace/gmail/imap/xoauth2-protocol [unclassified_reference / http_endpoint] — imap-send.c:994
+- https://docs.github.com/en/actions/learn-github-actions/variables [unclassified_reference / http_endpoint] — .github/workflows/coverity.yml:5
+- https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions [unclassified_reference / http_endpoint] — .github/workflows/coverity.yml:10
+- https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions [unclassified_reference / http_endpoint] — .github/workflows/main.yml:18
+- https://docs.microsoft.com/en-us/cpp/cpp/parsing-cpp-command-line-arguments [unclassified_reference / http_endpoint] — compat/mingw.c:1582
+- https://docs.microsoft.com/en-us/windows/desktop/fileio/file-access-rights-constants [unclassified_reference / http_endpoint] — compat/mingw.c:691
+- https://docs.microsoft.com/en-us/windows/win32/secauthz/creating-a-security-descriptor-for-a-new-object-in-c-- [unclassified_reference / http_endpoint] — compat/simple-ipc/ipc-win32.c:669
+- https://domain:port/ [internal_candidate / http_endpoint] — t/t5551-http-fetch-smart.sh:728
+- https://eclecticlight.co/2020/01/23/catalina-boot-volumes/ [unclassified_reference / http_endpoint] — compat/fsmonitor/fsm-path-utils-darwin.c:56
+- https://en.wikipedia.org/wiki/8.3_filename [unclassified_reference / http_endpoint] — path.c:1482
+- https://en.wikipedia.org/wiki/ANSI_escape_code [unclassified_reference / http_endpoint] — sideband.c:172
+- https://en.wikipedia.org/wiki/Integer_square_root [unclassified_reference / http_endpoint] — bisect.c:606
+- https://en.wikipedia.org/wiki/MurmurHash [unclassified_reference / http_endpoint] — bloom.c:109
+- https://encoding.spec.whatwg.org/ [unclassified_reference / http_endpoint] — utf8.h:106
+- https://example%0d.com/ [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:910, t/t0300-credentials.sh:919
+- https://example.com [unclassified_reference / http_endpoint] — t/lib-credential.sh:148, t/lib-credential.sh:216, t/lib-credential.sh:234, t/lib-credential.sh:235, t/lib-credential.sh:315
+- https://example.com%23%3f%2f/foo.git [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:990
+- https://example.com.helper [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:594, t/t0300-credentials.sh:626, t/t0300-credentials.sh:645, t/t0300-credentials.sh:752, t/t0300-credentials.sh:770
+- https://example.com.usehttppath [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:676, t/t0300-credentials.sh:822
+- https://example.com.username [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:736, t/t0300-credentials.sh:751, t/t0300-credentials.sh:769, t/t0300-credentials.sh:790
+- https://example.com/ [unclassified_reference / http_endpoint] — t/t0210-trace2-normal.sh:331, t/t0210-trace2-normal.sh:335, t/t0210-trace2-normal.sh:339, t/t0211-trace2-perf.sh:281, t/t0211-trace2-perf.sh:285
+- https://example.com/%2566.git [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:665
+- https://example.com/%2566.git.helper [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:663
+- https://example.com/* [unclassified_reference / http_endpoint] — t/t5710-promisor-remote-capability.sh:643, t/t5710-promisor-remote-capability.sh:661, t/t5710-promisor-remote-capability.sh:800
+- https://example.com/bundle-2.bdl [unclassified_reference / http_endpoint] — t/t5750-bundle-uri-parse.sh:146, t/t5750-bundle-uri-parse.sh:151
+- https://example.com/bundle.bdl [unclassified_reference / http_endpoint] — t/t5750-bundle-uri-parse.sh:11, t/t5750-bundle-uri-parse.sh:112, t/t5750-bundle-uri-parse.sh:132, t/t5750-bundle-uri-parse.sh:145, t/t5750-bundle-uri-parse.sh:162
+- https://example.com/cdn [unclassified_reference / http_endpoint] — t/t5710-promisor-remote-capability.sh:744, t/t5710-promisor-remote-capability.sh:757
+- https://example.com/foo.git [unclassified_reference / http_endpoint] — t/t7450-bad-git-dotfiles.sh:50, t/t7450-bad-git-dotfiles.sh:56
+- https://example.com/foo/bar.git [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:695
+- https://example.com/foo/bar.git.helper [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:693
+- https://example.com/foo/repo.git [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:722
+- https://example.com/foo/repo.git.helper [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:720
+- https://example.com/o [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:1026, t/t0300-credentials.sh:1027
+- https://example.com/org [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:1005, t/t0300-credentials.sh:1010
+- https://example.com/org/ [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:1006, t/t0300-credentials.sh:1011
+- https://example.com/org/repo.git [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:1007, t/t0300-credentials.sh:1012, t/t0300-credentials.sh:996
+- https://example.com/path.git [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:793
+- https://example.com/path.git.username [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:789
+- https://example.com/per%C3%BA.git [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:681
+- https://example.com/perú.git.helper [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:677
+- https://example.com/repo [unclassified_reference / http_endpoint] — t/t9904-url-parse.sh:307
+- https://example.com/repo.git [unclassified_reference / http_endpoint] — submodule-config.c:282, submodule-config.c:283, t/t0302-credential-store.sh:164, t/t0302-credential-store.sh:166, t/t0302-credential-store.sh:177
+- https://example.com/repo.git.helper [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:644
+- https://example.com/repository/path [unclassified_reference / http_endpoint] — t/t9904-url-parse.sh:107, t/t9904-url-parse.sh:108, t/t9904-url-parse.sh:125, t/t9904-url-parse.sh:149, t/t9904-url-parse.sh:173
+- https://example.com/subdirectory [unclassified_reference / http_endpoint] — t/t1300-config.sh:1931, t/t1300-config.sh:1960, t/t1300-config.sh:1962, t/t1300-config.sh:1978, t/t1300-config.sh:1980
+- https://example.com/subdirectory/nested [unclassified_reference / http_endpoint] — t/t1300-config.sh:1966, t/t1300-config.sh:1968
+- https://example.com:1234/repository/path [unclassified_reference / http_endpoint] — t/t9904-url-parse.sh:105, t/t9904-url-parse.sh:124, t/t9904-url-parse.sh:148, t/t9904-url-parse.sh:172, t/t9904-url-parse.sh:23
+- https://example.org${sq [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:1055
+- https://foo.com [unclassified_reference / http_endpoint] — t/t7006-pager.sh:273
+- https://foo.com/ [unclassified_reference / http_endpoint] — t/t7006-pager.sh:272
+- https://foo.helper [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:609
+- https://foo/bar/baz [internal_candidate / http_endpoint] — t/t1300-config.sh:2929
+- https://gcc.gnu.org/bugzilla/show_bug.cgi [unclassified_reference / http_endpoint] — Makefile:198, compat/fsmonitor/fsm-darwin-gcc.h:9
+- https://gcc.gnu.org/gcc-3.0/features.html [unclassified_reference / http_endpoint] — Makefile:2960
+- https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html [unclassified_reference / http_endpoint] — sha1dc/sha1.c:50
+- https://git-lfs.github.com/ [unclassified_reference / http_endpoint] — git-p4.py:1575, git-p4.py:1636, t/t9824-git-p4-git-lfs.sh:112, t/t9824-git-p4-git-lfs.sh:138, t/t9824-git-p4-git-lfs.sh:166
+- https://git-scm.com/ [informational_reference / http_endpoint] — README.md:18, git-gui/README.md:4
+- https://git-scm.com/docs/BreakingChanges.html [unclassified_reference / http_endpoint] — usage.c:397
+- https://git-scm.com/docs/MyFirstContribution [informational_reference / http_endpoint] — .github/CONTRIBUTING.md:20
+- https://git-scm.com/docs/SubmittingPatches [informational_reference / http_endpoint] — .github/CONTRIBUTING.md:14, gitk-git/README.md:83, gitk-git/README.md:88
+- https://git-scm.com/docs/git-gui [informational_reference / http_endpoint] — git-gui/README.md:9
+- https://git-scm.com/docs/gitk [informational_reference / http_endpoint] — gitk-git/README.md:28
+- https://git-scm.com/docs/gitsecurityboundary [informational_reference / http_endpoint] — SECURITY.md:14
+- https://git.example.com [unclassified_reference / http_endpoint] — t/lib-credential.sh:579, t/lib-credential.sh:580, t/lib-credential.sh:624
+- https://git.kernel.org/pub/scm/git/git.git/plain/MaintNotes [informational_reference / http_endpoint] — .github/CONTRIBUTING.md:11
+- https://git.wiki.kernel.org/index.php/GitCommunity [informational_reference / http_endpoint] — git-gui/README.md:53
+- https://git.zx2c4.com/cgit/ [unclassified_reference / http_endpoint] — graph.h:133, graph.h:199
+- https://git2.example.com [unclassified_reference / http_endpoint] — t/lib-credential.sh:648, t/lib-credential.sh:649, t/lib-credential.sh:673, t/lib-credential.sh:674
+- https://gitforwindows.org/ [unclassified_reference / http_endpoint] — contrib/buildsystems/CMakeLists.txt:83
+- https://gitgitgadget.github.io/ [informational_reference / http_endpoint] — .github/CONTRIBUTING.md:8, .github/PULL_REQUEST_TEMPLATE.md:4, git-gui/README.md:104
+- https://github.com/ [unclassified_reference / http_endpoint] — git-gui/README.md:115
+- https://github.com/${{ [unclassified_reference / http_endpoint] — .github/workflows/l10n.yml:40, .github/workflows/main.yml:41
+- https://github.com/${{github.repository [unclassified_reference / http_endpoint] — .github/workflows/check-whitespace.yml:32
+- https://github.com/Microsoft/vscode-cpptools [informational_reference / http_endpoint] — contrib/vscode/README.md:9
+- https://github.com/PCRE2Project/pcre2/commit/c21bd977547d [unclassified_reference / http_endpoint] — grep.c:332
+- https://github.com/agl/critbit.git [unclassified_reference / http_endpoint] — cbtree.c:5, cbtree.h:5
+- https://github.com/curl/curl/ [unclassified_reference / http_endpoint] — git-curl-compat.h:17
+- https://github.com/curl/curl/blob/master/docs/libcurl/symbols-in-versions [unclassified_reference / http_endpoint] — git-curl-compat.h:15
+- https://github.com/curl/curl/pull/11756 [unclassified_reference / http_endpoint] — t/t5551-http-fetch-smart.sh:23
+- https://github.com/depp/uniset.git [unclassified_reference / http_endpoint] — tools/update-unicode/update_unicode.sh:14
+- https://github.com/ethomson [informational_reference / http_endpoint] — t/unit-tests/clar/README.md:327
+- https://github.com/foresterre/cargo-msrv/releases/download/v$CARGO_MSRV_VERSION/cargo-msrv-x86_64-unknown-linux-musl-v$CARGO_MSRV_VERSION.tgz [unclassified_reference / http_endpoint] — ci/install-dependencies.sh:14
+- https://github.com/git-l10n/git-po-helper [informational_reference / http_endpoint] — .github/workflows/l10n.yml:104, po/AGENTS.md:231, po/README.md:481
+- https://github.com/git-l10n/git-po/ [unclassified_reference / http_endpoint] — po/README.md:10
+- https://github.com/git/git [informational_reference / http_endpoint] — git-gui/README.md:111, t/unit-tests/clar/README.md:332
+- https://github.com/git/git/actions [informational_reference / http_endpoint] — README.md:1
+- https://github.com/git/git/workflows/CI/badge.svg [informational_reference / http_endpoint] — README.md:1
+- https://github.com/gitgitgadget/git [unclassified_reference / http_endpoint] — git-gui/README.md:121
+- https://github.com/gitgitgadget/git/pulls [unclassified_reference / http_endpoint] — git-gui/README.md:137
+- https://github.com/github/git-lfs/commit/da2935d9a739592bc775c98d8ef4df9c72ea3b43 [unclassified_reference / http_endpoint] — git-p4.py:1603
+- https://github.com/github/git-lfs/releases/download/v$LINUX_GIT_LFS_VERSION [unclassified_reference / http_endpoint] — ci/install-dependencies.sh:11
+- https://github.com/j6t/git-gui [unclassified_reference / http_endpoint] — git-gui/README.md:46
+- https://github.com/libgit2/libgit2 [unclassified_reference / http_endpoint] — t/unit-tests/clar/README.md:331
+- https://github.com/mhagger/diff-slider-tools [unclassified_reference / http_endpoint] — xdiff/xdiffi.c:583
+- https://github.com/mozilla/diversity [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:142
+- https://github.com/newren/git-filter-repo/ [unclassified_reference / http_endpoint] — git-filter-branch.sh:92
+- https://github.com/user/repo.git [unclassified_reference / http_endpoint] — builtin/push.c:790
+- https://github.com/uutils/coreutils/issues/10508 [unclassified_reference / http_endpoint] — ci/install-dependencies.sh:80
+- https://github.com/vmg [informational_reference / http_endpoint] — t/unit-tests/clar/README.md:325
+- https://gitlab.alpinelinux.org/alpine/aports/-/issues/13112 [unclassified_reference / http_endpoint] — t/lib-httpd.sh:147
+- https://gitlab.com/git-scm/git/-/pipelines [informational_reference / http_endpoint] — README.md:2
+- https://gitlab.com/git-scm/git/badges/master/pipeline.svg [informational_reference / http_endpoint] — README.md:2
+- https://go.microsoft.com/fwlink/ [unclassified_reference / http_endpoint] — contrib/vscode/init.sh:239, contrib/vscode/init.sh:264
+- https://good-example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:2037
+- https://good.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:1883, t/t1300-config.sh:1885, t/t1300-config.sh:1889, t/t1300-config.sh:1891, t/t1300-config.sh:2029
+- https://host/-style [internal_candidate / http_endpoint] — trace2.c:254
+- https://host/repo [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:290, t/unit-tests/u-urlmatch-normalization.c:291
+- https://html.spec.whatwg.org/dev/semantics.html [unclassified_reference / http_endpoint] — t/t9502-gitweb-standalone-parse-output.sh:228
+- https://invalid.invalid [unclassified_reference / http_endpoint] — t/t5710-promisor-remote-capability.sh:820, t/t5710-promisor-remote-capability.sh:850, t/t5710-promisor-remote-capability.sh:883
+- https://invalid.invalid,partialclonefilter=blob:limit=10k,token=fooBar [unclassified_reference / http_endpoint] — t/t5710-promisor-remote-capability.sh:838, t/t5710-promisor-remote-capability.sh:870
+- https://isync.sourceforge.io/ [unclassified_reference / http_endpoint] — imap-send.c:874
+- https://johnresig.com/blog/getelementsbyclassname-speed-comparison/ [unclassified_reference / http_endpoint] — gitweb/static/js/lib/common-lib.js:140
+- https://lore.kernel.org/git/ [unclassified_reference / http_endpoint] — README.md:45, usage.c:399
+- https://lore.kernel.org/git/20130515143508.GO25742@login.drsnuggles.stderr.nl/ [unclassified_reference / http_endpoint] — t/t4038-diff-combined.sh:370
+- https://lore.kernel.org/git/458ad3c1-96df-4575-ee42-e6eb754f25f6@gmx.de/ [unclassified_reference / http_endpoint] — compat/regcomp_enhanced.c:8
+- https://lore.kernel.org/git/7vll0wvb2a.fsf@assigned-by-dhcp.cox.net/ [unclassified_reference / http_endpoint] — apply.c:486
+- https://lore.kernel.org/git/7vmxo5l2g4.fsf@alter.siamese.dyndns.org/ [unclassified_reference / http_endpoint] — tree-walk.c:1177
+- https://lore.kernel.org/git/93056823-2740-d072-1ebd-46b440b33d7e@felt.demon.nl/ [unclassified_reference / http_endpoint] — sha1dc/sha1.c:101
+- https://lore.kernel.org/git/Pine.LNX.4.44.0504271254120.4678-100000@wax.eds.org/ [unclassified_reference / http_endpoint] — t/t6401-merge-criss-cross.sh:6
+- https://lore.kernel.org/git/ZoV8b2RvYxLOotSJ@teonanacatl.net/ [unclassified_reference / http_endpoint] — t/lib-gpg.sh:82
+- https://lore.kernel.org/git/anlmwaEtwcCPse1N@pks.im/ [unclassified_reference / http_endpoint] — environment.h:128
+- https://lore.kernel.org/git/nycvar.QRO.7.76.6.1907252055500.21907@tvgsbejvaqbjf.bet/ [unclassified_reference / http_endpoint] — merge-ort.h:109
+- https://lore.kernel.org/git/xmqqcypfcmn4.fsf@gitster.g/ [unclassified_reference / http_endpoint] — builtin/apply.c:29
+- https://lore.kernel.org/git/xmqqshv18i8i.fsf@gitster.mtv.corp.google.com/ [unclassified_reference / http_endpoint] — t/t0021-conversion.sh:34, t/t0021-conversion.sh:49
+- https://man7.org/linux/man-pages/man7/inotify.7.html [unclassified_reference / http_endpoint] — compat/fsmonitor/fsm-listen-linux.c:163, compat/fsmonitor/fsm-listen-linux.c:594
+- https://marc.info/ [unclassified_reference / http_endpoint] — README.md:46
+- https://more.example.com.au [unclassified_reference / http_endpoint] — t/t1300-config.sh:2056
+- https://msdn.microsoft.com/en-us/library/windows/desktop/ms724435.aspx [unclassified_reference / http_endpoint] — compat/mingw.c:2666
+- https://one.example.com [unclassified_reference / http_endpoint] — t/t0300-credentials.sh:898, t/t0300-credentials.sh:901, t/t0300-credentials.sh:902, t/t7416-submodule-dash-url.sh:184
+- https://one.example.com/evil [unclassified_reference / http_endpoint] — t/t7450-bad-git-dotfiles.sh:63
+- https://opensource.org/licenses/MIT [unclassified_reference / http_endpoint] — sha1dc/sha1.c:5, sha1dc/sha1.h:5, sha1dc/ubc_check.c:5, sha1dc/ubc_check.h:5
+- https://other.example.com/foo.git [unclassified_reference / http_endpoint] — http.c:2374
+- https://other.example.com/foo.git/info/refs [unclassified_reference / http_endpoint] — http.c:2373
+- https://other.tld [unclassified_reference / http_endpoint] — t/lib-credential.sh:132, t/lib-credential.sh:133
+- https://plackperl.org [unclassified_reference / http_endpoint] — git-instaweb.sh:461
+- https://preceding.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:1937, t/t1300-config.sh:1984, t/t1300-config.sh:1986
+- https://repo1.maven.org/maven2/org/eclipse/jgit/org.eclipse.jgit.pgm/6.8.0.202311291450-r/org.eclipse.jgit.pgm-6.8.0.202311291450-r.sh [unclassified_reference / http_endpoint] — ci/install-dependencies.sh:12
+- https://research.swtch.com/glob [unclassified_reference / http_endpoint] — t/perf/p0100-globbing.sh:6
+- https://rt.cpan.org/Ticket/Display.html [unclassified_reference / http_endpoint] — t/lib-terminal.sh:30
+- https://scan.coverity.com/builds [unclassified_reference / http_endpoint] — .github/workflows/coverity.yml:167
+- https://scan.coverity.com/download/$COVERITY_LANGUAGE/$COVERITY_PLATFORM [unclassified_reference / http_endpoint] — .github/workflows/coverity.yml:108, .github/workflows/coverity.yml:79
+- https://shattered.io [unclassified_reference / http_endpoint] — Makefile:513
+- https://some.host:443 [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:118, t/unit-tests/u-urlmatch-normalization.c:120
+- https://sourceforge.net/p/predef/wiki/Endianness/ [unclassified_reference / http_endpoint] — sha1dc/sha1.c:66, sha1dc/sha1.c:90
+- https://sourceforge.net/p/tktoolkit/bugs/2343/ [unclassified_reference / http_endpoint] — git-gui/git-gui.sh:2265
+- https://sourceware.org/bugzilla/show_bug.cgi [unclassified_reference / http_endpoint] — t/helper/test-regex.c:33
+- https://stackoverflow.com/a/31976060 [unclassified_reference / http_endpoint] — t/t3070-wildmatch.sh:64
+- https://stackoverflow.com/questions/11893688 [unclassified_reference / http_endpoint] — t/t9801-git-p4-branch.sh:469
+- https://stackoverflow.com/questions/1818865/do-we-have-getelementsbyclassname-in-javascript [unclassified_reference / http_endpoint] — gitweb/static/js/lib/common-lib.js:138
+- https://sub.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:2008, t/t1300-config.sh:2010
+- https://sub.example.com/ [unclassified_reference / http_endpoint] — t/t1300-config.sh:1949
+- https://sub.example.com/wildcardwithsubdomain [unclassified_reference / http_endpoint] — t/t1300-config.sh:1996, t/t1300-config.sh:1998
+- https://subspace.kernel.org/subscribing.html [unclassified_reference / http_endpoint] — README.md:44
+- https://support.microsoft.com/en-us/help/170559/prb-conversion-problem-between-shift-jis-and-unicode [unclassified_reference / http_endpoint] — convert.c:450
+- https://testanything.org/tap-specification.html [unclassified_reference / http_endpoint] — t/test-lib.sh:719
+- https://timeout.tld [unclassified_reference / http_endpoint] — t/lib-credential.sh:431, t/lib-credential.sh:432
+- https://trailing.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:1945, t/t1300-config.sh:2002, t/t1300-config.sh:2004
+- https://unicode.org/faq/utf_bom.html [unclassified_reference / http_endpoint] — utf8.h:103, utf8.h:87
+- https://void.example.com/main.git [unclassified_reference / http_endpoint] — t/t9300-fast-import.sh:3965
+- https://weak.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:1878, t/t1300-config.sh:1895, t/t1300-config.sh:1897, t/t1300-config.sh:1904, t/t1300-config.sh:1906
+- https://web.archive.org/web/20130212022238/https://www.gnupg.org/faq/gnupg-faq.html [unclassified_reference / http_endpoint] — t/lib-gpg.sh:26
+- https://web.archive.org/web/20140421151132/http://www.perforce.com/perforce/doc.current/manuals/p4sag/chapter.superuser.html [unclassified_reference / http_endpoint] — sha1dc/sha1.c:91
+- https://web.archive.org/web/20150602090517/http://www.perforce.com/perforce/doc.current/manuals/p4sag/chapter.superuser.html [unclassified_reference / http_endpoint] — t/t9816-git-p4-locked.sh:12
+- https://wiki.debian.org/ArchitectureSpecificsMemo [unclassified_reference / http_endpoint] — sha1dc/sha1.c:110
+- https://wildcard.example.com [unclassified_reference / http_endpoint] — t/t1300-config.sh:1990, t/t1300-config.sh:1992
+- https://wildcard.example.org [unclassified_reference / http_endpoint] — t/t1300-config.sh:2014, t/t1300-config.sh:2016
+- https://www.cl.cam.ac.uk/~mgk25/ucs/ [unclassified_reference / http_endpoint] — utf8.c:7
+- https://www.contributor-covenant.org [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:140
+- https://www.contributor-covenant.org/faq [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:143
+- https://www.contributor-covenant.org/faq][FAQ [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:137
+- https://www.contributor-covenant.org/translations [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:144
+- https://www.contributor-covenant.org/translations][translations [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:138
+- https://www.contributor-covenant.org/version/2/0/code_of_conduct.html [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:141
+- https://www.contributor-covenant.org/version/2/0/code_of_conduct.html][v2.0 [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:131
+- https://www.example.org [unclassified_reference / http_endpoint] — t/unit-tests/u-trailer.c:331
+- https://www.freedesktop.org/wiki/Software/PulseAudio/HowToUseGitSendEmail/ [informational_reference / http_endpoint] — git-gui/README.md:91
+- https://www.gnu.org/licenses/ [unclassified_reference / http_endpoint] — git-gui/git-gui.sh:27, imap-send.c:21, kwset.c:21, kwset.h:23, list.h:22
+- https://www.iana.org/assignments/port-numbers [unclassified_reference / http_endpoint] — protocol.h:21
+- https://www.ietf.org/rfc/rfc7159.txt [unclassified_reference / http_endpoint] — json-writer.h:6
+- https://www.json.org/ [unclassified_reference / http_endpoint] — json-writer.h:7
+- https://www.kernel.org/pub/software/scm/git/docs/ [unclassified_reference / http_endpoint] — git-gui/git-gui.sh:2949
+- https://www.not-a-trailer.org [unclassified_reference / http_endpoint] — t/t7513-interpret-trailers.sh:2003
+- https://www.unicode.org/versions/Unicode10.0.0/ch03.pdf [informational_reference / http_endpoint] — utf8.h:104
+- https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html [unclassified_reference / http_endpoint] — gitweb/static/js/lib/common-lib.js:126, gitweb/static/js/lib/common-lib.js:127
+- https://www.xfree86.org/current/ctlseqs.html [unclassified_reference / http_endpoint] — sideband.c:201
+- https://www.youtube.com/watch [informational_reference / http_endpoint] — .github/CONTRIBUTING.md:16
+- https://x.y/^ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:243, t/unit-tests/u-urlmatch-normalization.c:244
+- https://x.y/^/ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:246
+- https://x.y/^/../abc [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:245
+- https://x.y:443/ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:246
+- https://x.y:443/^ [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:243, t/unit-tests/u-urlmatch-normalization.c:244
+- https://x.y:443/abc [unclassified_reference / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:245
+- https://x/ [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:144, t/unit-tests/u-urlmatch-normalization.c:145, t/unit-tests/u-urlmatch-normalization.c:146
+- https://x:443 [internal_candidate / http_endpoint] — t/unit-tests/u-urlmatch-normalization.c:144, t/unit-tests/u-urlmatch-normalization.c:145, t/unit-tests/u-urlmatch-normalization.c:146
+
+CONFIGURATION PARAMETERS
+- ALL_PROXY — http.c:1284
+- CLAR_SUMMARY — t/unit-tests/clar/clar.c:609
+- COLUMNS — pager.c:226
+- CONTENT_LENGTH — http-backend.c:369
+- CONTENT_TYPE — http-backend.c:637
+- DISPLAY — builtin/bisect.c:1274, builtin/help.c:313
+- EDITOR — editor.c:37
+- EMAIL — ident.c:174
+- GIT_ALLOW_PROTOCOL — transport.c:1102
+- GIT_ASKPASS — prompt.c:53
+- GIT_ASK_YESNO — compat/mingw.c:220
+- GIT_AUTHOR_DATE — builtin/commit.c:641, ident.c:574
+- GIT_AUTHOR_EMAIL — builtin/commit.c:640, ident.c:554, ident.c:569, ident.c:572
+- GIT_AUTHOR_NAME — builtin/commit.c:639, ident.c:553, ident.c:567, ident.c:571
+- GIT_BASENAME_FACTOR — diffcore-rename.c:1497
+- GIT_CHERRY_PICK_HELP — sequencer.c:533
+- GIT_COMMITTER_DATE — ident.c:587
+- GIT_COMMITTER_EMAIL — builtin/am.c:1698, http-backend.c:494, ident.c:558, ident.c:582, ident.c:585, sequencer.c:1690
+- GIT_COMMITTER_NAME — builtin/am.c:1697, http-backend.c:492, ident.c:557, ident.c:580, ident.c:584, sequencer.c:1689
+- GIT_CONFIG_GLOBAL — config.c:1562
+- GIT_CONFIG_SYSTEM — config.c:1533
+- GIT_CURL_FTP_NO_EPSV — http.c:1494
+- GIT_CURL_VERBOSE — http.c:1247, imap-send.c:1701
+- GIT_DEFAULT_OBJECT_STORAGE_FORMAT — setup.c:3007
+- GIT_DEFAULT_REF_FORMAT — setup.c:2962
+- GIT_DEFAULT_REF_STORAGE_FORMAT — setup.c:2957
+- GIT_DIFF_OPTS — diff.c:4031
+- GIT_DIR — git-p4.py:4581, git-p4.py:4620
+- GIT_EDITOR — editor.c:29
+- GIT_EXTERNAL_DIFF — diff.c:565
+- GIT_FORCE_THREADS — builtin/index-pack.c:1347
+- GIT_HTTP_EXPORT_ALL — http-backend.c:814
+- GIT_HTTP_MAX_REQUESTS — http.c:1456
+- GIT_HTTP_PROXY_AUTHMETHOD — http.c:715
+- GIT_INDEX_VERSION — read-cache.c:1656
+- GIT_MAN_VIEWER — builtin/help.c:521
+- GIT_MERGE_VERBOSITY — merge-ort.c:5532
+- GIT_OVERRIDE_VIRTUAL_HOST — connect.c:1290
+- GIT_PAGER — pager.c:100
+- GIT_PRINT_SHA1_ELLIPSIS — environment.c:242
+- GIT_PROJECT_ROOT — http-backend.c:707
+- GIT_PROXY_COMMAND — connect.c:1060
+- GIT_PROXY_SSL_CERT_PASSWORD_PROTECTED — http.c:1491
+- GIT_REFLOG_ACTION — builtin/am.c:1709, builtin/checkout.c:1044, builtin/commit.c:1848, builtin/fetch.c:675, builtin/merge.c:488, builtin/merge.c:493, builtin/pull.c:1023, builtin/reset.c:228
+- GIT_SEQUENCE_EDITOR — editor.c:50
+- GIT_SSH — connect.c:1420
+- GIT_SSH_COMMAND — connect.c:1186
+- GIT_SSH_VARIANT — connect.c:1206
+- GIT_SSL_CERT_PASSWORD_PROTECTED — http.c:1500
+- GIT_SSL_CIPHER_LIST — http.c:1187, http.c:1188
+- GIT_SSL_NO_VERIFY — http.c:1465
+- GIT_SSL_VERSION — http.c:1171, http.c:1172
+- GIT_STRACE_COMMANDS — compat/mingw.c:2058
+- GIT_TEST_CHECKOUT_WORKERS — parallel-checkout.c:46
+- GIT_TEST_DATE_NOW — date.c:137
+- GIT_TEST_DEFAULT_HASH — t/unit-tests/lib-oid.c:11
+- GIT_TEST_DEFAULT_HASH_ALGO — repository.c:46
+- GIT_TEST_DEFAULT_INITIAL_BRANCH_NAME — refs.c:717
+- GIT_TEST_FSMONITOR — fsmonitor-settings.c:129
+- GIT_TEST_MAINT_SCHEDULER — builtin/gc.c:1941, builtin/gc.c:1985
+- GIT_TEST_UF_DELAY_WARNING — wt-status.c:1264
+- GIT_TEST_VALIDATE_INDEX_CACHE_ENTRIES — read-cache.c:3611
+- GIT_TRACE_CURL_COMPONENTS — http.c:1437
+- GIT_TRACE_CURL_NO_DATA — http.c:1250
+- GIT_TRANSLOOP_DEBUG — transport-helper.c:1664
+- GIT_TRANSPORT_HELPER_DEBUG — transport-helper.c:1363
+- GIT_USER_AGENT — version.c:33, version.c:71
+- GIT_WORK_TREE — builtin/clone.c:1154
+- HOME — builtin/fsmonitor--daemon.c:1414, compat/mingw.c:3228, compat/mingw.c:3256, config.c:2165, git-p4.py:1704, path.c:1554, path.c:1575, path.c:714
+- HOMEDRIVE — compat/mingw.c:3234
+- HOMEPATH — compat/mingw.c:3237
+- HTTPS_PROXY — http.c:1278
+- HTTP_CONTENT_ENCODING — http-backend.c:477
+- HTTP_GIT_PROTOCOL — http-backend.c:822
+- LANG — compat/mingw.c:3277, gettext.c:150, gettext.c:25
+- LANGUAGE — gettext.c:54
+- LC_ALL — compat/mingw.c:3277, gettext.c:146, gettext.c:20
+- LC_CTYPE — compat/mingw.c:3277, gettext.c:148, gettext.c:23
+- MANPATH — builtin/help.c:484
+- MSYS — compat/mingw.c:3291
+- MSYSTEM — builtin/bisect.c:1274, compat/mingw.c:3255
+- NO_PROXY — http.c:1336
+- P4DIFF — git-p4.py:2118
+- P4EDITOR — git-p4.py:2094, git-p4.py:2095
+- PAGER — pager.c:110
+- PATH — compat/mingw.c:1750, compat/mingw.c:3256, exec-cmd.c:336, help.c:291, run-command.c:193
+- PATH_INFO — http-backend.c:706
+- PATH_TRANSLATED — http-backend.c:708
+- PLINK_PROTOCOL — compat/mingw.c:3251
+- PWD — abspath.c:301, git-p4.py:174
+- QUERY_STRING — http-backend.c:51
+- REMOTE_ADDR — daemon.c:751, http-backend.c:479
+- REMOTE_PORT — daemon.c:751
+- REMOTE_USER — http-backend.c:289, http-backend.c:478
+- REQUEST_METHOD — http-backend.c:766
+- SECURITYSESSIONID — builtin/bisect.c:1275
+- SERVER_PROTOCOL — http-backend.c:751
+- SESSIONNAME — builtin/bisect.c:1274
+- SHELL — builtin/bugreport.c:35
+- SSH_ASKPASS — prompt.c:57
+- TEMP — compat/mingw.c:3206
+- TERM — compat/mingw.c:3224, editor.c:23
+- TEST_SHELL_PATH — t/helper/test-run-command.c:216
+- TMP — compat/mingw.c:3205
+- TMPDIR — builtin/difftool.c:405, compat/mingw.c:3201, compat/mingw.c:3209, t/unit-tests/u-reftable-stack.c:63, tempfile.c:190, tempfile.c:218
+- TRASH_DIRECTORY — t/helper/test-fake-ssh.c:7
+- USERPROFILE — compat/mingw.c:3247, git-p4.py:1704
+- VISUAL — editor.c:35
+- XDG_CACHE_HOME — path.c:1571
+- XDG_CONFIG_HOME — path.c:1550
+- all_proxy — http.c:1285
+- http_proxy — http.c:1281
+- https_proxy — http.c:1279
+- no_proxy — http.c:1337
+
+CONTAINER / ENVIRONMENT DETAILS
+
+Review notes:
+- URL matches can include documentation and examples; inspect the cited lines.
+
+Taxonomy version: 1.0
+Use --format json for the full inventory, evidence, parameters and locations.

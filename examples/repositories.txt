@@ -1,0 +1,37 @@
+# Seven languages: the November 2026 TIOBE top five plus JavaScript and TypeScript.
+# Three public repositories per language, grouped below.
+
+# Python
+https://github.com/django/django
+https://github.com/pallets/flask
+https://github.com/tiangolo/fastapi
+
+# C
+https://github.com/git/git
+https://github.com/redis/redis
+https://github.com/curl/curl
+
+# Java
+https://github.com/spring-projects/spring-boot
+https://github.com/elastic/elasticsearch
+https://github.com/apache/kafka
+
+# C++
+https://github.com/opencv/opencv
+https://github.com/llvm/llvm-project
+https://github.com/nlohmann/json
+
+# C#
+https://github.com/dotnet/runtime
+https://github.com/dotnet/aspnetcore
+https://github.com/serilog/serilog
+
+# JavaScript
+https://github.com/facebook/react
+https://github.com/lodash/lodash
+https://github.com/expressjs/express
+
+# TypeScript
+https://github.com/microsoft/TypeScript
+https://github.com/microsoft/vscode
+https://github.com/nestjs/nest

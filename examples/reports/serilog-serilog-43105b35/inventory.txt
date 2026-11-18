@@ -1,0 +1,202 @@
+Dependocover report: https://github.com/serilog/serilog
+Languages: C#
+Files scanned: 283
+Findings: 287
+Repository ID: serilog/serilog
+Version/revision: 43105b3
+Categories: external_service=62, package=15, source_import=40
+
+DEDUPLICATED ENVIRONMENT INVENTORY
+
+LIBRARIES
+- BenchmarkDotNet [nuget] — BenchmarkDotNet 0.15.2
+  found at: test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj
+- BenchmarkDotNet.Attributes [nuget] — version not declared
+  found at: test/Serilog.PerformanceTests/GlobalUsings.cs:4
+- BenchmarkDotNet.Jobs [nuget] — version not declared
+  found at: test/Serilog.PerformanceTests/GlobalUsings.cs:5
+- BenchmarkDotNet.Running [nuget] — version not declared
+  found at: test/Serilog.PerformanceTests/GlobalUsings.cs:6
+- File [nuget] — version not declared
+  found at: test/Serilog.Tests/ArgumentNullTests.cs:2
+- JetBrains.Annotations [nuget] — version not declared
+  found at: src/Serilog/Guard.cs:1
+- MessageTemplateParser [nuget] — version not declared
+  found at: test/Serilog.Tests/Core/MessageTemplateTests.cs:1
+- Microsoft.NET.Test.Sdk [nuget] — Microsoft.NET.Test.Sdk 17.11.1
+  found at: test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj, test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj, test/Serilog.Tests/Serilog.Tests.csproj
+- Newtonsoft.Json [nuget] — Newtonsoft.Json 13.0.3
+  found at: test/Serilog.Tests/Formatting/Json/JsonFormatterTests.cs:1, test/Serilog.Tests/Serilog.Tests.csproj
+- PolySharp [nuget] — PolySharp 1.14.1; PolySharp 1.15.0
+  found at: src/Serilog/Serilog.csproj, test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj, test/TestDummies/TestDummies.csproj
+- PropertyToken [nuget] — version not declared
+  found at: test/Serilog.Tests/Parsing/MessageTemplateParserTests.cs:1
+- PublicApiGenerator [nuget] — PublicApiGenerator 11.1.0
+  found at: test/Serilog.ApprovalTests/ApiApprovalTests.cs:1, test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj
+- Serilog [nuget] — version not declared
+  found at: test/Serilog.ApprovalTests/ApiApprovalTests.cs:2, test/TestDummies/GlobalUsings.cs:2
+- Serilog.Capturing [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:10, test/Serilog.Tests/GlobalUsings.cs:8
+- Serilog.Configuration [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:11, test/Serilog.Tests/GlobalUsings.cs:9, test/TestDummies/GlobalUsings.cs:3
+- Serilog.Context [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:12, test/Serilog.PerformanceTests/GlobalUsings.cs:7, test/Serilog.Tests/GlobalUsings.cs:10
+- Serilog.Core [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:13, test/Serilog.PerformanceTests/GlobalUsings.cs:8, test/Serilog.Tests/GlobalUsings.cs:11, test/TestDummies/GlobalUsings.cs:4
+- Serilog.Core.Enrichers [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:14, test/Serilog.PerformanceTests/AllocationsBenchmark.cs:1, test/Serilog.Tests/GlobalUsings.cs:12
+- Serilog.Core.Filters [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:15, test/Serilog.Tests/GlobalUsings.cs:13
+- Serilog.Core.Pipeline [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:16, test/Serilog.PerformanceTests/GlobalUsings.cs:9, test/Serilog.Tests/GlobalUsings.cs:14
+- Serilog.Core.Sinks [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:17, test/Serilog.Tests/GlobalUsings.cs:15
+- Serilog.Core.Sinks.Batching [nuget] — version not declared
+  found at: src/Serilog/Configuration/BatchingOptions.cs:15, src/Serilog/Configuration/LoggerSinkConfiguration.cs:17, test/Serilog.Tests/Core/BatchingSinkMetricsTests.cs:2, test/Serilog.Tests/Core/BatchingSinkTests.cs:1, test/Serilog.Tests/Core/FailureAwareBatchSchedulerTests.cs:1
+- Serilog.Data [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:18, test/Serilog.Tests/GlobalUsings.cs:16
+- Serilog.Debugging [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:19, test/Serilog.Tests/GlobalUsings.cs:17
+- Serilog.Events [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:20, test/Serilog.PerformanceTests/GlobalUsings.cs:10, test/Serilog.Tests/GlobalUsings.cs:18, test/TestDummies/GlobalUsings.cs:5
+- Serilog.Events.LogEventLevel [nuget] — version not declared
+  found at: test/Serilog.Tests/GlobalUsings.cs:32
+- Serilog.Filters [nuget] — version not declared
+  found at: test/Serilog.PerformanceTests/GlobalUsings.cs:11, test/Serilog.Tests/GlobalUsings.cs:19
+- Serilog.Formatting [nuget] — version not declared
+  found at: test/Serilog.Tests/GlobalUsings.cs:20, test/TestDummies/GlobalUsings.cs:6
+- Serilog.Formatting.Display [nuget] — version not declared
+  found at: test/Serilog.PerformanceTests/GlobalUsings.cs:12, test/Serilog.Tests/GlobalUsings.cs:21
+- Serilog.Formatting.Json [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:21, test/Serilog.Tests/GlobalUsings.cs:22
+- Serilog.Parsing [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:22, test/Serilog.PerformanceTests/GlobalUsings.cs:13, test/Serilog.Tests/GlobalUsings.cs:23
+- Serilog.PerformanceTests.Support [nuget] — version not declared
+  found at: test/Serilog.PerformanceTests/GlobalUsings.cs:14
+- Serilog.Policies [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:23
+- Serilog.Rendering [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:24, test/Serilog.Tests/GlobalUsings.cs:24
+- Serilog.Settings.KeyValuePairs [nuget] — version not declared
+  found at: src/Serilog/GlobalUsings.cs:25, test/Serilog.Tests/GlobalUsings.cs:25
+- Serilog.Tests.Support [nuget] — version not declared
+  found at: test/Serilog.Tests/GlobalUsings.cs:26
+- Shouldly [nuget] — Shouldly 4.2.1
+  found at: test/Serilog.ApprovalTests/ApiApprovalTests.cs:3, test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj
+- System.Diagnostics.DiagnosticSource [nuget] — System.Diagnostics.DiagnosticSource 8.0.1
+  found at: src/Serilog/Serilog.csproj
+- System.Security.Cryptography.Xml [nuget] — System.Security.Cryptography.Xml 8.0.5
+  found at: test/Serilog.Tests/Serilog.Tests.csproj
+- System.ServiceModel.Http [nuget] — System.ServiceModel.Http 8.1.0
+  found at: test/Serilog.Tests/Serilog.Tests.csproj
+- System.ServiceModel.Primitives [nuget] — System.ServiceModel.Primitives 8.1.0
+  found at: test/Serilog.Tests/Serilog.Tests.csproj
+- System.Threading.Channels [nuget] — System.Threading.Channels 8.0.0
+  found at: src/Serilog/Serilog.csproj
+- System.ValueTuple [nuget] — System.ValueTuple 4.5.0
+  found at: src/Serilog/Serilog.csproj, test/Serilog.Tests/Serilog.Tests.csproj
+- TestDummies [nuget] — version not declared
+  found at: test/Serilog.Tests/GlobalUsings.cs:27
+- TestDummies.Console [nuget] — version not declared
+  found at: test/Serilog.Tests/GlobalUsings.cs:28, test/TestDummies/GlobalUsings.cs:7
+- TestDummies.Console.Themes [nuget] — version not declared
+  found at: test/Serilog.Tests/GlobalUsings.cs:29, test/TestDummies/GlobalUsings.cs:8
+- var [nuget] — version not declared
+  found at: src/Serilog/Events/LogEventPropertyValue.cs:54, src/Serilog/Events/MessageTemplate.cs:131, src/Serilog/Formatting/Json/JsonFormatter.cs:172, src/Serilog/Rendering/MessageTemplateRenderer.cs:71, test/Serilog.Tests/Core/BatchingSinkMetricsTests.cs:18, test/Serilog.Tests/Core/BatchingSinkMetricsTests.cs:35, test/Serilog.Tests/Core/LoggerTests.cs:281, test/Serilog.Tests/Core/LoggerTests.cs:287
+- xunit [nuget] — xunit 2.9.2
+  found at: test/Serilog.ApprovalTests/ApiApprovalTests.cs:4, test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj, test/Serilog.PerformanceTests/GlobalUsings.cs:15, test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj, test/Serilog.Tests/GlobalUsings.cs:30, test/Serilog.Tests/Serilog.Tests.csproj
+- xunit.runner.visualstudio [nuget] — xunit.runner.visualstudio 2.8.2
+  found at: test/Serilog.ApprovalTests/Serilog.ApprovalTests.csproj, test/Serilog.PerformanceTests/Serilog.PerformanceTests.csproj, test/Serilog.Tests/Serilog.Tests.csproj
+- Xunit.Sdk [nuget] — version not declared
+  found at: test/Serilog.Tests/GlobalUsings.cs:31
+
+INTERNAL SERVICES
+- localhost [external_service]
+  endpoint: HTTP http://localhost
+  found at: test/Serilog.Tests/Capturing/PropertyValueConverterTests.cs:445
+
+DATABASES / BROKERS: HOSTING UNKNOWN
+- None detected
+
+STANDARD CLOUD SERVICES
+- None detected
+
+THIRD-PARTY SERVICES
+- None detected
+
+UNCLASSIFIED SERVICE CLUES
+- None detected
+
+API ENDPOINTS (observed request calls)
+- None statically identified
+
+OTHER URL REFERENCES
+- http://contributor-covenant.org [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:10
+- http://contributor-covenant.org/ [informational_reference / http_endpoint] — CODE_OF_CONDUCT.md:3
+- http://contributor-covenant.org/version/1/4/ [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:11
+- http://contributor-covenant.org/version/1/4][version [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:8
+- http://localhost [internal_candidate / http_endpoint] — test/Serilog.Tests/Capturing/PropertyValueConverterTests.cs:445
+- http://stackoverflow.com/questions/tagged/serilog [informational_reference / http_endpoint] — CONTRIBUTING.md:53
+- http://www.apache.org/licenses/LICENSE-2.0 [unclassified_reference / http_endpoint] — src/Serilog/Capturing/DepthLimiter.cs:7, src/Serilog/Capturing/MessageTemplateProcessor.cs:7, src/Serilog/Capturing/PropertyBinder.cs:7, src/Serilog/Capturing/PropertyValueConverter.cs:7, src/Serilog/Configuration/BatchingOptions.cs:7
+- https://aka.ms/new-console-template [unclassified_reference / http_endpoint] — test/AotTestApp/Program.cs:1
+- https://apache.org/licenses/LICENSE-2.0.html [informational_reference / http_endpoint] — README.md:120
+- https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability [informational_reference / http_endpoint] — SECURITY.md:11
+- https://dot.net [informational_reference / http_endpoint] — INFLUENCES.md:5
+- https://github.com/issues [informational_reference / http_endpoint] — README.md:114
+- https://github.com/microsoftarchive/semantic-logging [informational_reference / http_endpoint] — INFLUENCES.md:7
+- https://github.com/serilog [informational_reference / http_endpoint] — CODE_OF_CONDUCT.md:3, CONTRIBUTING.md:5
+- https://github.com/serilog-archive [informational_reference / http_endpoint] — README.md:110
+- https://github.com/serilog-tracing/serilog-tracing [informational_reference / http_endpoint] — README.md:58
+- https://github.com/serilog/serilog [unclassified_reference / http_endpoint] — CONTRIBUTING.md:61
+- https://github.com/serilog/serilog-aspnetcore [informational_reference / http_endpoint] — README.md:54
+- https://github.com/serilog/serilog-filters-expressions [unclassified_reference / http_endpoint] — src/Serilog/Configuration/LoggerMinimumLevelConfiguration.cs:106, src/Serilog/Configuration/LoggerMinimumLevelConfiguration.cs:129
+- https://github.com/serilog/serilog-formatting-compact [informational_reference / http_endpoint] — README.md:31
+- https://github.com/serilog/serilog-settings-appsettings [informational_reference / http_endpoint] — README.md:51
+- https://github.com/serilog/serilog-settings-configuration [informational_reference / http_endpoint] — README.md:51
+- https://github.com/serilog/serilog-sinks-console [informational_reference / http_endpoint] — README.md:7
+- https://github.com/serilog/serilog-sinks-file [informational_reference / http_endpoint] — README.md:7
+- https://github.com/serilog/serilog-sinks-observable [informational_reference / http_endpoint] — README.md:59
+- https://github.com/serilog/serilog-sinks-opentelemetry [informational_reference / http_endpoint] — README.md:53
+- https://github.com/serilog/serilog/actions [informational_reference / http_endpoint] — README.md:1
+- https://github.com/serilog/serilog/actions/workflows/ci.yml/badge.svg [informational_reference / http_endpoint] — README.md:1
+- https://github.com/serilog/serilog/issues [informational_reference / http_endpoint] — CONTRIBUTING.md:16, CONTRIBUTING.md:54, README.md:106
+- https://github.com/serilog/serilog/issues/ [unclassified_reference / http_endpoint] — CONTRIBUTING.md:65
+- https://github.com/serilog/serilog/issues/1235 [unclassified_reference / http_endpoint] — test/Serilog.Tests/Capturing/PropertyValueConverterTests.cs:442
+- https://github.com/serilog/serilog/issues/1924 [unclassified_reference / http_endpoint] — test/Serilog.Tests/Formatting/Json/JsonFormatterTests.cs:279
+- https://github.com/serilog/serilog/issues/2019 [unclassified_reference / http_endpoint] — test/Serilog.Tests/Core/LoggerTests.cs:320, test/Serilog.Tests/Core/LoggerTests.cs:336, test/Serilog.Tests/Core/LoggerTests.cs:352, test/Serilog.Tests/Core/LoggerTests.cs:390, test/Serilog.Tests/Core/LoggerTests.cs:411
+- https://github.com/serilog/serilog/issues/new [unclassified_reference / http_endpoint] — CONTRIBUTING.md:64
+- https://github.com/serilog/serilog/releases [informational_reference / http_endpoint] — README.md:45
+- https://github.com/serilog/serilog/wiki [informational_reference / http_endpoint] — README.md:104
+- https://github.com/serilog/serilog/wiki/ [informational_reference / http_endpoint] — README.md:100
+- https://github.com/serilog/serilog/wiki/Community-Projects [informational_reference / http_endpoint] — CODE_OF_CONDUCT.md:12, CONTRIBUTING.md:3, CONTRIBUTING.md:63
+- https://github.com/serilog/serilog/wiki/Configuration-Basics [informational_reference / http_endpoint] — README.md:50
+- https://github.com/serilog/serilog/wiki/Debugging-and-Diagnostics [informational_reference / http_endpoint] — README.md:104
+- https://github.com/serilog/serilog/wiki/Enrichment [informational_reference / http_endpoint] — README.md:56
+- https://github.com/serilog/serilog/wiki/Getting-Started [informational_reference / http_endpoint] — README.md:100
+- https://github.com/serilog/serilog/wiki/Provided-Sinks [informational_reference / http_endpoint] — CODE_OF_CONDUCT.md:13, CONTRIBUTING.md:3, CONTRIBUTING.md:62, README.md:55, README.md:7
+- https://github.com/serilog/serilog/wiki/Usage-help [unclassified_reference / http_endpoint] — .github/ISSUE_TEMPLATE/config.yml:3
+- https://img.shields.io/badge/stack%20overflow-serilog-orange.svg [informational_reference / http_endpoint] — README.md:1
+- https://img.shields.io/nuget/dt/serilog.svg [informational_reference / http_endpoint] — README.md:1
+- https://img.shields.io/nuget/v/Serilog.svg [informational_reference / http_endpoint] — README.md:1
+- https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2 [unclassified_reference / http_endpoint] — src/Serilog/Core/Pipeline/MessageTemplateCache.cs:28
+- https://learn.microsoft.com/en-us/dotnet/api/system.collections.hashtable [unclassified_reference / http_endpoint] — src/Serilog/Core/Pipeline/MessageTemplateCache.cs:25
+- https://logging.apache.org/log4net/ [informational_reference / http_endpoint] — INFLUENCES.md:6
+- https://messagetemplates.org [informational_reference / http_endpoint] — README.md:27
+- https://nuget.org/packages/serilog [informational_reference / http_endpoint] — README.md:63
+- https://raw.githubusercontent.com/serilog/serilog.github.io/master/images/serilog-180px.png [informational_reference / http_endpoint] — README.md:5
+- https://serilog.net [informational_reference / http_endpoint] — README.md:5
+- https://serilog.net/ [informational_reference / http_endpoint] — CONTRIBUTING.md:5
+- https://stackoverflow.com/questions/tagged/serilog [informational_reference / http_endpoint] — README.md:1
+- https://twitter.com/search [informational_reference / http_endpoint] — CONTRIBUTING.md:55
+- https://www.kensets.com/ [informational_reference / http_endpoint] — README.md:120
+- https://www.nuget.org/packages/Serilog/ [informational_reference / http_endpoint] — README.md:1
+
+CONFIGURATION PARAMETERS
+
+CONTAINER / ENVIRONMENT DETAILS
+
+Review notes:
+- URL matches can include documentation and examples; inspect the cited lines.
+
+Taxonomy version: 1.0
+Use --format json for the full inventory, evidence, parameters and locations.

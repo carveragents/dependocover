@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dependocover"
+version = "0.1.0"
+description = "Discover runtime dependencies and external services in Python repositories"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Dependocover contributors" }]
+dependencies = ["tomli>=2; python_version < '3.11'"]
+
+[project.scripts]
+dependocover = "dependocover.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dependocover*"]

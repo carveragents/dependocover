@@ -1,0 +1,374 @@
+Dependocover report: https://github.com/expressjs/express
+Languages: JavaScript
+Files scanned: 216
+Findings: 529
+Repository ID: expressjs/express
+Version/revision: 43fca52
+Categories: configuration_parameter=3, external_service=174, javascript_import=43, package=44, runtime_requirement=1
+
+DEDUPLICATED ENVIRONMENT INVENTORY
+
+LIBRARIES
+- accepts [npm] — accepts ^2.0.0
+  imported as: accepts
+  found at: lib/request.js:16, package.json
+- after [npm] — after 0.8.2
+  imported as: after
+  found at: package.json, test/Route.js:3, test/Router.js:3, test/app.all.js:3, test/app.request.js:3, test/app.response.js:3, test/app.router.js:3, test/app.use.js:3
+- body-parser [npm] — body-parser ^2.4.0
+  imported as: body-parser
+  found at: lib/express.js:15, package.json
+- connect-redis [npm] — connect-redis ^8.0.1
+  imported as: connect-redis
+  found at: examples/session/redis.js:13, package.json
+- content-disposition [npm] — content-disposition ^2.0.1
+  imported as: content-disposition
+  found at: lib/response.js:15, package.json
+- content-type [npm] — content-type ^2.0.0
+  imported as: content-type
+  found at: lib/utils.js:16, package.json
+- cookie [npm] — cookie ^0.7.1
+  imported as: cookie
+  found at: lib/response.js:30, package.json
+- cookie-parser [npm] — cookie-parser 1.4.7
+  imported as: cookie-parser
+  found at: examples/cookies/index.js:10, examples/route-separation/index.js:11, package.json, test/req.signedCookies.js:5, test/res.cookie.js:5
+- cookie-session [npm] — cookie-session 2.1.1
+  imported as: cookie-session
+  found at: examples/cookie-sessions/index.js:7, package.json
+- cookie-signature [npm] — cookie-signature ^1.2.1
+  imported as: cookie-signature
+  found at: lib/response.js:26, package.json
+- debug [npm] — debug ^4.4.0
+  imported as: debug
+  found at: lib/application.js:17, lib/view.js:16, package.json
+- depd [npm] — depd ^2.0.0
+  imported as: depd
+  found at: lib/response.js:17, package.json
+- ejs [npm] — ejs ^3.1.10
+  imported as: ejs
+  found at: examples/ejs/index.js:23, lib/application.js:268, lib/application.js:275, package.json, test/app.render.js:4
+- encodeurl [npm] — encodeurl ^2.0.0
+  imported as: encodeurl
+  found at: lib/response.js:18, package.json
+- escape-html [npm] — escape-html ^1.0.3
+  imported as: escape-html
+  found at: examples/markdown/index.js:7, examples/route-map/index.js:7, lib/response.js:19, package.json
+- eslint [npm] — eslint 8.47.0
+  found at: package.json
+- etag [npm] — etag ^1.8.1
+  imported as: etag
+  found at: lib/utils.js:17, package.json
+- express [npm] — version not declared
+  imported as: express
+  found at: lib/application.js:588
+- express-session [npm] — express-session ^1.18.1
+  imported as: express-session
+  found at: examples/auth/index.js:10, examples/mvc/index.js:10, examples/session/index.js:11, examples/session/redis.js:9, package.json
+- finalhandler [npm] — finalhandler ^2.1.0
+  imported as: finalhandler
+  found at: lib/application.js:16, package.json
+- fresh [npm] — fresh ^2.0.0
+  imported as: fresh
+  found at: lib/request.js:20, package.json
+- hbs [npm] — hbs 4.4.0
+  found at: package.json
+- http-errors [npm] — http-errors ^2.0.0
+  imported as: http-errors
+  found at: examples/params/index.js:7, lib/response.js:16, package.json
+- marked [npm] — marked ^15.0.3
+  imported as: marked
+  found at: examples/markdown/index.js:10, examples/view-constructor/index.js:9, package.json
+- merge-descriptors [npm] — merge-descriptors ^2.0.0
+  imported as: merge-descriptors
+  found at: lib/express.js:17, package.json
+- method-override [npm] — method-override 3.0.0
+  imported as: method-override
+  found at: examples/mvc/index.js:11, examples/route-separation/index.js:12, package.json
+- mime-types [npm] — mime-types ^3.0.0
+  imported as: mime-types
+  found at: lib/response.js:22, lib/utils.js:18, package.json
+- mocha [npm] — mocha ^11.7.5
+  found at: package.json
+- morgan [npm] — morgan 1.12.1
+  imported as: morgan
+  found at: examples/cookies/index.js:9, examples/error-pages/index.js:10, examples/error/index.js:8, examples/mvc/index.js:8, examples/route-separation/index.js:10, examples/session/redis.js:8, examples/static-files/index.js:8, examples/vhost/index.js:8
+- nyc [npm] — nyc ^17.1.0
+  found at: package.json
+- on-finished [npm] — on-finished ^2.4.1
+  imported as: on-finished
+  found at: lib/response.js:21, package.json, test/res.sendFile.js:10
+- once [npm] — once ^1.4.0
+  imported as: once
+  found at: lib/application.js:25, package.json
+- online [npm] — version not declared
+  imported as: online
+  found at: examples/online/index.js:15
+- parseurl [npm] — parseurl ^1.3.3
+  imported as: parseurl
+  found at: lib/request.js:22, package.json
+- pbkdf2-password [npm] — pbkdf2-password 1.2.1
+  imported as: pbkdf2-password
+  found at: examples/auth/index.js:8, package.json
+- proxy-addr [npm] — proxy-addr ^2.0.8
+  imported as: proxy-addr
+  found at: lib/request.js:23, lib/utils.js:19, package.json
+- qs [npm] — qs ^6.16.0
+  imported as: qs
+  found at: lib/utils.js:20, package.json
+- range-parser [npm] — range-parser ^1.2.1
+  imported as: range-parser
+  found at: lib/request.js:21, package.json
+- redis [npm] — version not declared
+  imported as: redis
+  found at: examples/online/index.js:16, examples/search/index.js:16
+- router [npm] — router ^2.2.0
+  imported as: router
+  found at: lib/application.js:26, lib/express.js:19, package.json
+- send [npm] — send ^1.1.0
+  imported as: send
+  found at: lib/response.js:31, package.json
+- serve-static [npm] — serve-static ^2.2.0
+  imported as: serve-static
+  found at: lib/express.js:79, package.json
+- statuses [npm] — statuses ^2.0.1
+  imported as: statuses
+  found at: lib/response.js:25, package.json
+- supertest [npm] — supertest ^6.3.0
+  imported as: supertest
+  found at: package.json, test/acceptance/auth.js:2, test/acceptance/content-negotiation.js:2, test/acceptance/cookie-sessions.js:3, test/acceptance/cookies.js:3, test/acceptance/downloads.js:3, test/acceptance/ejs.js:2, test/acceptance/error-pages.js:3
+- type-is [npm] — type-is ^2.1.0
+  imported as: type-is
+  found at: lib/request.js:18, package.json
+- vary [npm] — vary ^1.1.2
+  imported as: vary
+  found at: lib/response.js:35, package.json
+- vhost [npm] — vhost ~3.0.2
+  imported as: vhost
+  found at: examples/vhost/index.js:9, package.json
+
+INTERNAL SERVICES
+- localhost [external_service]
+  endpoint: HTTP http://localhost/
+  endpoint: HTTP http://localhost:3000
+  endpoint: HTTP http://localhost:3000/
+  endpoint: HTTP http://localhost:3000/api/repos/
+    request keys: api-key
+  endpoint: HTTP http://localhost:3000/api/user/tobi/repos/
+    request keys: api-key
+  endpoint: HTTP http://localhost:3000/api/users/
+    request keys: api-key
+  endpoint: HTTP http://localhost:3000/notfound
+  endpoint: HTTP http://localhost:3000/user/0
+  endpoint: HTTP http://localhost:3000/user/0/edit
+  endpoint: HTTP http://localhost:3000/user/1
+  endpoint: HTTP http://localhost:3000/user/1/edit
+  endpoint: HTTP http://localhost:3000/users
+  endpoint: HTTP http://localhost:3000/users/1
+  endpoint: HTTP http://localhost:3000/users/1..3
+  endpoint: HTTP http://localhost:3000/users/4
+  found at: Readme.md:117, Readme.md:46, examples/error-pages/index.js:59, examples/error-pages/index.js:60, examples/error-pages/index.js:61, examples/resource/index.js:70, examples/resource/index.js:71, examples/resource/index.js:72
+
+DATABASES / BROKERS: HOSTING UNKNOWN
+- Redis [cache_or_key_value_store]
+  found at: History.md:2911, History.md:2922, History.md:3060, History.md:3291, examples/README.md:17, examples/online/index.js:16, examples/online/index.js:17, examples/online/index.js:3
+
+STANDARD CLOUD SERVICES
+- None detected
+
+THIRD-PARTY SERVICES
+- None detected
+
+UNCLASSIFIED SERVICE CLUES
+- None detected
+
+API ENDPOINTS (observed request calls)
+- None statically identified
+
+OTHER URL REFERENCES
+- http://api.example.com/users [unclassified_reference / http_endpoint] — lib/response.js:85, lib/response.js:86, lib/response.js:88, lib/response.js:89, test/res.links.js:13
+- http://dev-mag.com [unclassified_reference / http_endpoint] — History.md:3845
+- http://example.com [unclassified_reference / http_endpoint] — lib/response.js:789, lib/response.js:808, lib/response.js:809, test/res.redirect.js:106, test/res.redirect.js:124
+- http://example.com/ [unclassified_reference / http_endpoint] — test/res.redirect.js:167, test/res.redirect.js:175, test/res.redirect.js:176
+- http://example.com/blog/post/1 [unclassified_reference / http_endpoint] — test/Router.js:312, test/Router.js:317, test/Router.js:329, test/Router.js:334, test/Router.js:346
+- http://example.com/foo [unclassified_reference / http_endpoint] — test/Router.js:295, test/Router.js:300
+- http://example.com/post/1 [unclassified_reference / http_endpoint] — test/Router.js:351, test/Router.js:374, test/Router.js:391, test/Router.js:397
+- http://example.com:3000/ [informational_reference / http_endpoint] — examples/vhost/index.js:39
+- http://expressjs.com [informational_reference / http_endpoint] — History.md:3646
+- http://expressjs.com/guide.html [informational_reference / http_endpoint] — History.md:3552
+- http://foobar.com [unclassified_reference / http_endpoint] — test/req.get.js:32, test/req.get.js:33
+- http://github.com/visionmedia/haml.js [informational_reference / http_endpoint] — History.md:3737
+- http://google.com [unclassified_reference / http_endpoint] — test/res.location.js:198, test/res.location.js:199, test/res.location.js:209, test/res.location.js:210, test/res.location.js:253
+- http://google.com/ [unclassified_reference / http_endpoint] — test/res.location.js:115, test/res.location.js:120, test/res.location.js:14, test/res.location.js:19
+- http://localhost/ [internal_candidate / http_endpoint] — lib/response.js:625
+- http://localhost:3000 [internal_candidate / http_endpoint] — Readme.md:117, Readme.md:46
+- http://localhost:3000/ [internal_candidate / http_endpoint] — lib/response.js:625
+- http://localhost:3000/api/repos/ [internal_candidate / http_endpoint] — examples/web-service/index.js:79
+- http://localhost:3000/api/user/tobi/repos/ [internal_candidate / http_endpoint] — examples/web-service/index.js:84
+- http://localhost:3000/api/users/ [internal_candidate / http_endpoint] — examples/web-service/index.js:74
+- http://localhost:3000/notfound [internal_candidate / http_endpoint] — examples/error-pages/index.js:59, examples/error-pages/index.js:60, examples/error-pages/index.js:61
+- http://localhost:3000/user/0 [internal_candidate / http_endpoint] — examples/route-middleware/index.js:12, examples/route-middleware/index.js:16
+- http://localhost:3000/user/0/edit [internal_candidate / http_endpoint] — examples/route-middleware/index.js:13
+- http://localhost:3000/user/1 [internal_candidate / http_endpoint] — examples/route-middleware/index.js:14
+- http://localhost:3000/user/1/edit [internal_candidate / http_endpoint] — examples/route-middleware/index.js:15
+- http://localhost:3000/users [internal_candidate / http_endpoint] — examples/resource/index.js:70
+- http://localhost:3000/users/1 [internal_candidate / http_endpoint] — examples/resource/index.js:71, examples/resource/index.js:74
+- http://localhost:3000/users/1..3 [internal_candidate / http_endpoint] — examples/resource/index.js:73
+- http://localhost:3000/users/4 [internal_candidate / http_endpoint] — examples/resource/index.js:72
+- https://api.scorecard.dev/projects/github.com/expressjs/express/badge [unclassified_reference / http_endpoint] — Readme.md:279
+- https://bugs.chromium.org/p/v8/issues/detail [unclassified_reference / http_endpoint] — lib/response.js:1028
+- https://coveralls.io/r/expressjs/express [unclassified_reference / http_endpoint] — Readme.md:272
+- https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions [unclassified_reference / http_endpoint] — .github/workflows/codeql.yml:64
+- https://docs.npmjs.com/creating-a-package-json-file [informational_reference / http_endpoint] — Readme.md:59
+- https://docs.npmjs.com/downloading-and-installing-packages-locally [informational_reference / http_endpoint] — Readme.md:62
+- https://expressjs.com/ [informational_reference / http_endpoint] — Readme.md:1, Readme.md:83, package.json:17
+- https://expressjs.com/en/guide/migrating-5 [informational_reference / http_endpoint] — Readme.md:87
+- https://expressjs.com/en/starter/installing.html [informational_reference / http_endpoint] — Readme.md:68
+- https://expressjs.com/images/logos/logo-express-black.svg [unclassified_reference / http_endpoint] — Readme.md:4
+- https://expressjs.com/images/logos/logo-express-white.svg [unclassified_reference / http_endpoint] — Readme.md:3
+- https://github.com/0ss [informational_reference / http_endpoint] — Readme.md:255
+- https://github.com/3imed-jaberi [informational_reference / http_endpoint] — Readme.md:262
+- https://github.com/AkaHarshit [informational_reference / http_endpoint] — History.md:29
+- https://github.com/AuggieH [informational_reference / http_endpoint] — Readme.md:228
+- https://github.com/Bernice55231 [informational_reference / http_endpoint] — History.md:27
+- https://github.com/CBID2 [informational_reference / http_endpoint] — Readme.md:214
+- https://github.com/Cherry [informational_reference / http_endpoint] — History.md:17
+- https://github.com/G-Rath [informational_reference / http_endpoint] — Readme.md:229
+- https://github.com/GroophyLifefor [informational_reference / http_endpoint] — Readme.md:221
+- https://github.com/IamLizu [informational_reference / http_endpoint] — Readme.md:216
+- https://github.com/LinusU [informational_reference / http_endpoint] — Readme.md:190
+- https://github.com/Mayvis [informational_reference / http_endpoint] — History.md:52
+- https://github.com/MohammadXroid [informational_reference / http_endpoint] — Readme.md:230
+- https://github.com/NawafSwe [informational_reference / http_endpoint] — Readme.md:231
+- https://github.com/Nitin-Mohapatra [informational_reference / http_endpoint] — History.md:42
+- https://github.com/NotMoni [informational_reference / http_endpoint] — Readme.md:232
+- https://github.com/Phillip9587 [informational_reference / http_endpoint] — Readme.md:217
+- https://github.com/Sushmeet [informational_reference / http_endpoint] — Readme.md:261
+- https://github.com/UlisesGascon [informational_reference / http_endpoint] — Readme.md:187, Readme.md:215
+- https://github.com/VigneshMurugan [informational_reference / http_endpoint] — Readme.md:233
+- https://github.com/YuryShkoda [informational_reference / http_endpoint] — History.md:6
+- https://github.com/advisories/GHSA-4mjr-xmp4-gh2g [informational_reference / http_endpoint] — History.md:11
+- https://github.com/advisories/GHSA-x5fp-wj9c-mxmx [informational_reference / http_endpoint] — History.md:11
+- https://github.com/aravindvnair99 [informational_reference / http_endpoint] — Readme.md:211
+- https://github.com/bjohansebas [informational_reference / http_endpoint] — History.md:56, Readme.md:212
+- https://github.com/blakeembrey [informational_reference / http_endpoint] — History.md:35, History.md:44, Readme.md:191
+- https://github.com/carpasse [informational_reference / http_endpoint] — Readme.md:213
+- https://github.com/component/path-to-regexp [informational_reference / http_endpoint] — History.md:1783
+- https://github.com/crandmck [informational_reference / http_endpoint] — Readme.md:193
+- https://github.com/ctcpip [informational_reference / http_endpoint] — Readme.md:194
+- https://github.com/cuishuang [informational_reference / http_endpoint] — History.md:9
+- https://github.com/cyphercodes [informational_reference / http_endpoint] — History.md:11
+- https://github.com/dakshkhetan [informational_reference / http_endpoint] — Readme.md:257
+- https://github.com/davetashner [informational_reference / http_endpoint] — History.md:11
+- https://github.com/davidmashe [informational_reference / http_endpoint] — Readme.md:234
+- https://github.com/digitaIfabric [informational_reference / http_endpoint] — Readme.md:235
+- https://github.com/dougwilson [informational_reference / http_endpoint] — Readme.md:201
+- https://github.com/dpopp07 [informational_reference / http_endpoint] — Readme.md:260
+- https://github.com/e-l-i-s-e [informational_reference / http_endpoint] — Readme.md:236
+- https://github.com/efekrskl [informational_reference / http_endpoint] — Readme.md:218
+- https://github.com/ejcheng [informational_reference / http_endpoint] — Readme.md:256
+- https://github.com/enyoghasim [informational_reference / http_endpoint] — Readme.md:254
+- https://github.com/expressjs [informational_reference / http_endpoint] — Readme.md:84
+- https://github.com/expressjs/.github/blob/HEAD/CODE_OF_CONDUCT.md [unclassified_reference / http_endpoint] — Readme.md:281
+- https://github.com/expressjs/.github/blob/HEAD/CONTRIBUTING.md [unclassified_reference / http_endpoint] — Readme.md:282
+- https://github.com/expressjs/accepts [informational_reference / http_endpoint] — History.md:1781
+- https://github.com/expressjs/body-parser/security/advisories/GHSA-v422-hmwv-36x6 [informational_reference / http_endpoint] — History.md:52
+- https://github.com/expressjs/discussions [informational_reference / http_endpoint] — Readme.md:85
+- https://github.com/expressjs/discussions/blob/HEAD/docs/GOVERNANCE.md [informational_reference / http_endpoint] — Readme.md:179
+- https://github.com/expressjs/express [informational_reference / http_endpoint] — examples/web-service/index.js:54
+- https://github.com/expressjs/express.git [unclassified_reference / http_endpoint] — Readme.md:134
+- https://github.com/expressjs/express/actions/workflows/ci.yml [unclassified_reference / http_endpoint] — Readme.md:274
+- https://github.com/expressjs/express/blob/master/Readme.md [informational_reference / http_endpoint] — examples/view-constructor/index.js:40
+- https://github.com/expressjs/express/graphs/contributors [informational_reference / http_endpoint] — Readme.md:183
+- https://github.com/expressjs/express/issues/5615 [unclassified_reference / http_endpoint] — test/support/utils.js:83
+- https://github.com/expressjs/express/issues/5743 [unclassified_reference / http_endpoint] — test/app.router.js:1160
+- https://github.com/expressjs/express/pull/4893 [informational_reference / http_endpoint] — History.md:6
+- https://github.com/expressjs/express/pull/5167 [informational_reference / http_endpoint] — History.md:27
+- https://github.com/expressjs/express/pull/6464 [informational_reference / http_endpoint] — History.md:42
+- https://github.com/expressjs/express/pull/6903 [informational_reference / http_endpoint] — History.md:29
+- https://github.com/expressjs/express/pull/6991 [informational_reference / http_endpoint] — History.md:56
+- https://github.com/expressjs/express/pull/7057 [informational_reference / http_endpoint] — History.md:11
+- https://github.com/expressjs/express/pull/7233 [informational_reference / http_endpoint] — History.md:44
+- https://github.com/expressjs/express/pull/7234 [informational_reference / http_endpoint] — History.md:35
+- https://github.com/expressjs/express/pull/7305 [informational_reference / http_endpoint] — History.md:11
+- https://github.com/expressjs/express/pull/7366 [informational_reference / http_endpoint] — History.md:17
+- https://github.com/expressjs/express/pull/7390 [informational_reference / http_endpoint] — History.md:52
+- https://github.com/expressjs/express/pull/7459 [informational_reference / http_endpoint] — History.md:9
+- https://github.com/expressjs/express/pull/7474 [informational_reference / http_endpoint] — History.md:13
+- https://github.com/expressjs/express/pull/7478 [informational_reference / http_endpoint] — History.md:11
+- https://github.com/expressjs/express/security/advisories/GHSA-pj86-cfqh-vqx6 [informational_reference / http_endpoint] — History.md:61, History.md:67
+- https://github.com/expressjs/express/security/policy [informational_reference / http_endpoint] — Readme.md:161
+- https://github.com/expressjs/expressjs.com [informational_reference / http_endpoint] — Readme.md:83
+- https://github.com/expressjs/generator [informational_reference / http_endpoint] — History.md:1764, Readme.md:91
+- https://github.com/expressjs/type-is [informational_reference / http_endpoint] — History.md:1782
+- https://github.com/fed135 [informational_reference / http_endpoint] — Readme.md:237
+- https://github.com/firmanJS [informational_reference / http_endpoint] — Readme.md:238
+- https://github.com/getspooky [informational_reference / http_endpoint] — Readme.md:239
+- https://github.com/ghinks [informational_reference / http_endpoint] — Readme.md:240
+- https://github.com/ghousemohamed [informational_reference / http_endpoint] — Readme.md:241
+- https://github.com/gireeshpunathil [informational_reference / http_endpoint] — Readme.md:242
+- https://github.com/hacksparrow [informational_reference / http_endpoint] — Readme.md:202
+- https://github.com/jake32321 [informational_reference / http_endpoint] — Readme.md:243
+- https://github.com/jonathanong [informational_reference / http_endpoint] — Readme.md:203
+- https://github.com/jonchurch [informational_reference / http_endpoint] — Readme.md:188, Readme.md:244
+- https://github.com/krzysdz [informational_reference / http_endpoint] — Readme.md:220
+- https://github.com/ladjs/consolidate [informational_reference / http_endpoint] — Readme.md:126
+- https://github.com/lazerg [informational_reference / http_endpoint] — History.md:13
+- https://github.com/learnboost/cluster [informational_reference / http_endpoint] — examples/web-service/index.js:56
+- https://github.com/learnboost/stylus [informational_reference / http_endpoint] — examples/web-service/index.js:55
+- https://github.com/lekanikotun [informational_reference / http_endpoint] — Readme.md:245
+- https://github.com/ljharb/qs/security/advisories/GHSA-w7fw-mjwx-w883 [informational_reference / http_endpoint] — History.md:11
+- https://github.com/lucasraziel [informational_reference / http_endpoint] — Readme.md:258
+- https://github.com/marsonya [informational_reference / http_endpoint] — Readme.md:246
+- https://github.com/mastermatt [informational_reference / http_endpoint] — Readme.md:247
+- https://github.com/maxakuru [informational_reference / http_endpoint] — Readme.md:248
+- https://github.com/mertcanaltin [informational_reference / http_endpoint] — Readme.md:259
+- https://github.com/mlrawlings [informational_reference / http_endpoint] — Readme.md:249
+- https://github.com/niftylettuce [informational_reference / http_endpoint] — Readme.md:204
+- https://github.com/nodejs/node/issues/51562 [unclassified_reference / http_endpoint] — test/support/utils.js:82
+- https://github.com/ossf/scorecard-action [unclassified_reference / http_endpoint] — .github/workflows/scorecard.yml:47, .github/workflows/scorecard.yml:53
+- https://github.com/ossf/scorecard/blob/main/docs/checks.md [unclassified_reference / http_endpoint] — .github/workflows/scorecard.yml:11, .github/workflows/scorecard.yml:8
+- https://github.com/rodion-arr [informational_reference / http_endpoint] — Readme.md:250
+- https://github.com/rxmarbles [informational_reference / http_endpoint] — Readme.md:219
+- https://github.com/sheplu [informational_reference / http_endpoint] — Readme.md:192, Readme.md:251
+- https://github.com/tarunyadav1 [informational_reference / http_endpoint] — Readme.md:252
+- https://github.com/tj [informational_reference / http_endpoint] — Readme.md:181
+- https://github.com/tj/consolidate.js [informational_reference / http_endpoint] — lib/application.js:283
+- https://github.com/troygoode [informational_reference / http_endpoint] — Readme.md:205
+- https://github.com/tunniclm [informational_reference / http_endpoint] — Readme.md:253
+- https://github.com/wesleytodd [informational_reference / http_endpoint] — Readme.md:189
+- https://google.com [unclassified_reference / http_endpoint] — test/res.location.js:176, test/res.location.js:177, test/res.location.js:220, test/res.location.js:221, test/res.location.js:286
+- https://google.com/foo [unclassified_reference / http_endpoint] — test/res.location.js:242, test/res.location.js:243
+- https://img.shields.io/coverallsCoverage/github/expressjs/express [unclassified_reference / http_endpoint] — Readme.md:271
+- https://img.shields.io/github/actions/workflow/status/expressjs/express/ci.yml [unclassified_reference / http_endpoint] — Readme.md:273
+- https://img.shields.io/npm/dm/express [unclassified_reference / http_endpoint] — Readme.md:275
+- https://img.shields.io/npm/v/express [unclassified_reference / http_endpoint] — Readme.md:278
+- https://nodejs.org [informational_reference / http_endpoint] — Readme.md:8
+- https://nodejs.org/en/ [informational_reference / http_endpoint] — Readme.md:52
+- https://nodejs.org/en/about/releases/ [unclassified_reference / http_endpoint] — .github/workflows/ci.yml:50, .github/workflows/legacy.yml:34
+- https://nodejs.org/en/download/ [informational_reference / http_endpoint] — Readme.md:55
+- https://npmcharts.com/compare/express [unclassified_reference / http_endpoint] — Readme.md:276
+- https://npmjs.org/package/express [unclassified_reference / http_endpoint] — Readme.md:277
+- https://nvd.nist.gov/vuln/detail/CVE-2024-47764 [informational_reference / http_endpoint] — History.md:97
+- https://opencollective.com/express [unclassified_reference / http_endpoint] — package.json:20
+- https://ossf.github.io/scorecard-visualizer/ [unclassified_reference / http_endpoint] — Readme.md:280
+- https://redis.io/ [informational_reference / http_endpoint] — examples/online/index.js:4, examples/search/index.js:4, examples/session/index.js:4
+- https://registry.npmjs.org [unclassified_reference / http_endpoint] — .github/workflows/npm-publish.yml:31
+- https://www.cve.org/CVERecord [informational_reference / http_endpoint] — History.md:11, History.md:13, History.md:52, History.md:61, History.md:67
+- https://www.npmjs.com/ [informational_reference / http_endpoint] — Readme.md:53
+
+CONFIGURATION PARAMETERS
+- GITHUB_OUTPUT — .github/workflows/npm-publish.yml:72
+- NODE_ENV — examples/cookies/index.js:13, examples/error-pages/index.js:11, examples/route-map/index.js:10, lib/application.js:91, test/app.js:108, test/app.js:109, test/app.js:113, test/app.js:76
+- NO_DEPRECATION — test/support/env.js:3
+
+CONTAINER / ENVIRONMENT DETAILS
+- Node.js [runtime_requirement]
+  versions/tags: >= 18, Node.js
+  found at: package.json
+
+Review notes:
+- URL matches can include documentation and examples; inspect the cited lines.
+
+Taxonomy version: 1.0
+Use --format json for the full inventory, evidence, parameters and locations.

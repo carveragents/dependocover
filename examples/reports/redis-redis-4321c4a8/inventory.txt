@@ -1,0 +1,1792 @@
+Dependocover report: https://github.com/redis/redis
+Languages: Python, JavaScript, C, C++
+Files scanned: 1943
+Findings: 7127
+Repository ID: redis/redis
+Version/revision: 4321c4a
+Categories: api_call=1, configuration_parameter=6, container=1, external_service=703, javascript_import=1, package=3, python_import=43, source_import=523
+
+DEDUPLICATED ENVIRONMENT INVENTORY
+
+LIBRARIES
+- adapters/ae.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-ae.c:8
+- adapters/glib.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-glib.c:5
+- adapters/ivykis.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-ivykis.c:8
+- adapters/libev.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-libev.c:8
+- adapters/libevent.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-libevent-ssl.c:9, deps/hiredis/examples/example-libevent.c:8, deps/hiredis/test.c:33
+- adapters/libhv.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-libhv.c:8
+- adapters/libsdevent.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-libsdevent.c:8
+- adapters/libuv.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-libuv.c:8
+- adapters/macosx.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-macosx.c:10
+- adapters/poll.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-poll.c:8, deps/hiredis/test.c:28
+- adapters/qt.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-qt.h:4
+- adapters/redismoduleapi.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-redismoduleapi.c:8
+- adlist.h [c/c++] — version not declared
+  found at: src/adlist.c:13, src/functions.c:13, src/kvstore.h:30, src/listpack.c:2246, src/redis-benchmark.c:34, src/redis-cli.c:39, src/server.h:58, src/tls.c:17
+- ae.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/ae.h:34, src/ae.c:13, src/connection.h:19, src/redis-benchmark.c:27, src/redis-cli.c:43, src/server.h:50
+- ae_epoll.c [c/c++] — version not declared
+  found at: src/ae.c:36
+- ae_evport.c [c/c++] — version not declared
+  found at: src/ae.c:33
+- ae_kqueue.c [c/c++] — version not declared
+  found at: src/ae.c:39
+- ae_select.c [c/c++] — version not declared
+  found at: src/ae.c:41
+- ajv [npm] — version not declared
+  imported as: ajv
+  found at: utils/reply_schema_linter.js:3
+- alloc.h [c/c++] — version not declared
+  found at: deps/hiredis/alloc.c:32, deps/hiredis/async.c:33, deps/hiredis/dict.c:37, deps/hiredis/hiredis.h:46, deps/hiredis/read.c:45, deps/hiredis/sdsalloc.h:40
+- alloca.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_types.h:119, deps/tre/lib/regexec.c:17, deps/tre/lib/tre-match-backtrack.c:41, deps/tre/lib/tre-match-parallel.c:34
+- altivec.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:4259
+- anet.h [c/c++] — version not declared
+  found at: src/ae.c:14, src/anet.c:29, src/eventnotifier.c:20, src/redis-cli.c:42, src/server.h:60, src/syscheck.c:13
+- arena_reset.c [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/arena_reset_prof.c:4
+- arm_neon.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:171, deps/xxhash/xxhash.h:3865, src/bitops.c:31, src/hyperloglog.c:31
+- arm_sve.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:3858
+- arpa/inet.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:42, deps/hiredis/test.c:17, src/anet.c:20, src/cluster_legacy.c:31, src/config.c:27, src/debug.c:30, src/rdb.c:35, src/sentinel.c:21
+- asciilogo.h [c/c++] — version not declared
+  found at: src/server.c:7716
+- async.h [c/c++] — version not declared
+  found at: deps/hiredis/async.c:42, deps/hiredis/examples/example-ae.c:7, deps/hiredis/examples/example-glib.c:4, deps/hiredis/examples/example-ivykis.c:7, deps/hiredis/examples/example-libev.c:7, deps/hiredis/examples/example-libevent-ssl.c:8, deps/hiredis/examples/example-libevent.c:7, deps/hiredis/examples/example-libhv.c:7
+- async_private.h [c/c++] — version not declared
+  found at: deps/hiredis/async.c:48, deps/hiredis/ssl.c:59
+- atomicvar.h [c/c++] — version not declared
+  found at: src/db.c:19, src/dict.c:31, src/evict.c:15, src/functions.c:14, src/lazyfree.c:4, src/networking.c:16, src/redis-benchmark.c:37, src/server.c:22
+- AvailabilityMacros.h [c/c++] — version not declared
+  found at: src/config.h:17
+- avx2intrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:142
+- avx512bwintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:149
+- avx512cdintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:148
+- avx512dqintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:147
+- avx512fintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:146
+- avx512vbmi2intrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:152
+- avx512vbmiintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:151
+- avx512vlintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:150
+- avx512vpopcntdqintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:153
+- avxintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:141
+- batch_alloc.c [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/batch_alloc_prof.c:1
+- bio.h [c/c++] — version not declared
+  found at: src/aof.c:11, src/bio.c:48, src/cluster.c:27, src/cluster_asm.c:50, src/config.c:19, src/db.c:28, src/debug.c:20, src/evict.c:14
+- bitroar.h [c/c++] — version not declared
+  found at: src/bitops.c:12, src/bitroar.c:46, src/db.c:16, src/debug.c:16, src/defrag.c:23, src/lazyfree.c:2, src/object.c:15, src/rdb.c:16
+- bmiintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:136
+- byteswap.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:510
+- call_reply.h [c/c++] — version not declared
+  found at: src/call_reply.c:11, src/module.c:46
+- chk.h [c/c++] — version not declared
+  found at: src/chk.c:18, src/hotkeys.c:12, src/server.c:34
+- chrono [c/c++] — version not declared
+  found at: deps/jemalloc/msvc/test_threads/test_threads_main.cpp:4
+- cli_commands.h [c/c++] — version not declared
+  found at: src/cli_commands.c:2, src/redis-cli.c:47
+- cli_common.h [c/c++] — version not declared
+  found at: src/cli_common.c:12, src/redis-benchmark.c:40, src/redis-cli.c:45
+- client_comp.h [c/c++] — version not declared
+  found at: src/client_comp.c:2, src/server.h:71
+- climits [c/c++] — version not declared
+  found at: src/lzfP.h:141
+- cluster.h [c/c++] — version not declared
+  found at: src/acl.c:14, src/bless.c:26, src/cluster.c:22, src/cluster_asm.c:47, src/cluster_legacy.c:21, src/cluster_slot_stats.c:16, src/config.c:17, src/db.c:18
+- cluster_asm.h [c/c++] — version not declared
+  found at: src/aof.c:14, src/cluster.c:23, src/cluster_asm.c:49, src/cluster_legacy.c:23, src/db.c:23, src/debug.c:28, src/evict.c:18, src/module.c:41
+- cluster_legacy.h [c/c++] — version not declared
+  found at: src/cluster_legacy.c:22
+- cluster_slot_stats.h [c/c++] — version not declared
+  found at: src/blocked.c:52, src/cluster.c:24, src/cluster_legacy.c:24, src/cluster_slot_stats.c:15, src/networking.c:18, src/pubsub.c:17, src/replication.c:31, src/script.c:18
+- commands.def [c/c++] — version not declared
+  found at: src/cli_commands.c:13, src/commands.c:12
+- commands.h [c/c++] — version not declared
+  found at: src/cli_commands.h:9, src/commands.c:1, src/server.h:23
+- commands_with_reply_schema.def [c/c++] — version not declared
+  found at: src/commands.c:10
+- config.h [c/c++] — version not declared
+  found at: deps/tre/lib/regcomp.c:10, deps/tre/lib/regerror.c:10, deps/tre/lib/regexec.c:10, deps/tre/lib/tre-ast.c:10, deps/tre/lib/tre-compile.c:17, deps/tre/lib/tre-filter.c:16, deps/tre/lib/tre-match-backtrack.c:34, deps/tre/lib/tre-match-parallel.c:27
+- connection.h [c/c++] — version not declared
+  found at: src/cluster_legacy.c:26, src/config.c:18, src/connection.c:28, src/connhelpers.h:14, src/networking.c:24, src/redis-cli.c:44, src/replication.c:34, src/rio.h:22
+- connhelpers.h [c/c++] — version not declared
+  found at: src/socket.c:11, src/tls.c:16
+- CoreFoundation/CoreFoundation.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/macosx.h:9
+- cpuid.h [c/c++] — version not declared
+  found at: deps/croaring/src/isadetection.c:73
+- crc16_slottable.h [c/c++] — version not declared
+  found at: src/module.c:48, src/redis-benchmark.c:38
+- crc64.h [c/c++] — version not declared
+  found at: src/crc64.c:34, src/debug.c:19, src/release.c:18, src/rio.c:41, src/server.h:96
+- crccombine.h [c/c++] — version not declared
+  found at: src/crc64.c:318, src/crccombine.c:7, src/crcspeed.c:41
+- crcspeed.h [c/c++] — version not declared
+  found at: src/crc64.c:35, src/crcspeed.c:40
+- debugmacro.h [c/c++] — version not declared
+  found at: src/geo.c:34, src/geohash_helper.c:39
+- dict.c [c/c++] — version not declared
+  found at: deps/hiredis/async.c:44
+- dict.h [c/c++] — version not declared
+  found at: deps/hiredis/dict.c:41, src/dict.c:27, src/functions.c:12, src/kvstore.h:29, src/memory_prefetch.c:20, src/redis-benchmark.c:35, src/redis-cli.c:38, src/server.h:55
+- dirent.h [c/c++] — version not declared
+  found at: src/aof.c:19, src/debug.c:2357, src/util.c:47
+- dlfcn.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/background_thread.c:710, deps/lua/src/loadlib.c:61, src/debug.c:32, src/module.c:50
+- ebuckets.h [c/c++] — version not declared
+  found at: src/ebuckets.c:17, src/estore.h:48, src/hash_entry.h:72, src/lazyfree.c:7, src/server.c:30, src/server.h:54, src/set_entry.h:61, src/t_hash.c:16
+- emmintrin.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:3870
+- endian.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:440, src/config.h:233
+- endianconv.h [c/c++] — version not declared
+  found at: src/cluster_legacy.c:25, src/intset.c:36, src/rdb.c:19, src/server.h:95, src/t_stream.c:11, src/ziplist.c:191, src/zipmap.c:62
+- estore.h [c/c++] — version not declared
+  found at: src/estore.c:13, src/server.c:33, src/server.h:57
+- ev.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/libev.h:35
+- event2/event.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/libevent.h:33, deps/hiredis/test.c:34
+- eventnotifier.h [c/c++] — version not declared
+  found at: src/eventnotifier.c:11, src/server.h:69
+- example-qt.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-qt.cpp:7
+- execinfo.h [c/c++] — version not declared
+  found at: src/debug.c:38
+- expr.c [c/c++] — version not declared
+  found at: modules/vector-sets/vset.c:124
+- fast_float_strtod.h [c/c++] — version not declared
+  found at: src/debug.c:23, src/fast_float_strtod.c:40, src/resp_parser.c:38, src/server.c:35, src/sort.c:11, src/t_zset.c:43, src/util.c:33
+- fastjson.c [c/c++] — version not declared
+  found at: modules/vector-sets/expr.c:748
+- fastjson_test.c [c/c++] — version not declared
+  found at: modules/vector-sets/expr.c:887
+- fcntl.h [c/c++] — version not declared
+  found at: deps/hiredis/net.c:37, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:97, modules/vector-sets/fastjson_test.c:16, src/acl.c:16, src/anet.c:22, src/aof.c:18, src/bio.c:49, src/childinfo.c:12
+- features.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/jemalloc.c:3280, src/config.h:21, src/fmacros.h:53
+- float.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/math.c:6, modules/vector-sets/hnsw.c:45, src/fast_float_strtod.c:38, src/server.c:53, src/sparsearray.c:17, src/t_string.c:13, src/util.c:42
+- fmacros.h [c/c++] — version not declared
+  found at: deps/hiredis/alloc.c:31, deps/hiredis/async.c:32, deps/hiredis/dict.c:36, deps/hiredis/hiredis.c:34, deps/hiredis/net.c:35, deps/hiredis/read.c:32, deps/hiredis/sds.c:33, deps/hiredis/test.c:1
+- fmtargs.h [c/c++] — version not declared
+  found at: src/networking.c:21, src/server.c:28
+- fpconv.h [c/c++] — version not declared
+  found at: deps/lua/src/fpconv.c:36, deps/lua/src/lua_cjson.c:48
+- fpconv_dtoa.h [c/c++] — version not declared
+  found at: deps/fpconv/fpconv_dtoa.c:38, src/debug.c:22, src/networking.c:20, src/rdb.c:20, src/rio.c:35, src/script_lua.c:16, src/util.c:32
+- fpconv_powers.h [c/c++] — version not declared
+  found at: deps/fpconv/fpconv_dtoa.c:40
+- functions.h [c/c++] — version not declared
+  found at: src/aof.c:13, src/cluster_asm.c:48, src/db.c:22, src/function_lua.c:22, src/functions.c:10, src/lazyfree.c:5, src/object.c:16, src/rdb.c:22
+- future [c/c++] — version not declared
+  found at: deps/jemalloc/msvc/test_threads/test_threads.cpp:7, deps/jemalloc/msvc/test_threads/test_threads_main.cpp:2
+- fwtree.h [c/c++] — version not declared
+  found at: src/estore.h:49, src/fwtree.c:13, src/kvstore.c:22, src/server.c:32
+- geo.h [c/c++] — version not declared
+  found at: src/geo.c:31
+- geohash.h [c/c++] — version not declared
+  found at: src/geohash.c:31, src/geohash_helper.h:35
+- geohash_helper.h [c/c++] — version not declared
+  found at: src/geo.c:32, src/geohash_helper.c:38
+- getopt.h [c/c++] — version not declared
+  found at: deps/tre/tests/test-str-source.c:20
+- glib.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/glib.h:4
+- glob.h [c/c++] — version not declared
+  found at: src/config.c:23
+- google/tcmalloc.h [c/c++] — version not declared
+  found at: src/zmalloc.h:23
+- h5py [python] — version not declared
+  imported as: h5py
+  found at: modules/vector-sets/examples/glove-100/insert.py:10, modules/vector-sets/examples/glove-100/recall.py:10
+- hash_entry.h [c/c++] — version not declared
+  found at: src/hash_entry.c:11, src/server.h:52, src/t_hash.c:17
+- hdr_histogram.h [c/c++] — version not declared
+  found at: deps/hdr_histogram/hdr_histogram.c:23, src/latency.c:17, src/module.c:47, src/redis-benchmark.c:39, src/redis-cli.c:48, src/server.c:25
+- hiredis.h [c/c++] — version not declared
+  found at: deps/hiredis/async.h:34, deps/hiredis/examples/example-ae.c:6, deps/hiredis/examples/example-glib.c:3, deps/hiredis/examples/example-ivykis.c:6, deps/hiredis/examples/example-libev.c:6, deps/hiredis/examples/example-libevent-ssl.c:6, deps/hiredis/examples/example-libevent.c:6, deps/hiredis/examples/example-libhv.c:6
+- hiredis_ssl.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-libevent-ssl.c:7, deps/hiredis/examples/example-ssl.c:6, deps/hiredis/ssl.c:60, deps/hiredis/test.c:30, src/cli_common.c:29, src/redis-benchmark.c:32, src/redis-cli.c:34, src/sentinel.c:15
+- hnsw.h [c/c++] — version not declared
+  found at: modules/vector-sets/hnsw.c:47, modules/vector-sets/vset.c:119, modules/vector-sets/w2v.c:29
+- hv/hloop.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/libhv.h:4
+- hyperloglog.h [c/c++] — version not declared
+  found at: src/hyperloglog.c:18, src/t_set.c:16
+- immintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:138, deps/hdr_histogram/hdr_histogram.c:245, deps/xxhash/xxhash.h:3868, modules/vector-sets/hnsw.c:93, src/bitops.c:20, src/bitops.c:27, src/crc64.c:166, src/crccombine.c:5
+- intrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:187, deps/croaring/include/roaring/portability.h:662, deps/croaring/src/isadetection.c:70, deps/hdr_histogram/hdr_histogram.c:88, deps/jemalloc/include/msvc_compat/strings.h:7, deps/xxhash/xxhash.h:3882
+- intset.h [c/c++] — version not declared
+  found at: src/intset.c:34, src/object.c:17, src/rdb.c:23, src/server.c:8401, src/t_set.c:15, src/t_zset.c:46
+- inttypes.h [c/c++] — version not declared
+  found at: deps/croaring/src/roaring.c:2, deps/croaring/src/roaring_array.c:2, deps/hdr_histogram/hdr_histogram.c:21, deps/jemalloc/include/jemalloc/internal/malloc_io.h:24, deps/xxhash/xxhash.h:2559, deps/xxhash/xxhash.h:593, deps/xxhash/xxhash.h:862, src/crc64.c:310
+- io.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:78, deps/lua/src/luaconf.h:231
+- iv.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/ivykis.h:3
+- jemalloc/internal/activity_callback.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/tsd.h:4, deps/jemalloc/src/peak_event.c:6
+- jemalloc/internal/arena_externs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:61
+- jemalloc/internal/arena_inlines_a.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:76
+- jemalloc/internal/arena_inlines_b.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:79
+- jemalloc/internal/arena_stats.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_structs.h:4
+- jemalloc/internal/arena_structs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:52, deps/jemalloc/test/unit/san_bump.c:4
+- jemalloc/internal/arena_types.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:43, deps/jemalloc/include/jemalloc/internal/tsd.h:5, deps/jemalloc/test/integration/extent.c:5
+- jemalloc/internal/assert.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/atomic_gcc_atomic.h:4, deps/jemalloc/include/jemalloc/internal/bit_util.h:4, deps/jemalloc/include/jemalloc/internal/div.h:4, deps/jemalloc/include/jemalloc/internal/hash.h:4, deps/jemalloc/include/jemalloc/internal/tsd.h:6, deps/jemalloc/src/arena.c:4, deps/jemalloc/src/background_thread.c:4, deps/jemalloc/src/base.c:4
+- jemalloc/internal/atomic.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_stats.h:4, deps/jemalloc/include/jemalloc/internal/arena_structs.h:5, deps/jemalloc/include/jemalloc/internal/edata.h:4, deps/jemalloc/include/jemalloc/internal/ehooks.h:4, deps/jemalloc/include/jemalloc/internal/eset.h:4, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_externs.h:4, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_a.h:4, deps/jemalloc/include/jemalloc/internal/log.h:4
+- jemalloc/internal/atomic_c11.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/atomic.h:20
+- jemalloc/internal/atomic_gcc_atomic.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/atomic.h:8
+- jemalloc/internal/atomic_gcc_sync.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/atomic.h:13
+- jemalloc/internal/atomic_msvc.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/atomic.h:18
+- jemalloc/internal/background_thread_externs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:65
+- jemalloc/internal/background_thread_inlines.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:82
+- jemalloc/internal/background_thread_structs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:54
+- jemalloc/internal/base.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/edata_cache.h:4, deps/jemalloc/include/jemalloc/internal/emap.h:4, deps/jemalloc/include/jemalloc/internal/pa.h:4
+- jemalloc/internal/bin.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_externs.h:4, deps/jemalloc/include/jemalloc/internal/arena_structs.h:6, deps/jemalloc/include/jemalloc/internal/tcache_inlines.h:4, deps/jemalloc/src/bin.c:5
+- jemalloc/internal/bin_info.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/edata.h:5, deps/jemalloc/src/bin_info.c:4
+- jemalloc/internal/bin_stats.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/bin.h:4
+- jemalloc/internal/bin_types.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/bin.h:5, deps/jemalloc/include/jemalloc/internal/tsd.h:7
+- jemalloc/internal/bit_util.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/bitmap.h:4, deps/jemalloc/include/jemalloc/internal/edata.h:6, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_a.h:5, deps/jemalloc/include/jemalloc/internal/prng.h:4, deps/jemalloc/include/jemalloc/internal/sz.h:4, deps/jemalloc/src/cache_bin.c:4, deps/jemalloc/src/sc.c:4, deps/jemalloc/test/unit/bit_util.c:3
+- jemalloc/internal/bitmap.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_structs.h:7, deps/jemalloc/include/jemalloc/internal/bin_info.h:4, deps/jemalloc/include/jemalloc/internal/slab_data.h:4, deps/jemalloc/src/sc.c:5
+- jemalloc/internal/buf_writer.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/buf_writer.c:4, deps/jemalloc/src/jemalloc.c:7, deps/jemalloc/src/prof_log.c:5, deps/jemalloc/src/prof_recent.c:5, deps/jemalloc/src/prof_sys.c:5, deps/jemalloc/test/unit/buf_writer.c:3
+- jemalloc/internal/cache_bin.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/tcache_structs.h:4, deps/jemalloc/src/cache_bin.c:5, deps/jemalloc/test/unit/uaf.c:5
+- jemalloc/internal/ckh.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/prof_structs.h:4, deps/jemalloc/src/ckh.c:39, deps/jemalloc/src/prof_data.c:5, deps/jemalloc/src/prof_log.c:6
+- jemalloc/internal/counter.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_structs.h:8, deps/jemalloc/src/counter.c:4, deps/jemalloc/src/prof.c:7
+- jemalloc/internal/ctl.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:5, deps/jemalloc/src/jemalloc.c:8, deps/jemalloc/src/prof.c:4, deps/jemalloc/src/prof_sys.c:6, deps/jemalloc/src/stats.c:5, deps/jemalloc/test/unit/mallctl.c:3, deps/jemalloc/test/unit/oversize_threshold.c:3
+- jemalloc/internal/decay.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/pa.h:5, deps/jemalloc/src/arena.c:5, deps/jemalloc/src/decay.c:4, deps/jemalloc/test/unit/decay.c:3
+- jemalloc/internal/div.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_externs.h:5, deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:4, deps/jemalloc/src/div.c:3, deps/jemalloc/test/unit/div.c:3
+- jemalloc/internal/ecache.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_structs.h:9, deps/jemalloc/include/jemalloc/internal/extent.h:4, deps/jemalloc/include/jemalloc/internal/pa.h:6
+- jemalloc/internal/edata.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/base.h:4, deps/jemalloc/include/jemalloc/internal/bin.h:6, deps/jemalloc/include/jemalloc/internal/eset.h:6, deps/jemalloc/include/jemalloc/internal/prof_structs.h:5, deps/jemalloc/include/jemalloc/internal/san_bump.h:4
+- jemalloc/internal/edata_cache.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_structs.h:10, deps/jemalloc/include/jemalloc/internal/pa.h:7, deps/jemalloc/src/san_bump.c:8, deps/jemalloc/test/unit/edata_cache.c:3
+- jemalloc/internal/ehooks.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/base.h:5, deps/jemalloc/include/jemalloc/internal/extent.h:5, deps/jemalloc/include/jemalloc/internal/san.h:4, deps/jemalloc/src/arena.c:6, deps/jemalloc/src/ehooks.c:4, deps/jemalloc/src/san.c:5, deps/jemalloc/src/san_bump.c:7
+- jemalloc/internal/emap.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:5, deps/jemalloc/include/jemalloc/internal/pa.h:8, deps/jemalloc/include/jemalloc/internal/san.h:5, deps/jemalloc/src/emap.c:4, deps/jemalloc/src/extent.c:5, deps/jemalloc/src/jemalloc.c:9, deps/jemalloc/src/large.c:5
+- jemalloc/internal/emitter.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/prof_log.c:7, deps/jemalloc/src/prof_recent.c:6, deps/jemalloc/src/stats.c:6, deps/jemalloc/test/unit/emitter.c:2
+- jemalloc/internal/eset.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/ecache.h:4, deps/jemalloc/src/eset.c:4
+- jemalloc/internal/exp_grow.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/hpa.h:4, deps/jemalloc/include/jemalloc/internal/pac.h:4, deps/jemalloc/include/jemalloc/internal/san_bump.h:5
+- jemalloc/internal/extent.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_b.h:4
+- jemalloc/internal/extent_dss.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_externs.h:6, deps/jemalloc/include/jemalloc/internal/arena_structs.h:11, deps/jemalloc/src/arena.c:7, deps/jemalloc/src/ctl.c:6, deps/jemalloc/src/extent.c:6, deps/jemalloc/src/extent_dss.c:5, deps/jemalloc/src/jemalloc.c:10
+- jemalloc/internal/extent_mmap.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/ehooks.h:5, deps/jemalloc/src/arena.c:8, deps/jemalloc/src/base.c:5, deps/jemalloc/src/ctl.c:7, deps/jemalloc/src/ehooks.c:5, deps/jemalloc/src/extent.c:7, deps/jemalloc/src/extent_mmap.c:5, deps/jemalloc/src/jemalloc.c:11
+- jemalloc/internal/fb.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/eset.h:5, deps/jemalloc/include/jemalloc/internal/hpdata.h:4, deps/jemalloc/src/hpa.c:6, deps/jemalloc/src/psset.c:6, deps/jemalloc/test/unit/fb.c:3
+- jemalloc/internal/fxp.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/hpa_opts.h:4, deps/jemalloc/src/fxp.c:4, deps/jemalloc/src/jemalloc.c:12, deps/jemalloc/src/stats.c:7, deps/jemalloc/test/unit/fxp.c:3
+- jemalloc/internal/hash.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ckh.c:44, deps/jemalloc/src/prof_data.c:6, deps/jemalloc/src/prof_log.c:8, deps/jemalloc/test/unit/hash.c:31
+- jemalloc/internal/hook.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_externs.h:7, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_c.h:4, deps/jemalloc/include/jemalloc/internal/large_externs.h:4, deps/jemalloc/src/hook.c:3, deps/jemalloc/src/jemalloc.c:14, deps/jemalloc/test/unit/hook.c:3, deps/jemalloc/test/unit/mallctl.c:4
+- jemalloc/internal/hpa.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/pa.h:9, deps/jemalloc/src/hpa.c:4, deps/jemalloc/src/pa.c:5, deps/jemalloc/test/unit/hpa.c:3
+- jemalloc/internal/hpa_hooks.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/hpa.h:5, deps/jemalloc/src/hpa_hooks.c:4
+- jemalloc/internal/hpa_opts.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/hpa.h:6, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_externs.h:5
+- jemalloc/internal/hpdata.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/edata.h:7, deps/jemalloc/include/jemalloc/internal/psset.h:4, deps/jemalloc/src/hpdata.c:4
+- jemalloc/internal/inspect.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:8
+- jemalloc/internal/jemalloc_internal_externs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:60, deps/jemalloc/include/jemalloc/internal/tsd.h:8
+- jemalloc/internal/jemalloc_internal_includes.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/arena.c:2, deps/jemalloc/src/background_thread.c:2, deps/jemalloc/src/base.c:2, deps/jemalloc/src/bin.c:2, deps/jemalloc/src/bin_info.c:2, deps/jemalloc/src/bitmap.c:2, deps/jemalloc/src/buf_writer.c:2, deps/jemalloc/src/cache_bin.c:2
+- jemalloc/internal/jemalloc_internal_inlines_a.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:71
+- jemalloc/internal/jemalloc_internal_inlines_b.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:77
+- jemalloc/internal/jemalloc_internal_inlines_c.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:80
+- jemalloc/internal/jemalloc_internal_types.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:6, deps/jemalloc/include/jemalloc/internal/arena_structs.h:12, deps/jemalloc/include/jemalloc/internal/ctl.h:4, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_a.h:6, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_c.h:5, deps/jemalloc/include/jemalloc/internal/malloc_io.h:4, deps/jemalloc/include/jemalloc/internal/sc.h:4, deps/jemalloc/include/jemalloc/internal/tcache_inlines.h:5
+- jemalloc/internal/jemalloc_preamble.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/arena.c:1, deps/jemalloc/src/background_thread.c:1, deps/jemalloc/src/base.c:1, deps/jemalloc/src/bin.c:1, deps/jemalloc/src/bin_info.c:1, deps/jemalloc/src/bitmap.c:1, deps/jemalloc/src/buf_writer.c:1, deps/jemalloc/src/cache_bin.c:1
+- jemalloc/internal/large_externs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:62
+- jemalloc/internal/lockedint.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_stats.h:5, deps/jemalloc/include/jemalloc/internal/pa.h:10
+- jemalloc/internal/log.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_c.h:6, deps/jemalloc/src/jemalloc.c:16, deps/jemalloc/src/log.c:4, deps/jemalloc/test/unit/log.c:3
+- jemalloc/internal/malloc_io.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/assert.h:1, deps/jemalloc/include/jemalloc/internal/ctl.h:5, deps/jemalloc/include/jemalloc/internal/log.h:5, deps/jemalloc/src/buf_writer.c:5, deps/jemalloc/src/ckh.c:45, deps/jemalloc/src/jemalloc.c:17, deps/jemalloc/src/malloc_io.c:4, deps/jemalloc/src/mutex.c:5
+- jemalloc/internal/mpsc_queue.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/mpsc_queue.c:3
+- jemalloc/internal/mutex.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:7, deps/jemalloc/include/jemalloc/internal/arena_stats.h:6, deps/jemalloc/include/jemalloc/internal/arena_structs.h:13, deps/jemalloc/include/jemalloc/internal/base.h:6, deps/jemalloc/include/jemalloc/internal/bin.h:7, deps/jemalloc/include/jemalloc/internal/counter.h:4, deps/jemalloc/include/jemalloc/internal/ecache.h:6, deps/jemalloc/include/jemalloc/internal/eset.h:7
+- jemalloc/internal/mutex_prof.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_stats.h:7, deps/jemalloc/include/jemalloc/internal/bin_stats.h:4, deps/jemalloc/include/jemalloc/internal/ctl.h:6, deps/jemalloc/include/jemalloc/internal/mutex.h:5, deps/jemalloc/src/stats.c:9
+- jemalloc/internal/nstime.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_structs.h:14, deps/jemalloc/include/jemalloc/internal/edata.h:8, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_externs.h:8, deps/jemalloc/include/jemalloc/internal/mutex_prof.h:5, deps/jemalloc/src/ctl.c:10, deps/jemalloc/src/jemalloc.c:19, deps/jemalloc/src/nstime.c:4, deps/jemalloc/test/unit/hpa.c:4
+- jemalloc/internal/pa.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_stats.h:8, deps/jemalloc/include/jemalloc/internal/arena_structs.h:15, deps/jemalloc/test/unit/pa.c:3
+- jemalloc/internal/pac.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/pa.h:11, deps/jemalloc/src/pac.c:4, deps/jemalloc/src/san_bump.c:5
+- jemalloc/internal/pages.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_externs.h:8, deps/jemalloc/include/jemalloc/internal/sz.h:5, deps/jemalloc/src/pages.c:3, deps/jemalloc/src/sc.c:6
+- jemalloc/internal/pai.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/hpa.h:7, deps/jemalloc/include/jemalloc/internal/pa.h:12, deps/jemalloc/include/jemalloc/internal/pac.h:5, deps/jemalloc/include/jemalloc/internal/sec.h:5
+- jemalloc/internal/peak.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/tsd.h:9, deps/jemalloc/src/peak_event.c:7, deps/jemalloc/test/unit/peak.c:3
+- jemalloc/internal/peak_event.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:11, deps/jemalloc/src/peak_event.c:4
+- jemalloc/internal/ph.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/edata.h:9, deps/jemalloc/include/jemalloc/internal/extent.h:6, deps/jemalloc/include/jemalloc/internal/hpdata.h:5, deps/jemalloc/src/extent.c:8, deps/jemalloc/test/unit/ph.c:3
+- jemalloc/internal/prng.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/prof_structs.h:7, deps/jemalloc/include/jemalloc/internal/ticker.h:4, deps/jemalloc/src/ckh.c:46
+- jemalloc/internal/prof_data.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:12, deps/jemalloc/src/prof.c:8, deps/jemalloc/src/prof_data.c:8, deps/jemalloc/src/prof_log.c:11, deps/jemalloc/src/prof_recent.c:7, deps/jemalloc/src/prof_sys.c:7, deps/jemalloc/test/unit/prof_accum.c:3, deps/jemalloc/test/unit/prof_active.c:3
+- jemalloc/internal/prof_externs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:64
+- jemalloc/internal/prof_hook.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/prof_externs.h:5, deps/jemalloc/src/prof.c:13
+- jemalloc/internal/prof_inlines.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:81
+- jemalloc/internal/prof_log.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:13, deps/jemalloc/src/prof.c:9, deps/jemalloc/src/prof_log.c:12, deps/jemalloc/test/unit/prof_log.c:2
+- jemalloc/internal/prof_recent.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:14, deps/jemalloc/src/large.c:8, deps/jemalloc/src/prof.c:10, deps/jemalloc/src/prof_recent.c:8, deps/jemalloc/test/unit/prof_recent.c:3
+- jemalloc/internal/prof_stats.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:15, deps/jemalloc/src/prof.c:11, deps/jemalloc/src/prof_stats.c:4, deps/jemalloc/src/stats.c:10
+- jemalloc/internal/prof_structs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:51
+- jemalloc/internal/prof_sys.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/ctl.c:16, deps/jemalloc/src/prof.c:12, deps/jemalloc/src/prof_log.c:13, deps/jemalloc/src/prof_sys.c:8, deps/jemalloc/test/unit/prof_accum.c:4, deps/jemalloc/test/unit/prof_gdump.c:3, deps/jemalloc/test/unit/prof_idump.c:3, deps/jemalloc/test/unit/prof_mdump.c:3
+- jemalloc/internal/prof_types.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:45, deps/jemalloc/include/jemalloc/internal/tsd.h:10
+- jemalloc/internal/psset.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/hpa.h:8, deps/jemalloc/src/psset.c:4, deps/jemalloc/test/unit/psset.c:3
+- jemalloc/internal/ql.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_structs.h:16, deps/jemalloc/include/jemalloc/internal/cache_bin.h:4, deps/jemalloc/include/jemalloc/internal/ctl.h:7, deps/jemalloc/include/jemalloc/internal/edata.h:10, deps/jemalloc/include/jemalloc/internal/emitter.h:4, deps/jemalloc/include/jemalloc/internal/hpdata.h:6, deps/jemalloc/include/jemalloc/internal/tcache_structs.h:5, deps/jemalloc/include/jemalloc/internal/tsd.h:11
+- jemalloc/internal/qr.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/ql.h:4, deps/jemalloc/test/unit/qr.c:3
+- jemalloc/internal/quantum.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_types.h:4
+- jemalloc/internal/rb.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/prof_structs.h:8, deps/jemalloc/test/unit/rb.c:5
+- jemalloc/internal/rtree.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:8, deps/jemalloc/include/jemalloc/internal/emap.h:5, deps/jemalloc/include/jemalloc/internal/extent.h:7, deps/jemalloc/src/arena.c:11, deps/jemalloc/src/jemalloc.c:20, deps/jemalloc/src/tsd.c:7, deps/jemalloc/test/unit/arena_reset.c:6, deps/jemalloc/test/unit/rtree.c:3
+- jemalloc/internal/rtree_tsd.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/rtree.h:6, deps/jemalloc/include/jemalloc/internal/tsd.h:12
+- jemalloc/internal/safety_check.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:9, deps/jemalloc/include/jemalloc/internal/prof_inlines.h:4, deps/jemalloc/src/arena.c:12, deps/jemalloc/src/cache_bin.c:6, deps/jemalloc/src/ctl.c:17, deps/jemalloc/src/jemalloc.c:21, deps/jemalloc/src/tcache.c:6, deps/jemalloc/test/unit/double_free.c:4
+- jemalloc/internal/san.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/ecache.h:5, deps/jemalloc/include/jemalloc/internal/tcache_inlines.h:6, deps/jemalloc/src/arena.c:9, deps/jemalloc/src/ecache.c:4, deps/jemalloc/src/jemalloc.c:13, deps/jemalloc/src/pa.c:4, deps/jemalloc/src/pac.c:5, deps/jemalloc/src/san.c:6
+- jemalloc/internal/san_bump.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/san_bump.c:4, deps/jemalloc/test/unit/san_bump.c:5
+- jemalloc/internal/sc.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:10, deps/jemalloc/include/jemalloc/internal/arena_stats.h:9, deps/jemalloc/include/jemalloc/internal/arena_structs.h:17, deps/jemalloc/include/jemalloc/internal/arena_types.h:4, deps/jemalloc/include/jemalloc/internal/bin.h:8, deps/jemalloc/include/jemalloc/internal/bin_types.h:4, deps/jemalloc/include/jemalloc/internal/bitmap.h:5, deps/jemalloc/include/jemalloc/internal/ctl.h:8
+- jemalloc/internal/sec.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/pa.h:13, deps/jemalloc/src/sec.c:4, deps/jemalloc/test/unit/sec.c:3
+- jemalloc/internal/sec_opts.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_externs.h:6
+- jemalloc/internal/seq.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/hook.c:7, deps/jemalloc/test/unit/seq.c:3
+- jemalloc/internal/slab_data.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/edata.h:12
+- jemalloc/internal/smoothstep.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/decay.h:4
+- jemalloc/internal/spin.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/extent_dss.c:6, deps/jemalloc/src/jemalloc.c:23, deps/jemalloc/src/mutex.c:6, deps/jemalloc/test/unit/retained.c:4, deps/jemalloc/test/unit/spin.c:3
+- jemalloc/internal/stats.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_externs.h:9, deps/jemalloc/include/jemalloc/internal/ctl.h:9
+- jemalloc/internal/sz.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:11, deps/jemalloc/include/jemalloc/internal/cache_bin.h:5, deps/jemalloc/include/jemalloc/internal/edata.h:13, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_c.h:7, deps/jemalloc/include/jemalloc/internal/prof_inlines.h:5, deps/jemalloc/include/jemalloc/internal/tcache_inlines.h:8, deps/jemalloc/src/base.c:7, deps/jemalloc/src/jemalloc.c:24
+- jemalloc/internal/tcache_externs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:63
+- jemalloc/internal/tcache_inlines.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:78
+- jemalloc/internal/tcache_structs.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:53, deps/jemalloc/include/jemalloc/internal/tsd.h:14
+- jemalloc/internal/tcache_types.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_includes.h:44, deps/jemalloc/include/jemalloc/internal/tsd.h:13
+- jemalloc/internal/thread_event.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_c.h:8, deps/jemalloc/include/jemalloc/internal/prof_inlines.h:6, deps/jemalloc/src/jemalloc.c:26, deps/jemalloc/src/prof.c:14, deps/jemalloc/src/thread_event.c:4
+- jemalloc/internal/ticker.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/arena_inlines_b.h:12, deps/jemalloc/include/jemalloc/internal/arena_structs.h:18, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_a.h:8, deps/jemalloc/include/jemalloc/internal/tcache_structs.h:7, deps/jemalloc/src/jemalloc.c:25, deps/jemalloc/test/unit/arena_decay.c:4, deps/jemalloc/test/unit/ticker.c:3
+- jemalloc/internal/tsd.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/ckh.h:4, deps/jemalloc/include/jemalloc/internal/hook.h:4, deps/jemalloc/include/jemalloc/internal/mutex.h:6, deps/jemalloc/include/jemalloc/internal/rtree.h:8, deps/jemalloc/include/jemalloc/internal/thread_event.h:4, deps/jemalloc/src/san.c:7
+- jemalloc/internal/tsd_generic.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/tsd.h:310
+- jemalloc/internal/tsd_malloc_thread_cleanup.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/tsd.h:304
+- jemalloc/internal/tsd_tls.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/tsd.h:306
+- jemalloc/internal/tsd_types.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_externs.h:7, deps/jemalloc/include/jemalloc/internal/mutex_prof.h:6, deps/jemalloc/include/jemalloc/internal/tcache_structs.h:8
+- jemalloc/internal/tsd_win.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/tsd.h:308
+- jemalloc/internal/typed_list.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/edata.h:14, deps/jemalloc/include/jemalloc/internal/hpdata.h:7
+- jemalloc/internal/util.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/assert.h:2, deps/jemalloc/include/jemalloc/internal/sz.h:7, deps/jemalloc/include/jemalloc/internal/tcache_inlines.h:9, deps/jemalloc/include/jemalloc/internal/ticker.h:5, deps/jemalloc/include/jemalloc/internal/tsd.h:15, deps/jemalloc/src/arena.c:13, deps/jemalloc/src/ckh.c:47, deps/jemalloc/src/ctl.c:19
+- jemalloc/internal/witness.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_inlines_c.h:9, deps/jemalloc/include/jemalloc/internal/mutex.h:7, deps/jemalloc/include/jemalloc/internal/tsd.h:16, deps/jemalloc/src/bin.c:7, deps/jemalloc/src/hpa.c:7
+- jemalloc/jemalloc.h [c/c++] — version not declared
+  found at: deps/jemalloc/msvc/test_threads/test_threads.cpp:13, src/zmalloc.h:33
+- jemalloc/jemalloc_macros.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/integration/smallocx.c:2
+- jsonschema [python] — jsonschema==4.17.3
+  imported as: jsonschema
+  found at: utils/req-res-log-validator.py:19, utils/req-res-log-validator.py:21, utils/req-res-log-validator.py:7, utils/req-res-validator/requirements.txt:1
+- junk.c [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/junk_alloc.c:1, deps/jemalloc/test/unit/junk_free.c:1
+- kernel/OS.h [c/c++] — version not declared
+  found at: src/config.h:332
+- keymeta.h [c/c++] — version not declared
+  found at: src/db.c:29, src/rdb.c:26, src/server.h:97
+- kvstore.h [c/c++] — version not declared
+  found at: src/kvstore.c:21, src/server.h:56
+- lapi.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:7
+- lapi.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:18, deps/lua/src/ldebug.c:18
+- lasxintrin.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:3872
+- latency.h [c/c++] — version not declared
+  found at: src/blocked.c:50, src/db.c:20, src/server.c:21, src/server.h:63
+- lauxlib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:27
+- lauxlib.h [c/c++] — version not declared
+  found at: deps/lua/etc/lua.hpp:8, deps/lua/etc/min.c:10, deps/lua/src/lauxlib.c:25, deps/lua/src/lbaselib.c:19, deps/lua/src/ldblib.c:17, deps/lua/src/linit.c:14, deps/lua/src/liolib.c:18, deps/lua/src/lmathlib.c:16
+- lbaselib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:28
+- lcode.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:8
+- lcode.h [c/c++] — version not declared
+  found at: deps/lua/src/lcode.c:15, deps/lua/src/ldebug.c:19, deps/lua/src/lparser.c:15
+- ldblib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:29
+- ldebug.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:9
+- ldebug.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:19, deps/lua/src/lcode.c:16, deps/lua/src/ldebug.c:20, deps/lua/src/ldo.c:17, deps/lua/src/lgc.c:14, deps/lua/src/lmem.c:15, deps/lua/src/lparser.c:16, deps/lua/src/lstate.c:15
+- ldo.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:10
+- ldo.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:20, deps/lua/src/lcode.c:17, deps/lua/src/ldebug.c:21, deps/lua/src/ldo.c:18, deps/lua/src/lgc.c:15, deps/lua/src/llex.c:17, deps/lua/src/lmem.c:16, deps/lua/src/lobject.c:18
+- ldump.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:11
+- lfunc.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:12
+- lfunc.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:21, deps/lua/src/ldebug.c:22, deps/lua/src/ldo.c:19, deps/lua/src/lfunc.c:15, deps/lua/src/lgc.c:16, deps/lua/src/lparser.c:18, deps/lua/src/lstate.c:17, deps/lua/src/luac.c:19
+- lgc.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:13
+- lgc.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:22, deps/lua/src/lcode.c:18, deps/lua/src/ldo.c:20, deps/lua/src/lfunc.c:16, deps/lua/src/lgc.c:17, deps/lua/src/lstate.c:18, deps/lua/src/lstring.h:11, deps/lua/src/ltable.c:31
+- libgen.h [c/c++] — version not declared
+  found at: src/redis-check-aof.c:36, src/util.c:49
+- libintl.h [c/c++] — version not declared
+  found at: deps/tre/lib/regerror.c:24
+- libkern/OSByteOrder.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:506
+- libproc.h [c/c++] — version not declared
+  found at: src/zmalloc.c:1118
+- libunwind.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/prof_sys.c:12
+- libutf8.h [c/c++] — version not declared
+  found at: deps/tre/local_includes/tre.h:26
+- linenoise.h [c/c++] — version not declared
+  found at: deps/linenoise/example.c:4, deps/linenoise/linenoise.c:121, src/redis-cli.c:41
+- linit.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:31
+- linux/errqueue.h [c/c++] — version not declared
+  found at: deps/hiredis/test.c:18
+- linux/net_tstamp.h [c/c++] — version not declared
+  found at: deps/hiredis/test.c:19
+- liolib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:30
+- listpack.h [c/c++] — version not declared
+  found at: src/listpack.c:22, src/quicklist.c:37, src/stream.h:5
+- listpack_malloc.h [c/c++] — version not declared
+  found at: src/listpack.c:23
+- llex.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:14
+- llex.h [c/c++] — version not declared
+  found at: deps/lua/etc/noparser.c:17, deps/lua/src/lcode.c:19, deps/lua/src/lcode.h:10, deps/lua/src/llex.c:18, deps/lua/src/lparser.c:19, deps/lua/src/lstate.c:19
+- llimits.h [c/c++] — version not declared
+  found at: deps/lua/src/lmem.h:13, deps/lua/src/lobject.h:15, deps/lua/src/lopcodes.h:10, deps/lua/src/lparser.h:10, deps/lua/src/lzio.c:15
+- lmathlib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:32
+- lmem.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:15
+- lmem.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:23, deps/lua/src/lcode.c:20, deps/lua/src/ldo.c:21, deps/lua/src/lfunc.c:17, deps/lua/src/lgc.c:18, deps/lua/src/lmem.c:17, deps/lua/src/lobject.c:19, deps/lua/src/lparser.c:20
+- loadlib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:33
+- lobject.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:16
+- lobject.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:24, deps/lua/src/lapi.h:11, deps/lua/src/lcode.c:21, deps/lua/src/lcode.h:11, deps/lua/src/ldebug.c:23, deps/lua/src/ldo.c:22, deps/lua/src/ldo.h:11, deps/lua/src/ldump.c:14
+- locale.h [c/c++] — version not declared
+  found at: deps/lua/src/llex.c:9, deps/lua/src/loslib.c:9, deps/tre/tests/test-literal-opt.c:14, src/config.c:25, src/server.c:56
+- lolwut.h [c/c++] — version not declared
+  found at: src/lolwut.c:17, src/lolwut5.c:17, src/lolwut6.c:23
+- lopcodes.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:17
+- lopcodes.h [c/c++] — version not declared
+  found at: deps/lua/src/lcode.c:22, deps/lua/src/lcode.h:12, deps/lua/src/ldebug.c:24, deps/lua/src/ldo.c:23, deps/lua/src/lopcodes.c:11, deps/lua/src/lparser.c:22, deps/lua/src/luac.c:22, deps/lua/src/lvm.c:22
+- loslib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:34
+- lparser.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:18
+- lparser.h [c/c++] — version not declared
+  found at: deps/lua/etc/noparser.c:18, deps/lua/src/lcode.c:23, deps/lua/src/lcode.h:13, deps/lua/src/ldo.c:24, deps/lua/src/llex.c:20, deps/lua/src/lparser.c:23
+- lstate.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:19
+- lstate.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:25, deps/lua/src/ldebug.c:25, deps/lua/src/ldebug.h:11, deps/lua/src/ldo.c:25, deps/lua/src/ldo.h:12, deps/lua/src/ldump.c:15, deps/lua/src/lfunc.c:19, deps/lua/src/lgc.c:20
+- lstring.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:20
+- lstring.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:26, deps/lua/src/ldebug.c:26, deps/lua/src/ldo.c:26, deps/lua/src/lgc.c:21, deps/lua/src/llex.c:22, deps/lua/src/lobject.c:22, deps/lua/src/lparser.c:25, deps/lua/src/lstate.c:22
+- lstrlib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:35
+- lsxintrin.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:3873, deps/xxhash/xxhash.h:3875
+- ltable.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:21
+- ltable.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:27, deps/lua/src/lcode.c:24, deps/lua/src/ldebug.c:27, deps/lua/src/ldo.c:27, deps/lua/src/lgc.c:22, deps/lua/src/llex.c:23, deps/lua/src/lparser.c:26, deps/lua/src/lstate.c:23
+- ltablib.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:36
+- ltm.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:22
+- ltm.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:28, deps/lua/src/ldebug.c:28, deps/lua/src/ldo.c:28, deps/lua/src/lgc.c:23, deps/lua/src/lstate.c:24, deps/lua/src/lstate.h:13, deps/lua/src/ltm.c:19, deps/lua/src/lvm.c:26
+- lua.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:38
+- lua.h [c/c++] — version not declared
+  found at: deps/lua/etc/lua.hpp:6, deps/lua/etc/min.c:9, deps/lua/src/lapi.c:16, deps/lua/src/lauxlib.c:23, deps/lua/src/lauxlib.h:15, deps/lua/src/lbaselib.c:17, deps/lua/src/lcode.c:13, deps/lua/src/ldblib.c:15
+- luaconf.h [c/c++] — version not declared
+  found at: deps/lua/src/lua.h:16
+- lualib.h [c/c++] — version not declared
+  found at: deps/lua/etc/lua.hpp:7, deps/lua/src/lbaselib.c:20, deps/lua/src/ldblib.c:18, deps/lua/src/linit.c:13, deps/lua/src/liolib.c:19, deps/lua/src/lmathlib.c:17, deps/lua/src/loadlib.c:22, deps/lua/src/loslib.c:20
+- lundump.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:23
+- lundump.h [c/c++] — version not declared
+  found at: deps/lua/etc/noparser.c:35, deps/lua/src/lapi.c:29, deps/lua/src/ldo.c:29, deps/lua/src/ldump.c:16, deps/lua/src/luac.c:24, deps/lua/src/lundump.c:20, deps/lua/src/print.c:16
+- lvm.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:24
+- lvm.h [c/c++] — version not declared
+  found at: deps/lua/src/lapi.c:30, deps/lua/src/ldebug.c:29, deps/lua/src/ldo.c:30, deps/lua/src/lobject.c:23, deps/lua/src/lvm.c:27
+- lzcntintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:137
+- lzf.h [c/c++] — version not declared
+  found at: src/bitroar.c:47, src/lzfP.h:43, src/lzf_d_2.c:61, src/quicklist.c:39, src/rdb.c:17
+- lzfP.h [c/c++] — version not declared
+  found at: src/lzf_c.c:37, src/lzf_d.c:37, src/lzf_d_2.c:60
+- lzio.c [c/c++] — version not declared
+  found at: deps/lua/etc/all.c:25
+- lzio.h [c/c++] — version not declared
+  found at: deps/lua/etc/noparser.c:19, deps/lua/src/ldo.c:31, deps/lua/src/ldo.h:13, deps/lua/src/llex.c:24, deps/lua/src/llex.h:11, deps/lua/src/lparser.h:12, deps/lua/src/lstate.h:14, deps/lua/src/lundump.c:21
+- mach-o/dyld.h [c/c++] — version not declared
+  found at: deps/lua/src/loadlib.c:151
+- mach/mach.h [c/c++] — version not declared
+  found at: src/debug.c:53
+- mach/mach_init.h [c/c++] — version not declared
+  found at: src/zmalloc.c:787
+- mach/mach_time.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:53
+- mach/task.h [c/c++] — version not declared
+  found at: src/zmalloc.c:786
+- machine/endian.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:433, src/config.h:230
+- malloc.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:71, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_types.h:115, deps/tre/lib/regexec.c:43, deps/tre/lib/tre-match-backtrack.c:67, deps/tre/lib/tre-match-parallel.c:61, src/zmalloc.h:70
+- malloc/malloc.h [c/c++] — version not declared
+  found at: src/zmalloc.h:42
+- malloc_np.h [c/c++] — version not declared
+  found at: src/zmalloc.h:65
+- memory.h [c/c++] — version not declared
+  found at: src/replication.c:37, tests/modules/atomicslotmigration.c:4, tests/modules/eventloop.c:18, tests/modules/rdbloadsave.c:6
+- memory_prefetch.h [c/c++] — version not declared
+  found at: src/memory_prefetch.c:18, src/networking.c:23, src/server.h:70
+- mixer.h [c/c++] — version not declared
+  found at: modules/vector-sets/hnsw.c:48
+- mmintrin.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:4372
+- monotonic.h [c/c++] — version not declared
+  found at: src/ae.h:16, src/blocked.c:51, src/dict.c:30, src/eval.c:14, src/kvstore.c:24, src/module.c:44, src/monotonic.c:1, src/script_lua.c:22
+- mstcpip.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:53
+- mstr.h [c/c++] — version not declared
+  found at: src/mstr.c:12, src/server.c:29
+- msvc_compat/strings.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:8
+- msvc_compat/windows_extra.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:7
+- mt19937-64.h [c/c++] — version not declared
+  found at: src/dict.h:44, src/mt19937-64.c:57, src/redis-benchmark.c:41, src/redis-check-rdb.c:10, src/redis-cli.c:46, src/server.c:23
+- net.h [c/c++] — version not declared
+  found at: deps/hiredis/async.c:43, deps/hiredis/hiredis.c:42, deps/hiredis/net.c:46, deps/hiredis/ssl.c:35, deps/hiredis/test.c:36
+- netdb.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:43, src/anet.c:24
+- netinet/in.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:40, deps/hiredis/test.c:20, src/anet.c:18, src/server.h:38, src/tlshelpers.h:25
+- netinet/tcp.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:41, src/anet.c:19
+- numpy [python] — version not declared
+  imported as: numpy
+  found at: modules/vector-sets/examples/glove-100/recall.py:12
+- object.h [c/c++] — version not declared
+  found at: src/bitroar.h:24, src/hyperloglog.h:16, src/keymeta.h:37, src/server.h:24
+- OpenSSL [cmake] — FIND_PACKAGE(OpenSSL REQUIRED)
+  found at: deps/hiredis/CMakeLists.txt:154
+- openssl/conf.h [c/c++] — version not declared
+  found at: src/tls.c:21
+- openssl/decoder.h [c/c++] — version not declared
+  found at: src/tls.c:30
+- openssl/err.h [c/c++] — version not declared
+  found at: deps/hiredis/ssl.c:56, src/cli_common.c:27, src/redis-benchmark.c:31, src/redis-cli.c:33, src/tls.c:26
+- openssl/pem.h [c/c++] — version not declared
+  found at: src/tls.c:28
+- openssl/rand.h [c/c++] — version not declared
+  found at: src/tls.c:27
+- openssl/sha.h [c/c++] — version not declared
+  found at: src/tls.c:23
+- openssl/ssl.h [c/c++] — version not declared
+  found at: deps/hiredis/ssl.c:55, src/cli_common.c:26, src/cli_common.h:8, src/redis-benchmark.c:30, src/redis-cli.c:32, src/sentinel.c:14, src/tls.c:22, src/tlshelpers.h:37
+- openssl/x509.h [c/c++] — version not declared
+  found at: src/cli_common.c:28, src/tls.c:24
+- openssl/x509v3.h [c/c++] — version not declared
+  found at: src/tls.c:25, src/tlshelpers.h:38
+- OS.h [c/c++] — version not declared
+  found at: src/zmalloc.c:849
+- os/lock.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:44
+- poll.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:44, src/ae.c:22, src/ae_evport.c:33
+- port.h [c/c++] — version not declared
+  found at: src/ae_evport.c:32
+- pqsort.h [c/c++] — version not declared
+  found at: src/geo.c:35, src/sort.c:14
+- prompt_toolkit [python] — version not declared
+  imported as: prompt_toolkit
+  found at: modules/vector-sets/examples/cli-tool/cli.py:16, modules/vector-sets/examples/cli-tool/cli.py:17
+- pthread.h [c/c++] — version not declared
+  found at: deps/hiredis/ssl.c:52, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:34, modules/vector-sets/hnsw.h:17, modules/vector-sets/vset.c:117, modules/vector-sets/w2v.c:25, src/atomicvar.h:60, src/config.h:329, src/config.h:337
+- pthread_np.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:36, src/config.h:326, src/setcpuaffinity.c:41
+- QCoreApplication [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-qt.cpp:4
+- QSocketNotifier [c/c++] — version not declared
+  found at: deps/hiredis/adapters/qt.h:28
+- QTimer [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-qt.cpp:5
+- quicklist.h [c/c++] — version not declared
+  found at: src/debug.c:21, src/quicklist.c:34, src/server.h:65
+- rand.h [c/c++] — version not declared
+  found at: src/eval.c:12, src/script_lua.c:20
+- random [c/c++] — version not declared
+  found at: deps/jemalloc/msvc/test_threads/test_threads.cpp:8
+- rax.h [c/c++] — version not declared
+  found at: src/ebuckets.h:115, src/rax.c:16, src/server.h:67, src/stream.h:4
+- rdb.h [c/c++] — version not declared
+  found at: src/bitroar.c:48, src/module.c:43, src/redis-check-rdb.c:12, src/server.h:3807
+- read.h [c/c++] — version not declared
+  found at: deps/hiredis/hiredis.h:36, deps/hiredis/read.c:46
+- readline/history.h [c/c++] — version not declared
+  found at: deps/lua/src/luaconf.h:276
+- readline/readline.h [c/c++] — version not declared
+  found at: deps/lua/src/luaconf.h:275
+- redis [python] — redis==4.5.1
+  imported as: redis
+  found at: modules/vector-sets/examples/cli-tool/cli.py:12, modules/vector-sets/examples/glove-100/insert.py:11, modules/vector-sets/examples/glove-100/recall.py:11, modules/vector-sets/examples/movies/insert.py:12, modules/vector-sets/test.py:14, modules/vector-sets/tests/concurrent_vsim_and_vrem.py:2, modules/vector-sets/tests/dimension_max_limit.py:3, modules/vector-sets/tests/dimension_validation.py:3
+- redisassert.h [c/c++] — version not declared
+  found at: src/ae.c:15, src/chk.c:19, src/crc64.c:36, src/db.c:24, src/dict.c:29, src/ebuckets.c:15, src/estore.c:15, src/expire.c:15
+- redismodule.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/redismoduleapi.h:4, src/functions.h:33, src/server.h:89, tests/modules/aclcheck.c:2, tests/modules/aofduration.c:9, tests/modules/atomicslotmigration.c:1, tests/modules/auth.c:5, tests/modules/basics.c:13
+- regex.h [c/c++] — version not declared
+  found at: src/monotonic.c:75, src/redis-check-aof.c:35
+- release.h [c/c++] — version not declared
+  found at: src/release.c:17, src/tls.c:1562
+- requests [python] — version not declared
+  imported as: requests
+  found at: modules/vector-sets/examples/cli-tool/cli.py:13, modules/vector-sets/examples/movies/insert.py:11
+- resp_parser.h [c/c++] — version not declared
+  found at: src/call_reply.h:13, src/eval.c:15, src/resp_parser.c:39, src/script_lua.c:23
+- rio.h [c/c++] — version not declared
+  found at: src/aof.c:12, src/rdb.h:14, src/rio.c:39, src/server.h:21
+- riscv_vector.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:3877
+- roaring/array_util.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/array.h:22, deps/croaring/include/roaring/containers/run.h:25, deps/croaring/include/roaring/roaring_array.h:22, deps/croaring/src/array_util.c:8, deps/croaring/src/containers/mixed_andnot.c:9, deps/croaring/src/containers/mixed_intersection.c:6, deps/croaring/src/containers/mixed_negation.c:9, deps/croaring/src/containers/mixed_subset.c:1
+- roaring/art/art.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring64_internal.h:19, deps/croaring/src/art/art.c:5, deps/croaring/src/roaring64.c:6
+- roaring/bitset/bitset.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring.h:26, deps/croaring/src/bitset.c:7
+- roaring/bitset_util.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:20, deps/croaring/src/bitset_util.c:7, deps/croaring/src/containers/bitset.c:10, deps/croaring/src/containers/convert.c:3, deps/croaring/src/containers/mixed_andnot.c:10, deps/croaring/src/containers/mixed_intersection.c:7, deps/croaring/src/containers/mixed_negation.c:10, deps/croaring/src/containers/mixed_union.c:9
+- roaring/containers/array.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:21, deps/croaring/include/roaring/containers/convert.h:18, deps/croaring/include/roaring/containers/mixed_andnot.h:17, deps/croaring/include/roaring/containers/mixed_equal.h:9, deps/croaring/include/roaring/containers/mixed_intersection.h:23, deps/croaring/include/roaring/containers/mixed_negation.h:18, deps/croaring/include/roaring/containers/mixed_subset.h:15, deps/croaring/include/roaring/containers/mixed_union.h:22
+- roaring/containers/bitset.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:22, deps/croaring/include/roaring/containers/convert.h:19, deps/croaring/include/roaring/containers/mixed_andnot.h:18, deps/croaring/include/roaring/containers/mixed_equal.h:10, deps/croaring/include/roaring/containers/mixed_intersection.h:24, deps/croaring/include/roaring/containers/mixed_negation.h:19, deps/croaring/include/roaring/containers/mixed_subset.h:16, deps/croaring/include/roaring/containers/mixed_union.h:23
+- roaring/containers/container_defs.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/array.h:23, deps/croaring/include/roaring/containers/bitset.h:24, deps/croaring/include/roaring/containers/run.h:26
+- roaring/containers/containers.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring.h:27, deps/croaring/include/roaring/roaring_array.h:23, deps/croaring/src/containers/containers.c:1, deps/croaring/src/containers/convert.c:4, deps/croaring/src/containers/mixed_andnot.c:11, deps/croaring/src/containers/mixed_negation.c:11, deps/croaring/src/containers/mixed_xor.c:9, deps/croaring/src/roaring.c:14
+- roaring/containers/convert.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:23, deps/croaring/src/containers/convert.c:5, deps/croaring/src/containers/mixed_andnot.c:12, deps/croaring/src/containers/mixed_intersection.c:8, deps/croaring/src/containers/mixed_negation.c:12, deps/croaring/src/containers/mixed_union.c:10, deps/croaring/src/containers/mixed_xor.c:10
+- roaring/containers/mixed_andnot.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:24, deps/croaring/src/containers/mixed_andnot.c:13
+- roaring/containers/mixed_equal.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:25, deps/croaring/src/containers/mixed_equal.c:1
+- roaring/containers/mixed_intersection.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:26, deps/croaring/src/containers/mixed_intersection.c:9
+- roaring/containers/mixed_negation.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:27, deps/croaring/src/containers/mixed_negation.c:13
+- roaring/containers/mixed_subset.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:28, deps/croaring/src/containers/mixed_subset.c:2
+- roaring/containers/mixed_union.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:29, deps/croaring/src/containers/mixed_union.c:11
+- roaring/containers/mixed_xor.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:30, deps/croaring/src/containers/mixed_xor.c:11
+- roaring/containers/perfparameters.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/container_defs.h:17, deps/croaring/src/containers/convert.c:6, deps/croaring/src/containers/mixed_andnot.c:14, deps/croaring/src/containers/mixed_union.c:12, deps/croaring/src/containers/mixed_xor.c:12
+- roaring/containers/run.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/containers.h:31, deps/croaring/include/roaring/containers/convert.h:20, deps/croaring/include/roaring/containers/mixed_andnot.h:19, deps/croaring/include/roaring/containers/mixed_equal.h:11, deps/croaring/include/roaring/containers/mixed_intersection.h:25, deps/croaring/include/roaring/containers/mixed_negation.h:20, deps/croaring/include/roaring/containers/mixed_subset.h:17, deps/croaring/include/roaring/containers/mixed_union.h:24
+- roaring/isadetection.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:755, deps/croaring/src/isadetection.c:75
+- roaring/memory.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring.h:28, deps/croaring/include/roaring/roaring64.h:17, deps/croaring/src/art/art.c:6, deps/croaring/src/bitset.c:8, deps/croaring/src/containers/array.c:11, deps/croaring/src/containers/bitset.c:13, deps/croaring/src/containers/containers.c:2, deps/croaring/src/containers/run.c:5
+- roaring/portability.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/array_util.h:19, deps/croaring/include/roaring/bitset/bitset.h:33, deps/croaring/include/roaring/bitset_util.h:19, deps/croaring/include/roaring/containers/array.h:24, deps/croaring/include/roaring/containers/bitset.h:25, deps/croaring/include/roaring/containers/run.h:27, deps/croaring/include/roaring/misc/configreport.h:24, deps/croaring/include/roaring/roaring.h:29
+- roaring/roaring.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring64.h:19, deps/croaring/src/roaring.c:9, deps/croaring/src/roaring64.c:14, deps/croaring/src/roaring_priority_queue.c:1, src/bitroar.c:32
+- roaring/roaring64.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring.h:1387, deps/croaring/include/roaring/roaring64_internal.h:20, deps/croaring/src/roaring64.c:8, src/bitroar.c:33
+- roaring/roaring64_internal.h [c/c++] — version not declared
+  found at: deps/croaring/src/roaring64.c:22, src/bitroar.c:39
+- roaring/roaring_array.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring.h:30, deps/croaring/src/roaring.c:15, deps/croaring/src/roaring64.c:15, deps/croaring/src/roaring_array.c:11, deps/croaring/src/roaring_priority_queue.c:2, src/bitroar.c:34
+- roaring/roaring_types.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/containers/array.h:19, deps/croaring/include/roaring/containers/bitset.h:21, deps/croaring/include/roaring/containers/bitset.h:26, deps/croaring/include/roaring/containers/run.h:17, deps/croaring/include/roaring/roaring.h:23, deps/croaring/include/roaring/roaring64.h:20
+- roaring/roaring_version.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/roaring.h:31
+- roaring/utilasm.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/bitset_util.h:20, deps/croaring/include/roaring/containers/bitset.h:27, deps/croaring/src/array_util.c:10, deps/croaring/src/containers/bitset.c:15
+- s390intrin.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.h:4257
+- san_bump.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/pac.h:6
+- sanitizer/lsan_interface.h [c/c++] — version not declared
+  found at: src/zset_btree.c:727
+- sched.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:37, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:47, src/setcpuaffinity.c:33, src/setcpuaffinity.c:45
+- script.h [c/c++] — version not declared
+  found at: src/cluster_slot_stats.h:16, src/db.c:21, src/debug.c:27, src/evict.c:16, src/functions.h:32, src/module.c:45, src/networking.c:19, src/script.c:16
+- script_lua.h [c/c++] — version not declared
+  found at: src/eval.c:16, src/function_lua.c:23, src/script_lua.c:15
+- sds.h [c/c++] — version not declared
+  found at: deps/hiredis/async.c:45, deps/hiredis/hiredis.c:43, deps/hiredis/hiredis.h:45, deps/hiredis/net.c:47, deps/hiredis/read.c:47, deps/hiredis/sds.c:40, src/bitroar.h:23, src/chk.h:20
+- sdsalloc.h [c/c++] — version not declared
+  found at: deps/hiredis/sds.c:41, src/mstr.c:11, src/sds.c:21
+- sdscompat.h [c/c++] — version not declared
+  found at: src/cli_common.c:20, src/cli_common.h:5, src/redis-benchmark.c:25, src/redis-cli.c:36
+- server.h [c/c++] — version not declared
+  found at: src/acl.c:13, src/aof.c:10, src/bio.c:47, src/bitops.c:11, src/bitroar.c:45, src/bless.c:25, src/blocked.c:48, src/call_reply.c:10
+- set_entry.h [c/c++] — version not declared
+  found at: src/server.h:53, src/set_entry.c:14
+- setjmp.h [c/c++] — version not declared
+  found at: deps/lua/src/ldo.c:8, modules/vector-sets/fastjson_test.c:18
+- sha1.h [c/c++] — version not declared
+  found at: src/debug.c:18, src/eval.c:11, src/script_lua.c:19, src/server.h:94, src/sha1.c:28
+- sha256.h [c/c++] — version not declared
+  found at: src/acl.c:15, src/sha256.c:18, src/util.c:52
+- signal.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-ae.c:4, deps/hiredis/examples/example-ivykis.c:4, deps/hiredis/examples/example-libev.c:4, deps/hiredis/examples/example-libevent-ssl.c:4, deps/hiredis/examples/example-libevent.c:4, deps/hiredis/examples/example-libhv.c:4, deps/hiredis/examples/example-libsdevent.c:4, deps/hiredis/examples/example-libuv.c:4
+- slowlog.h [c/c++] — version not declared
+  found at: src/blocked.c:49, src/module.c:42, src/server.c:19, src/slowlog.c:23
+- smmintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:139
+- sockcompat.h [c/c++] — version not declared
+  found at: deps/hiredis/net.c:48, deps/hiredis/sockcompat.c:32, deps/hiredis/test.c:2
+- solarisfixes.h [c/c++] — version not declared
+  found at: src/server.h:20, src/sha1.c:27, src/zmalloc.c:16
+- sparkline.h [c/c++] — version not declared
+  found at: src/server.h:64
+- sparsearray.h [c/c++] — version not declared
+  found at: src/server.h:25
+- stdalign.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:77
+- stdarg.h [c/c++] — version not declared
+  found at: deps/croaring/src/roaring.c:4, deps/croaring/src/roaring64.c:2, deps/hiredis/hiredis.h:37, deps/hiredis/net.c:40, deps/hiredis/sds.h:46, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:65, deps/lua/src/lapi.c:10, deps/lua/src/lauxlib.c:10
+- stdatomic.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:613, deps/jemalloc/include/jemalloc/internal/atomic_c11.h:4, modules/vector-sets/hnsw.h:18, modules/vector-sets/vset.c:118, modules/vector-sets/w2v.c:26, src/atomicvar.h:99
+- stdfil.h [c/c++] — version not declared
+  found at: deps/croaring/src/isadetection.c:63
+- strbuf.h [c/c++] — version not declared
+  found at: deps/lua/src/lua_cjson.c:47, deps/lua/src/strbuf.c:31
+- stream.h [c/c++] — version not declared
+  found at: src/rdb.c:21, src/server.h:3337, src/t_stream.c:12
+- strings.h [c/c++] — version not declared
+  found at: deps/hiredis/async.c:37, deps/hiredis/read.c:37, deps/hiredis/test.c:7, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:75, modules/vector-sets/vset.c:113, modules/vector-sets/w2v.c:21, src/crccombine.c:3, tests/modules/aclcheck.c:6
+- stropts.h [c/c++] — version not declared
+  found at: src/memtest.c:18
+- sys/bitops.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/pages.c:17
+- sys/byteorder.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:436
+- sys/cpuset.h [c/c++] — version not declared
+  found at: src/setcpuaffinity.c:37
+- sys/endian.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:513
+- sys/epoll.h [c/c++] — version not declared
+  found at: deps/hiredis/test.c:21, src/ae_epoll.c:12
+- sys/event.h [c/c++] — version not declared
+  found at: src/ae_kqueue.c:33
+- sys/eventfd.h [c/c++] — version not declared
+  found at: src/eventnotifier.c:17
+- sys/feature_tests.h [c/c++] — version not declared
+  found at: src/config.h:118
+- sys/file.h [c/c++] — version not declared
+  found at: src/cluster_legacy.c:36, src/server.c:47
+- sys/ioctl.h [c/c++] — version not declared
+  found at: deps/linenoise/linenoise.c:118, src/memtest.c:16
+- sys/mman.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:21, modules/vector-sets/fastjson_test.c:14, src/debug.c:34, src/server.c:60, src/syscheck.c:25, src/util.c:1537, src/zmalloc.c:24, tests/modules/crash.c:4
+- sys/param.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:20, src/aof.c:25, src/config.h:13, src/rdb.c:37, src/setcpuaffinity.c:36
+- sys/prctl.h [c/c++] — version not declared
+  found at: src/debug.c:2354, src/server.c:7616
+- sys/procfs.h [c/c++] — version not declared
+  found at: src/zmalloc.c:867
+- sys/resource.h [c/c++] — version not declared
+  found at: src/aof.c:23, src/ebuckets.c:2035, src/hotkeys.c:14, src/rdb.c:33, src/server.c:49, src/slowlog.c:24, src/syscheck.c:16
+- sys/select.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:38, src/ae_select.c:12
+- sys/socket.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:37, deps/hiredis/test.c:22, src/anet.c:14, src/cluster_legacy.c:30, src/networking.c:25, src/replication.c:41, src/sentinel.c:22, src/server.c:57
+- sys/stat.h [c/c++] — version not declared
+  found at: deps/linenoise/linenoise.c:116, src/anet.c:15, src/aof.c:20, src/cluster_legacy.c:34, src/config.c:22, src/module.c:51, src/rdb.c:36, src/redis-check-aof.c:33
+- sys/syscall.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:23, src/debug.c:2356, src/threads_mngr.c:20
+- sys/sysctl.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/pages.c:11, src/server.c:64, src/zmalloc.c:785, src/zmalloc.c:802, src/zmalloc.c:825
+- sys/time.h [c/c++] — version not declared
+  found at: deps/hiredis/hiredis.h:39, deps/hiredis/test.c:8, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:50, modules/vector-sets/w2v.c:22, src/ae.c:18, src/ae_evport.c:36, src/ae_kqueue.c:34, src/anet.c:17
+- sys/types.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/ae.h:33, deps/hiredis/adapters/libev.h:34, deps/hiredis/adapters/redismoduleapi.h:9, deps/hiredis/net.c:36, deps/hiredis/sds.h:45, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:56, deps/linenoise/linenoise.c:117, deps/tre/lib/tre-internal.h:21
+- sys/uio.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:32, src/connection.h:17, src/networking.c:26, src/server.c:50, src/tls.c:32
+- sys/un.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:39, src/anet.c:16, src/server.c:51
+- sys/user.h [c/c++] — version not declared
+  found at: src/zmalloc.c:803
+- sys/utsname.h [c/c++] — version not declared
+  found at: src/server.c:55
+- sys/wait.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/fork.c:4, src/aof.c:24, src/module.c:52, src/rdb.c:34, src/sentinel.c:23, src/server.c:40, src/syscheck.c:22
+- syscheck.h [c/c++] — version not declared
+  found at: src/server.c:26, src/syscheck.c:11
+- syslog.h [c/c++] — version not declared
+  found at: src/server.h:37
+- systemd/sd-daemon.h [c/c++] — version not declared
+  found at: src/server.h:44
+- systemd/sd-event.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/libsdevent.h:3
+- termios.h [c/c++] — version not declared
+  found at: deps/linenoise/linenoise.c:108, src/memtest.c:15, src/redis-cli.c:28
+- test/arena_util.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/arena_decay.c:2, deps/jemalloc/test/unit/san.c:2, deps/jemalloc/test/unit/san_bump.c:2, deps/jemalloc/test/unit/uaf.c:2
+- test/bench.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/stress/batch_alloc.c:2, deps/jemalloc/test/stress/fill_flush.c:2, deps/jemalloc/test/stress/large_microbench.c:2, deps/jemalloc/test/stress/mallctl.c:2, deps/jemalloc/test/stress/microbench.c:2
+- test/extent_hooks.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/integration/extent.c:3, deps/jemalloc/test/unit/arena_reset.c:8, deps/jemalloc/test/unit/base.c:3
+- test/jemalloc_test.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/analyze/prof_bias.c:1, deps/jemalloc/test/analyze/rand.c:1, deps/jemalloc/test/analyze/sizes.c:1, deps/jemalloc/test/integration/MALLOCX_ARENA.c:1, deps/jemalloc/test/integration/aligned_alloc.c:1, deps/jemalloc/test/integration/allocated.c:1, deps/jemalloc/test/integration/cpp/basic.cpp:1, deps/jemalloc/test/integration/cpp/infallible_new_false.cpp:3
+- test/nbits.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/bitmap.c:3, deps/jemalloc/test/unit/fb.c:4
+- test/san.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/unit/double_free.c:2, deps/jemalloc/test/unit/san.c:3, deps/jemalloc/test/unit/tcache_max.c:2, deps/jemalloc/test/unit/uaf.c:3
+- test/SFMT-alti.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/src/SFMT.c:135
+- test/SFMT-params.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/src/SFMT.c:50
+- test/SFMT-params11213.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:111
+- test/SFMT-params1279.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:105
+- test/SFMT-params132049.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:119
+- test/SFMT-params19937.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:113
+- test/SFMT-params216091.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:121
+- test/SFMT-params2281.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:107
+- test/SFMT-params4253.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:109
+- test/SFMT-params44497.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:115
+- test/SFMT-params607.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:103
+- test/SFMT-params86243.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/SFMT-params.h:117
+- test/SFMT-sse2.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/src/SFMT.c:137
+- test/sleep.h [c/c++] — version not declared
+  found at: deps/jemalloc/test/include/test/mq.h:1, deps/jemalloc/test/unit/hpa_background_thread.c:2
+- test_threads.h [c/c++] — version not declared
+  found at: deps/jemalloc/msvc/test_threads/test_threads_main.cpp:1
+- testhelp.h [c/c++] — version not declared
+  found at: deps/hiredis/sds.c:1120, src/bitops.c:2992, src/chk.c:606, src/crc64.c:37, src/dict.c:1993, src/ebuckets.c:2037, src/estore.c:240, src/fast_float_strtod.c:767
+- threads_mngr.h [c/c++] — version not declared
+  found at: src/debug.c:26, src/server.c:27, src/threads_mngr.c:10
+- tlshelpers.h [c/c++] — version not declared
+  found at: src/cli_common.h:26, src/sentinel.c:16, src/tls.c:51
+- tmmintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:140
+- tqdm [python] — version not declared
+  imported as: tqdm
+  found at: modules/vector-sets/examples/glove-100/insert.py:12, modules/vector-sets/examples/glove-100/recall.py:13
+- tre-ast.h [c/c++] — version not declared
+  found at: deps/tre/lib/tre-ast.c:14, deps/tre/lib/tre-compile.c:26, deps/tre/lib/tre-parse.c:25
+- tre-compile.h [c/c++] — version not declared
+  found at: deps/tre/lib/tre-ast.h:15, deps/tre/lib/tre-compile.c:28
+- tre-config.h [c/c++] — version not declared
+  found at: deps/tre/local_includes/tre.h:18
+- tre-filter.h [c/c++] — version not declared
+  found at: deps/tre/lib/tre-filter.c:20
+- tre-internal.h [c/c++] — version not declared
+  found at: deps/tre/lib/regcomp.c:17, deps/tre/lib/regerror.c:21, deps/tre/lib/regexec.c:47, deps/tre/lib/tre-ast.h:14, deps/tre/lib/tre-compile.c:23, deps/tre/lib/tre-filter.c:19, deps/tre/lib/tre-match-backtrack.c:70, deps/tre/lib/tre-match-parallel.c:64
+- tre-match-utils.h [c/c++] — version not declared
+  found at: deps/tre/lib/tre-match-backtrack.c:72, deps/tre/lib/tre-match-parallel.c:65
+- tre-mem.h [c/c++] — version not declared
+  found at: deps/tre/lib/tre-ast.c:15, deps/tre/lib/tre-ast.h:13, deps/tre/lib/tre-compile.c:24, deps/tre/lib/tre-match-backtrack.c:71, deps/tre/lib/tre-mem.c:23, deps/tre/lib/tre-parse.c:24
+- tre-parse.h [c/c++] — version not declared
+  found at: deps/tre/lib/tre-compile.c:27, deps/tre/lib/tre-parse.c:27
+- tre-stack.h [c/c++] — version not declared
+  found at: deps/tre/lib/tre-compile.c:25, deps/tre/lib/tre-parse.c:26, deps/tre/lib/tre-stack.c:16
+- tre.h [c/c++] — version not declared
+  found at: deps/tre/tests/test-malformed-regn.c:13
+- tre/tre.h [c/c++] — version not declared
+  found at: deps/tre/local_includes/regex.h:25
+- ucontext.h [c/c++] — version not declared
+  found at: src/debug.c:40
+- unwind.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/prof_sys.c:22
+- util.h [c/c++] — version not declared
+  found at: src/anet.c:31, src/debug.c:17, src/dict.c:32, src/listpack.c:25, src/quicklist.c:38, src/rio.c:40, src/sds.c:22, src/server.h:62
+- uv.h [c/c++] — version not declared
+  found at: deps/hiredis/adapters/libuv.h:4
+- valgrind/helgrind.h [c/c++] — version not declared
+  found at: src/atomicvar.h:86
+- vector.h [c/c++] — version not declared
+  found at: src/bless.c:27, src/db.c:17, src/t_hash.c:18, src/t_set.c:17, src/vector.c:15
+- version.h [c/c++] — version not declared
+  found at: src/cli_common.c:13, src/script_lua.c:24, src/server.h:61
+- vm/vm_param.h [c/c++] — version not declared
+  found at: deps/jemalloc/src/pages.c:13
+- vset_config.h [c/c++] — version not declared
+  found at: modules/vector-sets/vset.c:120, modules/vector-sets/vset_config.c:11
+- wchar.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/msvc_compat/C99/stdint.h:52, deps/tre/lib/regerror.c:15, deps/tre/lib/regexec.c:34, deps/tre/lib/tre-internal.h:13, deps/tre/lib/tre-match-backtrack.c:58, deps/tre/lib/tre-match-parallel.c:52, deps/tre/local_includes/tre.h:202
+- wctype.h [c/c++] — version not declared
+  found at: deps/tre/lib/regerror.c:18, deps/tre/lib/regexec.c:37, deps/tre/lib/tre-internal.h:17, deps/tre/lib/tre-match-backtrack.c:61, deps/tre/lib/tre-match-parallel.c:55
+- win32.h [c/c++] — version not declared
+  found at: deps/hiredis/async.c:46, deps/hiredis/hiredis.c:45, deps/hiredis/net.c:49, deps/hiredis/read.c:48, deps/hiredis/ssl.c:58, deps/hiredis/test.c:37
+- wincrypt.h [c/c++] — version not declared
+  found at: deps/hiredis/ssl.c:42
+- windows.h [c/c++] — version not declared
+  found at: deps/hiredis/ssl.c:41, deps/jemalloc/include/jemalloc/internal/jemalloc_internal_decls.h:6, deps/lua/src/loadlib.c:92
+- winsock2.h [c/c++] — version not declared
+  found at: deps/hiredis/examples/example-ssl.c:9, deps/hiredis/examples/example.c:7, deps/hiredis/sockcompat.h:49, deps/hiredis/win32.h:5
+- wmmintrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:143
+- ws2tcpip.h [c/c++] — version not declared
+  found at: deps/hiredis/sockcompat.h:50
+- wtypes.h [c/c++] — version not declared
+  found at: deps/jemalloc/include/msvc_compat/C99/stdbool.h:4
+- x86intrin.h [c/c++] — version not declared
+  found at: deps/croaring/include/roaring/portability.h:115, src/monotonic.c:76
+- xmalloc.h [c/c++] — version not declared
+  found at: deps/tre/lib/regcomp.c:18, deps/tre/lib/regexec.c:48, deps/tre/lib/tre-compile.c:29, deps/tre/lib/tre-match-backtrack.c:73, deps/tre/lib/tre-match-parallel.c:66, deps/tre/lib/tre-mem.c:24, deps/tre/lib/tre-parse.c:23, deps/tre/lib/tre-stack.c:17
+- xxhash.h [c/c++] — version not declared
+  found at: deps/xxhash/xxhash.c:42, src/chk.c:21, src/stream.h:7, src/t_stream.c:13, src/t_string.c:12
+- ziplist.h [c/c++] — version not declared
+  found at: src/server.h:93, src/ziplist.c:189
+- zipmap.h [c/c++] — version not declared
+  found at: src/rdb.c:18, src/server.h:92
+- zmalloc.h [c/c++] — version not declared
+  found at: src/adlist.c:14, src/ae.c:27, src/chk.c:20, src/crc64.c:317, src/dict.c:28, src/ebuckets.c:14, src/estore.c:14, src/eventnotifier.c:21
+- zset_btree.h [c/c++] — version not declared
+  found at: src/aof.c:15, src/db.c:30, src/debug.c:25, src/defrag.c:22, src/geo.c:33, src/module.c:49, src/object.c:19, src/rdb.c:27
+- zstd.h [c/c++] — version not declared
+  found at: src/client_comp.c:5
+
+INTERNAL SERVICES
+- Redis [cache_or_key_value_store]
+  endpoint: HTTP redis://host:port/dbnum
+  endpoint: HTTP redis://localhost:6379/0
+  found at: .github/ISSUE_TEMPLATE/bug_report.md:3, .github/ISSUE_TEMPLATE/crash_report.md:11, .github/ISSUE_TEMPLATE/feature_request.md:3, .github/ISSUE_TEMPLATE/question.md:10, .github/ISSUE_TEMPLATE/question.md:12, .github/ISSUE_TEMPLATE/question.md:14, .github/ISSUE_TEMPLATE/question.md:15, .github/ISSUE_TEMPLATE/question.md:16
+- localhost [external_service]
+  endpoint: HTTP http://localhost:11434/api/embeddings
+  found at: modules/vector-sets/examples/cli-tool/cli.py:20, modules/vector-sets/examples/movies/insert.py:21
+
+DATABASES / BROKERS: HOSTING UNKNOWN
+- None detected
+
+STANDARD CLOUD SERVICES
+- Google Cloud [cloud_platform]
+  endpoint: HTTP https://oss-fuzz-build-logs.storage.googleapis.com/badges/croaring.svg
+  found at: deps/croaring/README.md:4
+
+THIRD-PARTY SERVICES
+- Stripe [payments]
+  found at: deps/xxhash/xxhash.h:2932, deps/xxhash/xxhash.h:2938, deps/xxhash/xxhash.h:6254, deps/xxhash/xxhash.h:6827
+
+UNCLASSIFIED SERVICE CLUES
+- None detected
+
+API ENDPOINTS (observed request calls)
+- None statically identified
+
+OTHER URL REFERENCES
+- http://antirez.com/news/98 [unclassified_reference / http_endpoint] — utils/graphs/commits-over-time/README.md:2
+- http://archive.ubuntu.com/ubuntu/ [unclassified_reference / http_endpoint] — .github/workflows/ci.yml:98, .github/workflows/daily.yml:1255, .github/workflows/daily.yml:1256, .github/workflows/daily.yml:1297, .github/workflows/daily.yml:1298
+- http://arxiv.org/abs/1402.6407 [informational_reference / research_or_document_reference] — deps/croaring/README.md:1325
+- http://arxiv.org/abs/1603.06549 [informational_reference / research_or_document_reference] — deps/croaring/README.md:1326
+- http://bitop.luajit.org/ [unclassified_reference / http_endpoint] — deps/lua/src/lua_bit.c:3
+- http://citeseerx.ist.psu.edu/viewdoc/download [unclassified_reference / http_endpoint] — deps/jemalloc/include/jemalloc/internal/ph.h:13
+- http://compilers.iecc.com/comparch/article/93-03-102 [unclassified_reference / http_endpoint] — deps/tre/lib/tre-match-backtrack.c:18
+- http://creativecommons.org/licenses/by/3.0/deed.en_US [unclassified_reference / http_endpoint] — src/zmalloc.c:1208
+- http://creativecommons.org/publicdomain/zero/1.0/ [unclassified_reference / http_endpoint] — deps/hdr_histogram/LICENSE.txt:3, deps/hdr_histogram/hdr_histogram.c:11, deps/hdr_histogram/hdr_histogram.c:78, deps/hdr_histogram/hdr_histogram.h:4, src/siphash.c:15
+- http://csrc.nist.gov/publications/fips/fips180-2/fips180-2withchangenotice.pdf [informational_reference / http_endpoint] — src/sha256.c:11
+- http://db.ucsd.edu/wp-content/uploads/2017/03/sidm338-wangA.pdf [informational_reference / http_endpoint] — deps/croaring/README.md:76
+- http://deb.debian.org/debian|http://archive.debian.org/debian|g [unclassified_reference / http_endpoint] — .github/workflows/ci.yml:49
+- http://doris.incubator.apache.org [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- http://druid.io/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:63
+- http://en.wikipedia.org/wiki/Signed_zero [unclassified_reference / http_endpoint] — src/util.c:732
+- http://florian.loitsch.com/publications/dtoa-pldi2010.pdf [informational_reference / http_endpoint] — deps/fpconv/fpconv_dtoa.h:45
+- http://github.com/antirez/aspark [unclassified_reference / http_endpoint] — src/sparkline.c:2
+- http://github.com/antirez/linenoise [unclassified_reference / http_endpoint] — deps/linenoise/linenoise.c:6
+- http://github.com/antirez/lua-cmsgpack [unclassified_reference / http_endpoint] — deps/lua/src/lua_cmsgpack.c:44
+- http://github.com/linkedin/pinot/wiki [unclassified_reference / http_endpoint] — deps/croaring/README.md:70
+- http://github.com/redis/redis/issues [unclassified_reference / http_endpoint] — src/debug.c:2938
+- http://graphics.stanford.edu/~seander/bithacks.html [unclassified_reference / http_endpoint] — src/dict.c:1489
+- http://invisible-island.net/xterm/ctlseqs/ctlseqs.html [unclassified_reference / http_endpoint] — deps/linenoise/linenoise.c:44
+- http://jemalloc.net/jemalloc.3.html [informational_reference / http_endpoint] — deps/jemalloc/TUNING.md:103, deps/jemalloc/TUNING.md:109, deps/jemalloc/TUNING.md:112, deps/jemalloc/TUNING.md:115, deps/jemalloc/TUNING.md:124
+- http://kylin.apache.org/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:69
+- http://liblzf.plan9.de/ [unclassified_reference / http_endpoint] — src/lzf.h:43
+- http://lists.freebsd.org/pipermail/freebsd-stable/2008-June/043136.html [unclassified_reference / http_endpoint] — src/setproctitle.c:85
+- http://localhost:11434/api/embeddings [internal_candidate / http_endpoint] — modules/vector-sets/examples/cli-tool/cli.py:20, modules/vector-sets/examples/movies/insert.py:21
+- http://luc.devroye.org/rnbookindex.html [unclassified_reference / http_endpoint] — deps/jemalloc/src/prof.c:235
+- http://monkey.org/~provos/libevent/ [informational_reference / http_endpoint] — deps/hiredis/README.md:388
+- http://nadeausoftware.com/articles/2012/09/c_c_tip_how_get_physical_memory_size_system [unclassified_reference / http_endpoint] — src/zmalloc.c:1204
+- http://oliveryang.net/2015/09/pitfalls-of-TSC-usage [unclassified_reference / http_endpoint] — src/monotonic.c:26
+- http://oliveryang.net/2015/09/pitfalls-of-TSC-usage/ [unclassified_reference / http_endpoint] — README.md:451
+- http://pkg.freebsd.org/ [unclassified_reference / http_endpoint] — deps/jemalloc/.cirrus.yml:34
+- http://poormansprofiler.org/ [unclassified_reference / http_endpoint] — utils/whatisdoing.sh:1
+- http://pyropus.ca/software/memtester/ [unclassified_reference / http_endpoint] — src/memtest.c:345, src/memtest.c:50
+- http://r-libre.teluq.ca/950/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:1327
+- http://roaringbitmap.github.io/CRoaring/ [informational_reference / http_endpoint] — deps/croaring/README.md:6
+- http://rpms.remirepo.net/enterprise/remi-release-7.rpm [unclassified_reference / http_endpoint] — deps/hiredis/.github/workflows/build.yml:49
+- http://security.debian.org|http//archive.debian.org/debian-security|g [unclassified_reference / http_endpoint] — .github/workflows/ci.yml:50
+- http://software.schmorp.de/pkg/libev.html [informational_reference / http_endpoint] — deps/hiredis/README.md:387
+- http://stackoverflow.com/questions/4909263 [unclassified_reference / http_endpoint] — src/geohash.c:80
+- http://stackoverflow.com/questions/tagged/redis [informational_reference / http_endpoint] — .github/ISSUE_TEMPLATE/question.md:15
+- http://theshfl.com/redis_sets [unclassified_reference / http_endpoint] — utils/srandmember/README.md:4
+- http://wiki.msgpack.org/display/MSGPACK/Format+specification [unclassified_reference / http_endpoint] — deps/lua/src/lua_cmsgpack.c:47
+- http://www.3waylabs.com/nw/WWW/products/wizcon/vt220.html [unclassified_reference / http_endpoint] — deps/linenoise/linenoise.c:45
+- http://www.amazon.com/exec/obidos/ASIN/8590379833/lua-indexmanual-20 [unclassified_reference / http_endpoint] — deps/lua/doc/contents.html:30, deps/lua/doc/contents.html:41
+- http://www.apache.org/licenses/LICENSE-2.0 [unclassified_reference / http_endpoint] — deps/croaring/src/license-comment.h:12
+- http://www.blevesearch.com [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- http://www.lua.org [unclassified_reference / http_endpoint] — deps/lua/src/lua.h:4
+- http://www.lua.org/ [unclassified_reference / http_endpoint] — deps/lua/doc/contents.html:18, deps/lua/doc/lua.html:162, deps/lua/doc/luac.html:136, deps/lua/doc/manual.html:15, deps/lua/doc/readme.html:11
+- http://www.lua.org/docs.html [unclassified_reference / http_endpoint] — deps/lua/doc/contents.html:25
+- http://www.lua.org/donations.html [unclassified_reference / http_endpoint] — deps/lua/doc/contents.html:43
+- http://www.lua.org/license.html [unclassified_reference / http_endpoint] — deps/lua/doc/contents.html:58, deps/lua/doc/manual.html:24
+- http://www.lua.org/manual/ [unclassified_reference / http_endpoint] — deps/lua/doc/contents.html:53, deps/lua/doc/manual.html:33
+- http://www.lua.org/manual/5.1/ [unclassified_reference / http_endpoint] — deps/lua/doc/readme.html:30
+- http://www.math.hiroshima-u.ac.jp/~m-mat/MT/emt.html [unclassified_reference / http_endpoint] — src/mt19937-64.c:52, src/mt19937-64.h:52
+- http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/index.html [unclassified_reference / http_endpoint] — deps/jemalloc/test/include/test/SFMT-alti.h:3, deps/jemalloc/test/include/test/SFMT-params.h:3, deps/jemalloc/test/include/test/SFMT-params11213.h:3, deps/jemalloc/test/include/test/SFMT-params1279.h:3, deps/jemalloc/test/include/test/SFMT-params132049.h:3
+- http://www.memtest86.com/ [unclassified_reference / http_endpoint] — src/memtest.c:344, src/memtest.c:50
+- http://www.nongnu.org/libunwind/ [unclassified_reference / http_endpoint] — deps/jemalloc/INSTALL.md:147
+- http://www.opensearchserver.com [unclassified_reference / http_endpoint] — deps/croaring/README.md:65
+- http://www.opensource.org/licenses/mit-license.php [unclassified_reference / http_endpoint] — deps/jemalloc/test/unit/hash.c:4, deps/lua/src/lua_bit.c:26
+- http://www.reddit.com/r/redis [informational_reference / http_endpoint] — .github/ISSUE_TEMPLATE/question.md:16
+- https://abi-laboratory.pro/ [informational_reference / http_endpoint] — deps/hiredis/README.md:4
+- https://antirez.com/word2vec_with_attribs.rdb [informational_reference / http_endpoint] — modules/vector-sets/README.md:517, modules/vector-sets/README.md:519
+- https://api.star-history.com/svg [informational_reference / http_endpoint] — deps/croaring/README.md:1318
+- https://arxiv.org/abs/1709.07821 [informational_reference / research_or_document_reference] — deps/croaring/README.md:1322, deps/croaring/README.md:58
+- https://bitbucket.org/mchaput/whoosh/wiki/Home [unclassified_reference / http_endpoint] — deps/croaring/README.md:67
+- https://brandur.org/rate-limiting [unclassified_reference / http_endpoint] — src/gcra.c:68
+- https://bugs.chromium.org/p/oss-fuzz/issues/list [informational_reference / http_endpoint] — deps/croaring/README.md:4
+- https://bugzilla.mozilla.org/show_bug.cgi [unclassified_reference / http_endpoint] — deps/jemalloc/src/jemalloc.c:3274
+- https://clang.llvm.org/docs/AttributeReference.html [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:830
+- https://cloud.redis.io/ [informational_reference / http_endpoint] — README.md:90
+- https://cmake.org/download/ [informational_reference / http_endpoint] — deps/croaring/README.md:1110
+- https://code.google.com/p/smhasher/ [unclassified_reference / http_endpoint] — deps/jemalloc/test/unit/hash.c:3
+- https://codecov.io/github/redis/redis [informational_reference / http_endpoint] — README.md:1
+- https://codecov.io/github/redis/redis/graph/badge.svg [informational_reference / http_endpoint] — README.md:1
+- https://conan.io/ [informational_reference / http_endpoint] — deps/croaring/README.md:1129
+- https://danluu.com/assembly-intrinsics/ [unclassified_reference / http_endpoint] — src/bitops.c:99
+- https://datatracker.ietf.org/doc/html/rfc7159 [unclassified_reference / http_endpoint] — src/cli_common.c:550
+- https://db.in.tum.de/~leis/papers/ART.pdf [informational_reference / http_endpoint] — deps/croaring/include/roaring/art/art.h:10
+- https://desktop.github.com/ [informational_reference / http_endpoint] — deps/croaring/README.md:1109, deps/croaring/README.md:1117, deps/croaring/README.md:396
+- https://devblogs.microsoft.com/commandline/af_unix-comes-to-windows/ [unclassified_reference / http_endpoint] — deps/hiredis/net.c:750
+- https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/DynamicLibraryDesignGuidelines.html [unclassified_reference / http_endpoint] — deps/xxhash/Makefile:77
+- https://discord.com/invite/redis [unclassified_reference / http_endpoint] — CONTRIBUTING.md:75
+- https://distfiles.macports.org/MacPorts/MacPorts-2.6.2-10.13-HighSierra.pkg [unclassified_reference / http_endpoint] — deps/hiredis/.travis.yml:28
+- https://dl.acm.org/doi/10.1145/23002.23003 [informational_reference / http_endpoint] — deps/jemalloc/doc_internal/PROFILING_INTERNALS.md:12
+- https://docs.conan.io/2/ [informational_reference / http_endpoint] — deps/croaring/README.md:1135
+- https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request [unclassified_reference / http_endpoint] — CONTRIBUTING.md:106
+- https://docs.github.com/en/github/getting-started-with-github/fork-a-repo [unclassified_reference / http_endpoint] — CONTRIBUTING.md:103
+- https://docs.openssl.org/3.3/man3/SSL_shutdown/ [unclassified_reference / http_endpoint] — deps/hiredis/ssl.c:481
+- https://docs.travis-ci.com/user/languages/minimal-and-generic/ [unclassified_reference / http_endpoint] — deps/jemalloc/.travis.yml:7, deps/jemalloc/scripts/gen_travis.py:25
+- https://download.redis.io/releases/${TARNAME [unclassified_reference / http_endpoint] — utils/releasetools/03_test_release.sh:11
+- https://download.redis.io/releases/redis-${1}.tar.gz [unclassified_reference / http_endpoint] — utils/releasetools/02_upload_tarball.sh:16, utils/releasetools/04_release_hash.sh:8, utils/releasetools/04_release_hash.sh:9
+- https://en.cppreference.com/w/c/language/attributes/fallthrough [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:816
+- https://en.cppreference.com/w/cpp/language/attributes/fallthrough [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:815
+- https://en.cppreference.com/w/cpp/language/ebo [unclassified_reference / http_endpoint] — deps/croaring/include/roaring/roaring_types.h:31
+- https://en.wikipedia.org/wiki/Digital_poetry [unclassified_reference / http_endpoint] — src/lolwut8.c:171
+- https://en.wikipedia.org/wiki/Fenwick_tree [unclassified_reference / http_endpoint] — src/fwtree.h:38
+- https://en.wikipedia.org/wiki/Reservoir_sampling [unclassified_reference / http_endpoint] — src/dict.c:1406
+- https://en.wikipedia.org/wiki/Single_Compilation_Unit [informational_reference / http_endpoint] — deps/croaring/README.md:108
+- https://en.wikipedia.org/wiki/Smoothstep [unclassified_reference / http_endpoint] — deps/jemalloc/include/jemalloc/internal/smoothstep.h:12, deps/jemalloc/include/jemalloc/internal/smoothstep.sh:4, deps/jemalloc/include/jemalloc/internal/smoothstep.sh:68
+- https://fastcompression.blogspot.com/2015/08/accessing-unaligned-memory.html [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:2150, deps/xxhash/xxhash.h:2663, deps/xxhash/xxhash.h:3376
+- https://fastcompression.blogspot.com/2018/03/xxhash-for-small-keys-impressive-power.html [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:291
+- https://fastcompression.blogspot.com/2019/03/presenting-xxh3.html [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:1065
+- https://fil-c.org [informational_reference / http_endpoint] — deps/croaring/README.md:95
+- https://fsf.org/ [unclassified_reference / http_endpoint] — LICENSE.txt:742
+- https://gcc.gnu.org/bugzilla/show_bug.cgi [unclassified_reference / http_endpoint] — deps/jemalloc/src/jemalloc.c:3368, deps/xxhash/xxhash.h:2647, deps/xxhash/xxhash.h:3360, src/sha1.h:20, src/zmalloc.h:164
+- https://gcc.gnu.org/gcc-3.1/changes.html [unclassified_reference / http_endpoint] — src/config.h:127
+- https://gcc.gnu.org/onlinedocs/gcc/_005f_005fsync-Builtins.html [unclassified_reference / http_endpoint] — src/atomicvar.h:30
+- https://gcc.godbolt.org/z/xYez1j67Y [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:2648, deps/xxhash/xxhash.h:3361
+- https://gitcode.com/openharmony-sig/tpc_c_cplusplus/blob/master/Cross-Compilation [unclassified_reference / http_endpoint] — deps/croaring/README.md:1174
+- https://github.com/${{ [unclassified_reference / http_endpoint] — .github/workflows/modules-build-flow.yml:142, .github/workflows/modules-build-flow.yml:145
+- https://github.com/@MichaelSuenthePointer [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:96
+- https://github.com/@smmircent [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:155
+- https://github.com/ClickHouse/ClickHouse [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://github.com/Crunsher [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:384
+- https://github.com/CrystallineCore/Biscuit [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://github.com/Cyan4973/xxHash [unclassified_reference / http_endpoint] — deps/xxhash/Makefile:23, deps/xxhash/xxhash.c:32, deps/xxhash/xxhash.h:33
+- https://github.com/Cyan4973/xxHash/issues/211 [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:4478
+- https://github.com/Cyan4973/xxHash/wiki [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:96
+- https://github.com/EricDeng1001 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:164, deps/hiredis/CHANGELOG.md:185
+- https://github.com/EricDeng1001.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:185
+- https://github.com/Ezibenroc/PyRoaringBitMap [informational_reference / http_endpoint] — deps/croaring/README.md:1252
+- https://github.com/HdrHistogram/HdrHistogram_c.git [unclassified_reference / http_endpoint] — deps/README.md:113
+- https://github.com/HdrHistogram/HdrHistogram_c/commit/30e9ce6ef5dcdc60f9270e1ca03c0966eaaf71d0 [informational_reference / http_endpoint] — deps/README.md:104, deps/hdr_histogram/README.md:3
+- https://github.com/Kevin-Xi [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:358
+- https://github.com/Lipraxde [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:148, deps/hiredis/CHANGELOG.md:186
+- https://github.com/Lipraxde.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:186
+- https://github.com/Mic92 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:381
+- https://github.com/MichaelSuen-thePointer [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:187
+- https://github.com/MichaelSuen-thePointer.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:187
+- https://github.com/Microsoft/vcpkg [informational_reference / http_endpoint] — deps/croaring/README.md:1143
+- https://github.com/Miniwoffer [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:247, deps/hiredis/CHANGELOG.md:368
+- https://github.com/Netflix/atlas [unclassified_reference / http_endpoint] — deps/croaring/README.md:72
+- https://github.com/Oipo [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:39
+- https://github.com/Oipo.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:39
+- https://github.com/OmriSteiner [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:245, deps/hiredis/CHANGELOG.md:331
+- https://github.com/RedisInsight/RedisInsight [informational_reference / http_endpoint] — README.md:159
+- https://github.com/RoaringBitmap/CPMdemo [informational_reference / http_endpoint] — deps/croaring/README.md:316
+- https://github.com/RoaringBitmap/CRoaring [unclassified_reference / http_endpoint] — deps/README.md:143
+- https://github.com/RoaringBitmap/CRoaring/actions/workflows/ubuntu-noexcept-ci.yml [informational_reference / http_endpoint] — deps/croaring/README.md:3
+- https://github.com/RoaringBitmap/CRoaring/actions/workflows/ubuntu-noexcept-ci.yml/badge.svg [informational_reference / http_endpoint] — deps/croaring/README.md:3
+- https://github.com/RoaringBitmap/CRoaring/actions/workflows/vs18-ci.yml [informational_reference / http_endpoint] — deps/croaring/README.md:3
+- https://github.com/RoaringBitmap/CRoaring/actions/workflows/vs18-ci.yml/badge.svg [informational_reference / http_endpoint] — deps/croaring/README.md:3
+- https://github.com/RoaringBitmap/CRoaring/blob/master/cpp/roaring/roaring.hh [informational_reference / http_endpoint] — deps/croaring/README.md:412
+- https://github.com/RoaringBitmap/CRoaring/blob/master/cpp/roaring/roaring64map.hh [informational_reference / http_endpoint] — deps/croaring/README.md:413
+- https://github.com/RoaringBitmap/CRoaring/blob/master/include/roaring/roaring.h [informational_reference / http_endpoint] — deps/croaring/README.md:407
+- https://github.com/RoaringBitmap/CRoaring/blob/master/include/roaring/roaring64.h [informational_reference / http_endpoint] — deps/croaring/README.md:408
+- https://github.com/RoaringBitmap/CRoaring/issues/256 [unclassified_reference / http_endpoint] — deps/croaring/src/roaring_array.c:46
+- https://github.com/RoaringBitmap/CRoaring/issues/394 [unclassified_reference / http_endpoint] — deps/croaring/include/roaring/portability.h:751, deps/croaring/src/isadetection.c:67
+- https://github.com/RoaringBitmap/CRoaring/issues/476 [unclassified_reference / http_endpoint] — deps/croaring/src/containers/mixed_union.c:214
+- https://github.com/RoaringBitmap/CRoaring/pull/452 [unclassified_reference / http_endpoint] — deps/croaring/src/containers/mixed_union.c:213
+- https://github.com/RoaringBitmap/CRoaring/pull/603 [unclassified_reference / http_endpoint] — deps/croaring/src/isadetection.c:55
+- https://github.com/RoaringBitmap/CRoaring/releases/download/v2.1.0/roaring.c [unclassified_reference / http_endpoint] — deps/croaring/README.md:118
+- https://github.com/RoaringBitmap/CRoaring/releases/download/v2.1.0/roaring.h [unclassified_reference / http_endpoint] — deps/croaring/README.md:119
+- https://github.com/RoaringBitmap/CRoaring/releases/download/v2.1.0/roaring.hh [unclassified_reference / http_endpoint] — deps/croaring/README.md:120
+- https://github.com/RoaringBitmap/RoaringFormatSpec [unclassified_reference / http_endpoint] — deps/croaring/README.md:765, deps/croaring/include/roaring/roaring.h:709, deps/croaring/include/roaring/roaring.h:720, deps/croaring/include/roaring/roaring.h:763, deps/croaring/include/roaring/roaring.h:779
+- https://github.com/RoaringBitmap/RoaringFormatSpec/ [informational_reference / http_endpoint] — deps/croaring/README.md:1020, deps/croaring/README.md:79
+- https://github.com/RoaringBitmap/SwiftRoaring [informational_reference / http_endpoint] — deps/croaring/README.md:1272
+- https://github.com/RoaringBitmap/croaring_cmake_demo_single_file [informational_reference / http_endpoint] — deps/croaring/README.md:346
+- https://github.com/RoaringBitmap/gocroaring [informational_reference / http_endpoint] — deps/croaring/README.md:1280
+- https://github.com/SalvatorePreviti/roaring-node [informational_reference / http_endpoint] — deps/croaring/README.md:1262
+- https://github.com/ShooterIT [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:355
+- https://github.com/StarRocks/starrocks [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://github.com/SukkaW [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:151, deps/hiredis/CHANGELOG.md:188
+- https://github.com/SukkaW.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:188
+- https://github.com/aappleby/smhasher [unclassified_reference / http_endpoint] — deps/jemalloc/include/jemalloc/internal/hash.h:8
+- https://github.com/adobeturchenko [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:189, deps/hiredis/CHANGELOG.md:91
+- https://github.com/adobeturchenko.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:189
+- https://github.com/afcidk [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:107, deps/hiredis/CHANGELOG.md:136, deps/hiredis/CHANGELOG.md:190
+- https://github.com/afcidk.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:190
+- https://github.com/antirez/RESP3/blob/master/spec.md [informational_reference / http_endpoint] — deps/hiredis/README.md:241, src/module.c:3319, src/module.c:3336, src/module.c:3354, src/module.c:3462
+- https://github.com/antirez/listpack [unclassified_reference / http_endpoint] — src/listpack.c:5, src/listpack.h:5, src/listpack_malloc.h:2
+- https://github.com/artix75/redis-cluster-proxy [unclassified_reference / http_endpoint] — src/redis-cli.c:2530
+- https://github.com/aureus1 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:333
+- https://github.com/autoantwort [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:40
+- https://github.com/autoantwort.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:40
+- https://github.com/aviggiano/redis-roaring [informational_reference / http_endpoint] — deps/croaring/README.md:1292
+- https://github.com/bit0fun [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:100, deps/hiredis/CHANGELOG.md:191
+- https://github.com/bit0fun.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:191
+- https://github.com/bjosv [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:109, deps/hiredis/CHANGELOG.md:113, deps/hiredis/CHANGELOG.md:123, deps/hiredis/CHANGELOG.md:124, deps/hiredis/CHANGELOG.md:126
+- https://github.com/bjosv.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:192, deps/hiredis/CHANGELOG.md:76
+- https://github.com/bjsov [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:76
+- https://github.com/brandur [unclassified_reference / http_endpoint] — src/gcra.c:16
+- https://github.com/brandur/redis-cell [unclassified_reference / http_endpoint] — src/gcra.c:16
+- https://github.com/bugwz [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:147, deps/hiredis/CHANGELOG.md:193
+- https://github.com/bugwz.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:193
+- https://github.com/catterer [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:149, deps/hiredis/CHANGELOG.md:194
+- https://github.com/catterer.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:194
+- https://github.com/ch1aki [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:354
+- https://github.com/charsyam [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:388
+- https://github.com/chayim [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:152, deps/hiredis/CHANGELOG.md:195
+- https://github.com/chayim.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:195
+- https://github.com/clice-io/clice [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://github.com/codehz [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:380
+- https://github.com/conan-io/conan-center-index [informational_reference / http_endpoint] — deps/croaring/README.md:1138
+- https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/get_cpm.cmake [unclassified_reference / http_endpoint] — deps/croaring/README.md:331
+- https://github.com/crate-ci/typos [unclassified_reference / http_endpoint] — .github/workflows/spell-check.yml:1, .github/workflows/spell-check.yml:4
+- https://github.com/devnexen [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:115, deps/hiredis/CHANGELOG.md:196, deps/hiredis/CHANGELOG.md:382
+- https://github.com/devnexen.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:196
+- https://github.com/dragonation [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:245, deps/hiredis/CHANGELOG.md:375
+- https://github.com/endorno/pytorch/blob/master/torch/lib/TH/generic/simd/simd.h [unclassified_reference / http_endpoint] — deps/croaring/src/isadetection.c:3
+- https://github.com/facebook/hhvm/blob/master/hphp/util/alloc.cpp [informational_reference / http_endpoint] — deps/jemalloc/TUNING.md:119
+- https://github.com/fastfloat/fast_float [unclassified_reference / http_endpoint] — src/fast_float_strtod.c:370, src/fast_float_strtod.c:61, src/fast_float_strtod.c:7
+- https://github.com/ffontaine [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:162, deps/hiredis/CHANGELOG.md:197, deps/hiredis/CHANGELOG.md:41
+- https://github.com/ffontaine.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:197, deps/hiredis/CHANGELOG.md:41
+- https://github.com/filipecosta90 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:60, deps/hiredis/CHANGELOG.md:77
+- https://github.com/filipecosta90.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:77
+- https://github.com/ghost [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:373
+- https://github.com/github-changelog-generator/github-changelog-generator [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:391
+- https://github.com/google/highwayhash/blob/0aaf66b/highwayhash/hh_avx2.h [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:5034
+- https://github.com/google/highwayhash/blob/master/highwayhash/hh_vsx.h [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:4334
+- https://github.com/hacst [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:385
+- https://github.com/heronr [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:248, deps/hiredis/CHANGELOG.md:352
+- https://github.com/hudayou [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:42
+- https://github.com/hudayou.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:42
+- https://github.com/intel/ScalableVectorSearch [informational_reference / http_endpoint] — README.md:479
+- https://github.com/ithewei [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:198, deps/hiredis/CHANGELOG.md:89
+- https://github.com/ithewei.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:198
+- https://github.com/jemalloc/jemalloc.git [unclassified_reference / http_endpoint] — deps/README.md:52
+- https://github.com/jemalloc/jemalloc/issues/1328 [unclassified_reference / http_endpoint] — src/syscheck.c:136
+- https://github.com/jengab [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:108, deps/hiredis/CHANGELOG.md:199
+- https://github.com/jengab.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:199
+- https://github.com/jinjiazhang [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:246, deps/hiredis/CHANGELOG.md:376
+- https://github.com/jman-krafton [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:246, deps/hiredis/CHANGELOG.md:372
+- https://github.com/jpillora/cloud-torrent [unclassified_reference / http_endpoint] — deps/croaring/README.md:66
+- https://github.com/justinbrewer [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:244, deps/hiredis/CHANGELOG.md:387
+- https://github.com/jwhear/roaring-zig [informational_reference / http_endpoint] — deps/croaring/README.md:1296
+- https://github.com/k-wojcik/Roaring.Net [informational_reference / http_endpoint] — deps/croaring/README.md:1276
+- https://github.com/kevin1018 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:249, deps/hiredis/CHANGELOG.md:369
+- https://github.com/kozross/awesome-c [informational_reference / http_endpoint] — deps/croaring/README.md:10
+- https://github.com/kristjanvalur [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:117, deps/hiredis/CHANGELOG.md:119, deps/hiredis/CHANGELOG.md:150, deps/hiredis/CHANGELOG.md:157, deps/hiredis/CHANGELOG.md:158
+- https://github.com/kristjanvalur.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:200
+- https://github.com/lemire/Code-used-on-Daniel-Lemire-s-blog/blob/master/extra/bitset/c/arraybitsetintersection.c [unclassified_reference / http_endpoint] — deps/croaring/src/containers/mixed_intersection.c:42
+- https://github.com/libevent/libevent/commit/e1d7d3e40a7fd50348d849046fbfd9bf976e643c [unclassified_reference / http_endpoint] — src/sha1.c:129
+- https://github.com/libuv/libuv/blob/v0.11.23/include/uv.h [unclassified_reference / http_endpoint] — deps/hiredis/adapters/libuv.h:102
+- https://github.com/mbitsnbites [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:243, deps/hiredis/CHANGELOG.md:374, deps/hiredis/CHANGELOG.md:378
+- https://github.com/michael-grunder [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:103, deps/hiredis/CHANGELOG.md:105, deps/hiredis/CHANGELOG.md:110, deps/hiredis/CHANGELOG.md:111, deps/hiredis/CHANGELOG.md:114
+- https://github.com/michael-grunder.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:201, deps/hiredis/CHANGELOG.md:43, deps/hiredis/CHANGELOG.md:78
+- https://github.com/mnunberg [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:243, deps/hiredis/CHANGELOG.md:277, deps/hiredis/CHANGELOG.md:379, deps/hiredis/CHANGELOG.md:389
+- https://github.com/movebean [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:248, deps/hiredis/CHANGELOG.md:371
+- https://github.com/mtdxc [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:101, deps/hiredis/CHANGELOG.md:203
+- https://github.com/mtdxc.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:203
+- https://github.com/mtuleika-appcast [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:104
+- https://github.com/natoscott [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:357
+- https://github.com/neverlord [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:38
+- https://github.com/neverlord.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:38
+- https://github.com/night-shift/fpconv [informational_reference / http_endpoint] — deps/fpconv/README.md:7
+- https://github.com/noxiouz [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:146, deps/hiredis/CHANGELOG.md:202
+- https://github.com/noxiouz.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:202
+- https://github.com/orgads [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:121, deps/hiredis/CHANGELOG.md:156, deps/hiredis/CHANGELOG.md:204
+- https://github.com/orgads.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:204
+- https://github.com/pata00 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:67, deps/hiredis/CHANGELOG.md:79
+- https://github.com/pata00.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:79
+- https://github.com/pbotros [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:359
+- https://github.com/pbtummillo [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:128, deps/hiredis/CHANGELOG.md:205
+- https://github.com/pbtummillo.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:205
+- https://github.com/pietern/hiredis-rb/blob/master/ext/hiredis_ext/reader.c [informational_reference / http_endpoint] — deps/hiredis/README.md:594
+- https://github.com/pizhenwei [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:163, deps/hiredis/CHANGELOG.md:206, deps/hiredis/CHANGELOG.md:92
+- https://github.com/pizhenwei.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:206
+- https://github.com/postgraph [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:44
+- https://github.com/postgraph.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:44
+- https://github.com/qlyoung [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:370
+- https://github.com/redis-developer/redis-starter-csharp [informational_reference / http_endpoint] — README.md:109
+- https://github.com/redis-developer/redis-starter-go [informational_reference / http_endpoint] — README.md:110
+- https://github.com/redis-developer/redis-starter-java [informational_reference / http_endpoint] — README.md:112
+- https://github.com/redis-developer/redis-starter-js [informational_reference / http_endpoint] — README.md:111
+- https://github.com/redis-developer/redis-starter-python [informational_reference / http_endpoint] — README.md:108
+- https://github.com/redis/bjosv [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:70
+- https://github.com/redis/docs [unclassified_reference / http_endpoint] — CONTRIBUTING.md:87
+- https://github.com/redis/docs/blob/main/data/commands.json [unclassified_reference / http_endpoint] — src/commands/README.md:7
+- https://github.com/redis/hiredis [unclassified_reference / http_endpoint] — deps/hiredis/CMakeLists.txt:89
+- https://github.com/redis/hiredis.git [unclassified_reference / http_endpoint] — deps/README.md:69
+- https://github.com/redis/hiredis/actions/workflows/build.yml [informational_reference / http_endpoint] — deps/hiredis/README.md:2
+- https://github.com/redis/hiredis/actions/workflows/build.yml/badge.svg [informational_reference / http_endpoint] — deps/hiredis/README.md:2
+- https://github.com/redis/hiredis/blob/f5d25850/alloc.h [informational_reference / http_endpoint] — deps/hiredis/README.md:790
+- https://github.com/redis/hiredis/commit/38b5ae543f5c99eb4ccabbe277770fc6bc81226f [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:255
+- https://github.com/redis/hiredis/commit/76a7b10005c70babee357a7d0f2becf28ec7ed1e [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:231
+- https://github.com/redis/hiredis/commit/d4e6f109a064690cde64765c654e679fea1d3548 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:221
+- https://github.com/redis/hiredis/compare/v0.14.1...v1.0.0 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:251
+- https://github.com/redis/hiredis/issues/421 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:319
+- https://github.com/redis/hiredis/issues/502 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:318
+- https://github.com/redis/hiredis/issues/506 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:317
+- https://github.com/redis/hiredis/issues/508 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:316
+- https://github.com/redis/hiredis/issues/518 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:315
+- https://github.com/redis/hiredis/issues/545 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:314
+- https://github.com/redis/hiredis/issues/618 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:313
+- https://github.com/redis/hiredis/issues/646 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:312
+- https://github.com/redis/hiredis/issues/679 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:304
+- https://github.com/redis/hiredis/issues/687 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:299
+- https://github.com/redis/hiredis/issues/690 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:304
+- https://github.com/redis/hiredis/issues/722 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:296
+- https://github.com/redis/hiredis/issues/748 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:311
+- https://github.com/redis/hiredis/issues/757 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:310
+- https://github.com/redis/hiredis/issues/767 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:309
+- https://github.com/redis/hiredis/issues/769 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:308
+- https://github.com/redis/hiredis/issues/775 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:307
+- https://github.com/redis/hiredis/issues/777 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:306
+- https://github.com/redis/hiredis/issues/778 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:305
+- https://github.com/redis/hiredis/issues/779 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:304
+- https://github.com/redis/hiredis/issues/785 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:304
+- https://github.com/redis/hiredis/issues/794 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:303
+- https://github.com/redis/hiredis/issues/802 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:298
+- https://github.com/redis/hiredis/issues/804 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:302
+- https://github.com/redis/hiredis/issues/809 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:295
+- https://github.com/redis/hiredis/issues/813 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:302
+- https://github.com/redis/hiredis/issues/815 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:301
+- https://github.com/redis/hiredis/issues/825 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:300
+- https://github.com/redis/hiredis/issues/827 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:297
+- https://github.com/redis/hiredis/issues/838 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:299
+- https://github.com/redis/hiredis/issues/842 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:299
+- https://github.com/redis/hiredis/issues/931 [unclassified_reference / http_endpoint] — deps/hiredis/test.c:2403, deps/hiredis/test.c:2414
+- https://github.com/redis/hiredis/issues/945 [unclassified_reference / http_endpoint] — deps/hiredis/test.c:2384
+- https://github.com/redis/hiredis/pull/1000 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:174
+- https://github.com/redis/hiredis/pull/1001 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:173
+- https://github.com/redis/hiredis/pull/1004 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:172
+- https://github.com/redis/hiredis/pull/1005 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:164
+- https://github.com/redis/hiredis/pull/1008 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:171
+- https://github.com/redis/hiredis/pull/1009 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:170
+- https://github.com/redis/hiredis/pull/1010 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:169
+- https://github.com/redis/hiredis/pull/1011 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:167
+- https://github.com/redis/hiredis/pull/1012 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:166
+- https://github.com/redis/hiredis/pull/1014 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:130
+- https://github.com/redis/hiredis/pull/1016 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:96
+- https://github.com/redis/hiredis/pull/1020 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:168
+- https://github.com/redis/hiredis/pull/1026 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:165
+- https://github.com/redis/hiredis/pull/1027 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:131
+- https://github.com/redis/hiredis/pull/1030 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:129
+- https://github.com/redis/hiredis/pull/1031 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:125
+- https://github.com/redis/hiredis/pull/1036 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:126
+- https://github.com/redis/hiredis/pull/1038 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:127
+- https://github.com/redis/hiredis/pull/1040 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:124
+- https://github.com/redis/hiredis/pull/1045 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:123
+- https://github.com/redis/hiredis/pull/1046 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:161
+- https://github.com/redis/hiredis/pull/1047 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:95
+- https://github.com/redis/hiredis/pull/1050 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:155
+- https://github.com/redis/hiredis/pull/1054 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:157
+- https://github.com/redis/hiredis/pull/1055 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:148
+- https://github.com/redis/hiredis/pull/1057 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:156
+- https://github.com/redis/hiredis/pull/1058 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:121
+- https://github.com/redis/hiredis/pull/1061 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:159
+- https://github.com/redis/hiredis/pull/1062 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:122
+- https://github.com/redis/hiredis/pull/1063 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:160
+- https://github.com/redis/hiredis/pull/1072 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:120
+- https://github.com/redis/hiredis/pull/1073 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:119
+- https://github.com/redis/hiredis/pull/1074 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:158
+- https://github.com/redis/hiredis/pull/1079 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:151
+- https://github.com/redis/hiredis/pull/1080 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:154
+- https://github.com/redis/hiredis/pull/1083 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:152
+- https://github.com/redis/hiredis/pull/1084 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:153
+- https://github.com/redis/hiredis/pull/1085 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:93
+- https://github.com/redis/hiredis/pull/1087 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:110
+- https://github.com/redis/hiredis/pull/1090 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:109
+- https://github.com/redis/hiredis/pull/1091 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:108
+- https://github.com/redis/hiredis/pull/1092 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:147
+- https://github.com/redis/hiredis/pull/1093 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:149
+- https://github.com/redis/hiredis/pull/1094 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:92
+- https://github.com/redis/hiredis/pull/1095 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:114
+- https://github.com/redis/hiredis/pull/1096 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:88
+- https://github.com/redis/hiredis/pull/1097 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:113
+- https://github.com/redis/hiredis/pull/1098 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:146
+- https://github.com/redis/hiredis/pull/1099 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:145
+- https://github.com/redis/hiredis/pull/1101 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:180
+- https://github.com/redis/hiredis/pull/1104 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:105
+- https://github.com/redis/hiredis/pull/1106 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:104
+- https://github.com/redis/hiredis/pull/1107 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:144
+- https://github.com/redis/hiredis/pull/1108 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:140
+- https://github.com/redis/hiredis/pull/1109 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:90
+- https://github.com/redis/hiredis/pull/1110 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:143
+- https://github.com/redis/hiredis/pull/1115 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:142
+- https://github.com/redis/hiredis/pull/1117 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:139
+- https://github.com/redis/hiredis/pull/1118 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:141
+- https://github.com/redis/hiredis/pull/1121 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:111
+- https://github.com/redis/hiredis/pull/1122 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:138
+- https://github.com/redis/hiredis/pull/1124 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:137
+- https://github.com/redis/hiredis/pull/1125 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:101
+- https://github.com/redis/hiredis/pull/1127 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:100
+- https://github.com/redis/hiredis/pull/1130 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:135
+- https://github.com/redis/hiredis/pull/1133 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:61
+- https://github.com/redis/hiredis/pull/1135 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:69
+- https://github.com/redis/hiredis/pull/1136 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:67
+- https://github.com/redis/hiredis/pull/1139 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:70
+- https://github.com/redis/hiredis/pull/1140 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:66
+- https://github.com/redis/hiredis/pull/578 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:389
+- https://github.com/redis/hiredis/pull/580 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:388
+- https://github.com/redis/hiredis/pull/593 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:149
+- https://github.com/redis/hiredis/pull/597 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:387
+- https://github.com/redis/hiredis/pull/614 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:386
+- https://github.com/redis/hiredis/pull/620 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:385
+- https://github.com/redis/hiredis/pull/621 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:384
+- https://github.com/redis/hiredis/pull/624 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:383
+- https://github.com/redis/hiredis/pull/628 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:382
+- https://github.com/redis/hiredis/pull/632 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:381
+- https://github.com/redis/hiredis/pull/644 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:380
+- https://github.com/redis/hiredis/pull/645 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:270, deps/hiredis/CHANGELOG.md:379
+- https://github.com/redis/hiredis/pull/652 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:282, deps/hiredis/CHANGELOG.md:378
+- https://github.com/redis/hiredis/pull/653 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:377
+- https://github.com/redis/hiredis/pull/658 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:376
+- https://github.com/redis/hiredis/pull/662 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:375
+- https://github.com/redis/hiredis/pull/663 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:283, deps/hiredis/CHANGELOG.md:374
+- https://github.com/redis/hiredis/pull/665 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:373
+- https://github.com/redis/hiredis/pull/670 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:372
+- https://github.com/redis/hiredis/pull/671 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:371
+- https://github.com/redis/hiredis/pull/684 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:370
+- https://github.com/redis/hiredis/pull/688 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:369
+- https://github.com/redis/hiredis/pull/691 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:368
+- https://github.com/redis/hiredis/pull/697 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:264, deps/hiredis/CHANGELOG.md:367
+- https://github.com/redis/hiredis/pull/699 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:271, deps/hiredis/CHANGELOG.md:366
+- https://github.com/redis/hiredis/pull/702 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:272, deps/hiredis/CHANGELOG.md:365
+- https://github.com/redis/hiredis/pull/706 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:364
+- https://github.com/redis/hiredis/pull/708 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:273, deps/hiredis/CHANGELOG.md:363
+- https://github.com/redis/hiredis/pull/711 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:274, deps/hiredis/CHANGELOG.md:362
+- https://github.com/redis/hiredis/pull/715 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:361
+- https://github.com/redis/hiredis/pull/720 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:360
+- https://github.com/redis/hiredis/pull/727 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:359
+- https://github.com/redis/hiredis/pull/731 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:358
+- https://github.com/redis/hiredis/pull/737 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:357
+- https://github.com/redis/hiredis/pull/741 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:356
+- https://github.com/redis/hiredis/pull/746 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:355
+- https://github.com/redis/hiredis/pull/756 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:354
+- https://github.com/redis/hiredis/pull/764 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:353
+- https://github.com/redis/hiredis/pull/768 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:352
+- https://github.com/redis/hiredis/pull/776 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:351
+- https://github.com/redis/hiredis/pull/780 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:350
+- https://github.com/redis/hiredis/pull/783 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:349
+- https://github.com/redis/hiredis/pull/784 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:348
+- https://github.com/redis/hiredis/pull/789 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:347
+- https://github.com/redis/hiredis/pull/793 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:346
+- https://github.com/redis/hiredis/pull/795 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:305, deps/hiredis/CHANGELOG.md:345
+- https://github.com/redis/hiredis/pull/796 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:344
+- https://github.com/redis/hiredis/pull/797 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:343
+- https://github.com/redis/hiredis/pull/800 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:279, deps/hiredis/CHANGELOG.md:342
+- https://github.com/redis/hiredis/pull/805 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:265, deps/hiredis/CHANGELOG.md:341
+- https://github.com/redis/hiredis/pull/808 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:340
+- https://github.com/redis/hiredis/pull/812 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:339
+- https://github.com/redis/hiredis/pull/814 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:338
+- https://github.com/redis/hiredis/pull/819 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:266, deps/hiredis/CHANGELOG.md:337
+- https://github.com/redis/hiredis/pull/821 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:275, deps/hiredis/CHANGELOG.md:336
+- https://github.com/redis/hiredis/pull/823 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:335
+- https://github.com/redis/hiredis/pull/824 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:334
+- https://github.com/redis/hiredis/pull/826 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:333
+- https://github.com/redis/hiredis/pull/829 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:287, deps/hiredis/CHANGELOG.md:296
+- https://github.com/redis/hiredis/pull/830 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:332
+- https://github.com/redis/hiredis/pull/836 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:331
+- https://github.com/redis/hiredis/pull/839 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:286
+- https://github.com/redis/hiredis/pull/841 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:267, deps/hiredis/CHANGELOG.md:330
+- https://github.com/redis/hiredis/pull/844 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:329
+- https://github.com/redis/hiredis/pull/845 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:328
+- https://github.com/redis/hiredis/pull/846 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:327
+- https://github.com/redis/hiredis/pull/848 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:326
+- https://github.com/redis/hiredis/pull/849 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:325
+- https://github.com/redis/hiredis/pull/850 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:324
+- https://github.com/redis/hiredis/pull/855 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:290, deps/hiredis/CHANGELOG.md:323
+- https://github.com/redis/hiredis/pull/872 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:162
+- https://github.com/redis/hiredis/pull/901 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:115
+- https://github.com/redis/hiredis/pull/904 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:89
+- https://github.com/redis/hiredis/pull/905 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:116
+- https://github.com/redis/hiredis/pull/928 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:91
+- https://github.com/redis/hiredis/pull/931 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:118
+- https://github.com/redis/hiredis/pull/932 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:94
+- https://github.com/redis/hiredis/pull/937 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:128
+- https://github.com/redis/hiredis/pull/943 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:150
+- https://github.com/redis/hiredis/pull/957 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:112
+- https://github.com/redis/hiredis/pull/959 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:136
+- https://github.com/redis/hiredis/pull/964 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:107
+- https://github.com/redis/hiredis/pull/988 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:179
+- https://github.com/redis/hiredis/pull/989 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:106
+- https://github.com/redis/hiredis/pull/993 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:178
+- https://github.com/redis/hiredis/pull/995 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:177
+- https://github.com/redis/hiredis/pull/996 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:176
+- https://github.com/redis/hiredis/pull/997 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:163
+- https://github.com/redis/hiredis/pull/999 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:175
+- https://github.com/redis/hiredis/pulls [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:276
+- https://github.com/redis/hiredis/security/advisories/GHSA-hfm9-39pp-55p2 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:230, deps/hiredis/README.md:37
+- https://github.com/redis/hiredis/tree/v1.0.0 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:236, deps/hiredis/README.md:4
+- https://github.com/redis/hiredis/tree/v1.0.0-rc1 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:393
+- https://github.com/redis/hiredis/tree/v1.0.1 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:224
+- https://github.com/redis/hiredis/tree/v1.0.2 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:217, deps/hiredis/CHANGELOG.md:226
+- https://github.com/redis/hiredis/tree/v1.1.0 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:52
+- https://github.com/redis/hiredis/tree/v1.1.0-rc1 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:81
+- https://github.com/redis/hiredis/tree/v1.2.0 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:1
+- https://github.com/redis/homebrew-redis [informational_reference / http_endpoint] — README.md:97
+- https://github.com/redis/redis-debian [informational_reference / http_endpoint] — README.md:99
+- https://github.com/redis/redis-rpm [informational_reference / http_endpoint] — README.md:98
+- https://github.com/redis/redis-snap [informational_reference / http_endpoint] — README.md:96
+- https://github.com/redis/redis.git [unclassified_reference / http_endpoint] — README.md:234
+- https://github.com/redis/redis/archive/6.0.6.tar.gz [unclassified_reference / http_endpoint] — deps/hiredis/.travis.yml:21
+- https://github.com/redis/redis/discussions [informational_reference / http_endpoint] — .github/ISSUE_TEMPLATE/question.md:17
+- https://github.com/redis/redis/issues/3043 [unclassified_reference / http_endpoint] — src/cluster_legacy.c:5276
+- https://github.com/redis/redis/issues/6988 [unclassified_reference / http_endpoint] — src/networking.c:5874
+- https://github.com/redis/redis/releases/download/ [unclassified_reference / http_endpoint] — README.md:230, README.md:241
+- https://github.com/redis/redis/tree/8.8 [informational_reference / http_endpoint] — README.md:204, README.md:296, modules/README.md:35
+- https://github.com/redisbloom/redisbloom [unclassified_reference / http_endpoint] — modules/README.md:16, modules/modules.yaml:66
+- https://github.com/redisearch/redisearch [unclassified_reference / http_endpoint] — modules/MODULES.md:46, modules/README.md:17, modules/modules.yaml:71
+- https://github.com/redisjson/redisjson [unclassified_reference / http_endpoint] — modules/README.md:18, modules/modules.yaml:77
+- https://github.com/redistimeseries/redistimeseries [unclassified_reference / http_endpoint] — modules/README.md:19, modules/modules.yaml:82
+- https://github.com/redpanda-data/redpanda [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://github.com/rmalizia44 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:326
+- https://github.com/saulius/croaring-rs [informational_reference / http_endpoint] — deps/croaring/README.md:1284
+- https://github.com/scddev [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:125, deps/hiredis/CHANGELOG.md:207
+- https://github.com/scddev.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:207
+- https://github.com/smmir-cent [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:208
+- https://github.com/smmir-cent.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:208
+- https://github.com/stanhu [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:153, deps/hiredis/CHANGELOG.md:209, deps/hiredis/CHANGELOG.md:93
+- https://github.com/stanhu.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:209
+- https://github.com/sundb [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:116, deps/hiredis/CHANGELOG.md:129, deps/hiredis/CHANGELOG.md:210
+- https://github.com/sundb.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:210
+- https://github.com/systemd/systemd/pull/25688 [unclassified_reference / http_endpoint] — src/zmalloc.h:156
+- https://github.com/tezc [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:45
+- https://github.com/tezc.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:45
+- https://github.com/thomaslee [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:386
+- https://github.com/tillkruss [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:46
+- https://github.com/tillkruss.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:46
+- https://github.com/tryfinally [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:247, deps/hiredis/CHANGELOG.md:338
+- https://github.com/valentinogeron [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:244, deps/hiredis/CHANGELOG.md:288, deps/hiredis/CHANGELOG.md:296
+- https://github.com/vinhqngo5/Cuckoo_Heavy_Keeper [unclassified_reference / http_endpoint] — src/chk.c:6, src/chk.h:6
+- https://github.com/vityafx [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:47
+- https://github.com/vityafx.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:47
+- https://github.com/vturchenko [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:211
+- https://github.com/vturchenko.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:211
+- https://github.com/windyakin [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:48
+- https://github.com/windyakin.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:48
+- https://github.com/xkszltl [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:106, deps/hiredis/CHANGELOG.md:179, deps/hiredis/CHANGELOG.md:212
+- https://github.com/xkszltl.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:212
+- https://github.com/yinqiwen/ardb/blob/d42503/src/geo/geohash_helper.cpp [unclassified_reference / http_endpoint] — src/geohash_helper.c:34
+- https://github.com/yossigo [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:122, deps/hiredis/CHANGELOG.md:159, deps/hiredis/CHANGELOG.md:213, deps/hiredis/CHANGELOG.md:232, deps/hiredis/CHANGELOG.md:234
+- https://github.com/yossigo.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:213, deps/hiredis/CHANGELOG.md:49
+- https://github.com/yuce/droaring [informational_reference / http_endpoint] — deps/croaring/README.md:1288
+- https://github.com/zhangtaoXT5 [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:112, deps/hiredis/CHANGELOG.md:214
+- https://github.com/zhangtaoXT5.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:214
+- https://github.com/zuiderkwast [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:215, deps/hiredis/CHANGELOG.md:50, deps/hiredis/CHANGELOG.md:87
+- https://github.com/zuiderkwast.png [unclassified_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:215, deps/hiredis/CHANGELOG.md:50
+- https://godbolt.org/z/Y6oMGEo97 [informational_reference / http_endpoint] — deps/croaring/README.md:142
+- https://graphics.stanford.edu/~seander/bithacks.html [unclassified_reference / http_endpoint] — src/crc64.c:80, src/geohash.c:50
+- https://groups.google.com/forum/ [informational_reference / http_endpoint] — .github/ISSUE_TEMPLATE/question.md:14, deps/croaring/README.md:1301
+- https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates [unclassified_reference / http_endpoint] — .github/dependabot.yml:4
+- https://hub.docker.com/_/redis [informational_reference / http_endpoint] — README.md:91
+- https://img.shields.io/badge/docs-doxygen-green.svg [informational_reference / http_endpoint] — deps/croaring/README.md:6
+- https://json-schema.org/ [unclassified_reference / http_endpoint] — src/commands/README.md:13
+- https://learn.microsoft.com/en-us/windows/win32/sync/interlocked-variable-access [unclassified_reference / http_endpoint] — deps/croaring/include/roaring/portability.h:680
+- https://lemire.me/blog/2022/05/10/faster-bitset-decoding-using-intel-avx-512/ [unclassified_reference / http_endpoint] — deps/croaring/src/bitset_util.c:632
+- https://lemire.me/blog/2026/04/27/you-can-beat-the-binary-search/ [unclassified_reference / http_endpoint] — deps/croaring/include/roaring/array_util.h:47, deps/croaring/include/roaring/containers/array.h:348
+- https://lucene.apache.org/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:60
+- https://lucene.apache.org/solr/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:61
+- https://man7.org/linux/man-pages/man2/accept.2.html [unclassified_reference / http_endpoint] — src/anet.c:809
+- https://man7.org/linux/man-pages/man3/gai_strerror.3.html [informational_reference / http_endpoint] — deps/hiredis/README.md:136
+- https://man7.org/linux/man-pages/man7/socket.7.html [informational_reference / http_endpoint] — deps/hiredis/README.md:135
+- https://msdn.microsoft.com/fr-fr/library/84szxsww(v=vs.90).aspx [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:4372
+- https://oss-fuzz-build-logs.storage.googleapis.com/badges/croaring.svg [standard_cloud_candidate / cloud_api] — deps/croaring/README.md:4
+- https://packages.redis.io/deb [unclassified_reference / http_endpoint] — deps/hiredis/.github/workflows/build.yml:14
+- https://packages.redis.io/gpg [unclassified_reference / http_endpoint] — deps/hiredis/.github/workflows/build.yml:13
+- https://patchwork.kernel.org/patch/10576637/ [unclassified_reference / http_endpoint] — deps/jemalloc/src/pages.c:60
+- https://redis.io [unclassified_reference / http_endpoint] — src/asciilogo.h:20
+- https://redis.io/ [informational_reference / http_endpoint] — deps/hiredis/README.md:8
+- https://redis.io/chat [informational_reference / http_endpoint] — README.md:156
+- https://redis.io/clients [informational_reference / http_endpoint] — .github/ISSUE_TEMPLATE/question.md:19
+- https://redis.io/cloud/ [informational_reference / http_endpoint] — README.md:194, README.md:82
+- https://redis.io/commands/ [informational_reference / http_endpoint] — README.md:73
+- https://redis.io/commands/acl-log [unclassified_reference / http_endpoint] — src/module.c:11304, src/module.c:11315
+- https://redis.io/commands/command [unclassified_reference / http_endpoint] — src/module.c:1342
+- https://redis.io/commands/command-docs/ [unclassified_reference / http_endpoint] — src/commands/README.md:11
+- https://redis.io/commands/command/ [unclassified_reference / http_endpoint] — src/commands/README.md:11
+- https://redis.io/commands/slowlog [unclassified_reference / http_endpoint] — src/latency.c:377
+- https://redis.io/community [informational_reference / http_endpoint] — .github/ISSUE_TEMPLATE/question.md:12
+- https://redis.io/community/ [informational_reference / http_endpoint] — README.md:198
+- https://redis.io/docs/ [informational_reference / http_endpoint] — README.md:9
+- https://redis.io/docs/latest/commands/ [informational_reference / http_endpoint] — README.md:61
+- https://redis.io/docs/latest/commands/info/ [unclassified_reference / http_endpoint] — src/zmalloc.c:1018, src/zmalloc.c:965
+- https://redis.io/docs/latest/develop/ai/ [informational_reference / http_endpoint] — README.md:74
+- https://redis.io/docs/latest/develop/ai/search-and-query/ [informational_reference / http_endpoint] — README.md:166, README.md:169
+- https://redis.io/docs/latest/develop/clients/ [informational_reference / http_endpoint] — README.md:127
+- https://redis.io/docs/latest/develop/clients/dotnet/ [informational_reference / http_endpoint] — README.md:120
+- https://redis.io/docs/latest/develop/clients/go/ [informational_reference / http_endpoint] — README.md:124
+- https://redis.io/docs/latest/develop/clients/hiredis/ [informational_reference / http_endpoint] — README.md:126
+- https://redis.io/docs/latest/develop/clients/jedis/ [informational_reference / http_endpoint] — README.md:122
+- https://redis.io/docs/latest/develop/clients/lettuce/ [informational_reference / http_endpoint] — README.md:123
+- https://redis.io/docs/latest/develop/clients/nodejs/ [informational_reference / http_endpoint] — README.md:121
+- https://redis.io/docs/latest/develop/clients/php/ [informational_reference / http_endpoint] — README.md:125
+- https://redis.io/docs/latest/develop/clients/redis-py/ [informational_reference / http_endpoint] — README.md:118
+- https://redis.io/docs/latest/develop/data-types/ [informational_reference / http_endpoint] — README.md:72
+- https://redis.io/docs/latest/develop/data-types/arrays/ [informational_reference / http_endpoint] — README.md:167
+- https://redis.io/docs/latest/develop/data-types/bitfields/ [informational_reference / http_endpoint] — README.md:176
+- https://redis.io/docs/latest/develop/data-types/bitmaps/ [informational_reference / http_endpoint] — README.md:175
+- https://redis.io/docs/latest/develop/data-types/geospatial/ [informational_reference / http_endpoint] — README.md:174
+- https://redis.io/docs/latest/develop/data-types/hashes/ [informational_reference / http_endpoint] — README.md:168
+- https://redis.io/docs/latest/develop/data-types/json/ [informational_reference / http_endpoint] — README.md:166
+- https://redis.io/docs/latest/develop/data-types/lists/ [informational_reference / http_endpoint] — README.md:170
+- https://redis.io/docs/latest/develop/data-types/probabilistic/bloom-filter/ [informational_reference / http_endpoint] — README.md:178
+- https://redis.io/docs/latest/develop/data-types/probabilistic/count-min-sketch/ [informational_reference / http_endpoint] — README.md:182
+- https://redis.io/docs/latest/develop/data-types/probabilistic/cuckoo-filter/ [informational_reference / http_endpoint] — README.md:179
+- https://redis.io/docs/latest/develop/data-types/probabilistic/hyperloglogs/ [informational_reference / http_endpoint] — README.md:177
+- https://redis.io/docs/latest/develop/data-types/probabilistic/t-digest/ [informational_reference / http_endpoint] — README.md:180
+- https://redis.io/docs/latest/develop/data-types/probabilistic/top-k/ [informational_reference / http_endpoint] — README.md:181
+- https://redis.io/docs/latest/develop/data-types/sets/ [informational_reference / http_endpoint] — README.md:171
+- https://redis.io/docs/latest/develop/data-types/sorted-sets/ [informational_reference / http_endpoint] — README.md:172
+- https://redis.io/docs/latest/develop/data-types/streams/ [informational_reference / http_endpoint] — README.md:186, src/module.c:6181
+- https://redis.io/docs/latest/develop/data-types/strings [informational_reference / http_endpoint] — README.md:165
+- https://redis.io/docs/latest/develop/data-types/timeseries/ [informational_reference / http_endpoint] — README.md:183
+- https://redis.io/docs/latest/develop/data-types/vector-sets/ [informational_reference / http_endpoint] — README.md:173
+- https://redis.io/docs/latest/develop/get-started/ [informational_reference / http_endpoint] — README.md:100
+- https://redis.io/docs/latest/develop/interact/programmability/eval-intro/ [informational_reference / http_endpoint] — README.md:188
+- https://redis.io/docs/latest/develop/interact/pubsub/ [informational_reference / http_endpoint] — README.md:185, deps/hiredis/async.c:481
+- https://redis.io/docs/latest/develop/interact/transactions/ [informational_reference / http_endpoint] — README.md:187
+- https://redis.io/docs/latest/develop/reference/command-tips/ [unclassified_reference / http_endpoint] — src/module.c:1303, src/module.c:1709
+- https://redis.io/docs/latest/develop/reference/modules/ [informational_reference / http_endpoint] — README.md:60, modules/README.md:216, src/module.c:1087, src/module.c:7095
+- https://redis.io/docs/latest/develop/reference/modules/modules-blocking-ops/ [unclassified_reference / http_endpoint] — src/module.c:8543
+- https://redis.io/docs/latest/develop/reference/modules/modules-native-types/ [unclassified_reference / http_endpoint] — src/module.c:7646
+- https://redis.io/docs/latest/develop/tools/cli/ [informational_reference / http_endpoint] — README.md:131
+- https://redis.io/docs/latest/develop/tools/insight/ [informational_reference / http_endpoint] — README.md:156, README.md:158
+- https://redis.io/docs/latest/develop/use/keyspace-notifications/ [unclassified_reference / http_endpoint] — src/module.c:9643, src/notify.c:13
+- https://redis.io/docs/latest/integrate/redisvl/ [informational_reference / http_endpoint] — README.md:119
+- https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/latency-monitor [unclassified_reference / http_endpoint] — src/latency.c:207
+- https://redis.io/docs/latest/operate/oss_and_stack/management/optimization/latency/ [unclassified_reference / http_endpoint] — utils/whatisdoing.sh:7
+- https://redis.io/documentation/ [informational_reference / http_endpoint] — README.md:75
+- https://redis.io/enterprise/ [informational_reference / http_endpoint] — README.md:81
+- https://redis.io/legal/trademark-policy/ [unclassified_reference / http_endpoint] — README.md:507
+- https://redis.io/redis-responsible-vulnerability-disclosure/ [informational_reference / http_endpoint] — SECURITY.md:30
+- https://redis.io/technology/advantages/ [informational_reference / http_endpoint] — README.md:84
+- https://releases.llvm.org/2.9/docs/ReleaseNotes.html [unclassified_reference / http_endpoint] — src/config.h:126
+- https://repology.org/badge/vertical-allrepos/croaring.svg [informational_reference / http_endpoint] — deps/croaring/README.md:311
+- https://repology.org/project/croaring/versions [informational_reference / http_endpoint] — deps/croaring/README.md:311
+- https://research.google/pubs/pub48388/ [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://rpms.remirepo.net/enterprise/remi-release-8.rpm [unclassified_reference / http_endpoint] — deps/hiredis/.github/workflows/build.yml:86
+- https://rustup.rs [informational_reference / http_endpoint] — modules/README.md:44
+- https://scan.coverity.com/builds [unclassified_reference / http_endpoint] — .github/workflows/coverity.yml:39
+- https://scan.coverity.com/download/cxx/linux64 [unclassified_reference / http_endpoint] — .github/workflows/coverity.yml:22
+- https://scan.coverity.com/faq [unclassified_reference / http_endpoint] — .github/workflows/coverity.yml:5
+- https://software.intel.com/sites/landingpage/IntrinsicsGuide/ [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.h:4951
+- https://sourceware.org/bugzilla/show_bug.cgi [unclassified_reference / http_endpoint] — deps/jemalloc/INSTALL.md:250, src/server.c:3427
+- https://spark.apache.org/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:64
+- https://stackoverflow.com/questions/57228537/how-does-one-use-pragma-clang-attribute-push-with-c-namespaces [unclassified_reference / http_endpoint] — deps/croaring/include/roaring/portability.h:105
+- https://stackoverflow.com/questions/tagged/redis [unclassified_reference / http_endpoint] — CONTRIBUTING.md:83
+- https://static.rust-lang.org/dist/$${RUST_INSTALLER}.tar.xz [unclassified_reference / http_endpoint] — modules/Makefile:77
+- https://www.alibabacloud.com/help/en/redis/developer-reference/tairroaring-command [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://www.bitsnbites.eu/author/m/ [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:284
+- https://www.contributor-covenant.org/faq [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:95
+- https://www.contributor-covenant.org/translations [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:96
+- https://www.contributor-covenant.org/version/2/0/code_of_conduct.html [unclassified_reference / http_endpoint] — CODE_OF_CONDUCT.md:91
+- https://www.cs.cmu.edu/~sleator/papers/pairing-heaps.pdf [informational_reference / http_endpoint] — deps/jemalloc/include/jemalloc/internal/ph.h:8
+- https://www.cs.tufts.edu/~nr/cs257/archive/florian-loitsch/printf.pdf [informational_reference / http_endpoint] — deps/fpconv/README.md:9, deps/fpconv/fpconv_dtoa.c:6, deps/fpconv/fpconv_dtoa.h:6, deps/fpconv/fpconv_powers.h:6
+- https://www.elastic.co/products/elasticsearch [unclassified_reference / http_endpoint] — deps/croaring/README.md:62
+- https://www.facebook.com/notes/facebook-engineering/three-optimization-tips-for-c/10151361643253920 [unclassified_reference / http_endpoint] — src/util.c:435, src/util.c:759
+- https://www.gnu.org/licenses/ [unclassified_reference / http_endpoint] — LICENSE.txt:1384, LICENSE.txt:1399
+- https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html [unclassified_reference / http_endpoint] — deps/xxhash/Makefile:541
+- https://www.iana.org/assignments/uri-schemes/prov/redis [unclassified_reference / http_endpoint] — src/cli_common.c:464
+- https://www.influxdata.com [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- https://www.microsoft.com/en-us/msrc/msvr [informational_reference / http_endpoint] — deps/hiredis/CHANGELOG.md:234
+- https://www.opensource.org/licenses/bsd-license.php [unclassified_reference / http_endpoint] — deps/xxhash/xxhash.c:5, deps/xxhash/xxhash.h:6
+- https://www.pilosa.com/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:68
+- https://www.sqlite.org/amalgamation.html [informational_reference / http_endpoint] — deps/croaring/README.md:107
+- https://www.star-history.com/ [informational_reference / http_endpoint] — deps/croaring/README.md:1318
+- https://www.technetworkhub.com/c11-atomics-in-visual-studio-2022-version-17/ [unclassified_reference / http_endpoint] — deps/croaring/include/roaring/portability.h:604
+- https://www.teluq.ca/siteweb/univ/en/dlemire.html [unclassified_reference / http_endpoint] — deps/croaring/SECURITY.md:7
+- https://www.tty1.net/pycrc/ [unclassified_reference / http_endpoint] — src/crc64.c:44
+- https://www.valgrind.org/docs/manual/hg-manual.html [unclassified_reference / http_endpoint] — src/atomicvar.h:81
+- https://www.visualstudio.com/team-services/ [unclassified_reference / http_endpoint] — deps/croaring/README.md:71
+- https://www.xxhash.com [unclassified_reference / http_endpoint] — deps/xxhash/Makefile:22, deps/xxhash/xxhash.c:31, deps/xxhash/xxhash.h:32
+- https://www.youtube.com/watch [unclassified_reference / http_endpoint] — src/lolwut8.c:172
+- https://ydb.tech [informational_reference / http_endpoint] — deps/croaring/README.md:54
+- redis://host:port/dbnum [internal_candidate / cache_or_key_value_store] — src/redis-benchmark.c:1629, src/redis-cli.c:3315
+- redis://localhost:6379/0 [internal_candidate / cache_or_key_value_store] — src/redis-cli.c:3429
+
+CONFIGURATION PARAMETERS
+- FAKETTY — src/redis-cli.c:11534, src/redis-cli.c:152, src/redis-cli.c:2438
+- FAKETTY_WITH_PROMPT — deps/linenoise/linenoise.c:1264, deps/linenoise/linenoise.c:1268, deps/linenoise/linenoise.c:302, deps/linenoise/linenoise.c:374, src/redis-cli.c:3686
+- HOME — src/redis-cli.c:372
+- NOTIFY_SOCKET — src/server.c:8371
+- TERM — deps/linenoise/linenoise.c:291, src/redis-cli.c:2044
+- UPSTART_JOB — src/server.c:8335, src/server.c:8368
+
+CONTAINER / ENVIRONMENT DETAILS
+- FROM ubuntu:24.04 [container_image_or_directive]
+  found at: docker/Dockerfile.noble:27
+
+Review notes:
+- URL matches can include documentation and examples; inspect the cited lines.
+
+Taxonomy version: 1.0
+Use --format json for the full inventory, evidence, parameters and locations.
